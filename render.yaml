@@ -1,0 +1,40 @@
+# Render Blueprint — развёртывание через render.yaml (бесплатный тариф).
+# Использование: загрузите проект на GitHub → Render → New → Blueprint →
+# выберите репозиторий. Render сам создаст сервис по этому файлу.
+# Документация: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: book
+    runtime: node
+    plan: free
+    buildCommand: PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true npm ci
+    startCommand: node server.js
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Секреты — задайте значения вручную в Dashboard → Environment
+      - key: JWT_SECRET
+        sync: false
+      - key: PORTAL_SECRET
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: VIDEO_ADMIN_PASSWORD
+        sync: false
+      # Постоянная БД (PostgreSQL). Без неё данные на бесплатном тарифе
+      # стираются при ре-деплое. Получить бесплатно: https://neon.tech
+      - key: DATABASE_URL
+        sync: false
+      # Адреса портала (ваш публичный URL на Render + адреса соседних сервисов)
+      - key: BOOK_URL
+        sync: false
+      - key: DIALOG_URL
+        sync: false
+      - key: LITFAIR_URL
+        sync: false
+      # Дополнительно (необязательно):
+      # - key: SCORING_MODEL          # модель GROQ, по умолчанию qwen/qwen3.8-27b
+      # - key: PORTAL_COOKIE_DOMAIN   # .example.com для SSO между субдоменами

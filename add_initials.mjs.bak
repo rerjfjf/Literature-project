@@ -1,0 +1,171 @@
+#!/usr/bin/env node
+/**
+ * add_initials.mjs
+ *
+ * Проставляет инициалы у фамилий авторов во всех файлах проекта:
+ *   Рыбаков       -> А.Рыбаков
+ *   Ахматова      -> А.Ахматова
+ *   Васильев      -> Б.Васильев
+ *   Кондратьев    -> В.Кондратьев
+ *   Быков         -> В.Быков
+ *   Твардовский   -> А.Твардовский
+ *   Окуджава      -> Б.Окуджава
+ *   Заболоцкий    -> Н.Заболоцкий
+ *   Высоцкий      -> В.Высоцкий
+ *   Евтушенко     -> Е.Евтушенко
+ *
+ * Правила:
+ *  - Полное ФИО ("Анатолий Наумович Рыбаков", "Александр Трифонович Твардовский" и т.п.)
+ *    сворачивается в "Инициал.Фамилия".
+ *  - "Имя Фамилия" (например "Анна Ахматова", "Булат Окуджава") -> "Инициал.Фамилия".
+ *  - Одинокая фамилия без инициала ("Рыбаков", "Кондратьев" и т.д.) получает инициал.
+ *  - Если инициал уже стоит перед фамилией (например "А.Рыбаков" или "А. Рыбаков"),
+ *    ничего не меняется (нет двойных замен).
+ *  - Опечатка "Твордовский" исправляется на "А.Твардовский".
+ *
+ * Запуск:
+ *   node add_initials.mjs             — применить изменения
+ *   node add_initials.mjs --dry-run   — только показать, что изменится, без записи
+ *
+ * Скрипт рекурсивно обходит текущую директорию (корень проекта), пропуская
+ * node_modules, .git, images, qrcodes и бинарные файлы. Перед изменением
+ * каждого файла создаётся резервная копия рядом с оригиналом (*.bak).
+ */
+
+import { promises as fs } from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = process.cwd(); // запускать из корня проекта книги
+const DRY_RUN = process.argv.includes('--dry-run');
+
+// Директории, которые не обрабатываем
+const SKIP_DIRS = new Set(['node_modules', '.git', 'images', 'qrcodes']);
+
+// Расширения файлов, которые имеет смысл трогать (текстовые/код)
+const ALLOWED_EXT = new Set(['.js', '.mjs', '.html', '.json', '.css', '.md']);
+
+// Карта: фамилия -> нужный инициал
+const AUTHORS = [
+  { surname: 'Рыбаков',     initial: 'А', fullNames: ['Анатолий Наумович Рыбаков', 'Анатолий Рыбаков'] },
+  { surname: 'Ахматова',    initial: 'А', fullNames: ['Анна Андреевна Ахматова', 'Анна Ахматова'] },
+  { surname: 'Васильев',    initial: 'Б', fullNames: ['Борис Львович Васильев', 'Борис Васильев'] },
+  { surname: 'Кондратьев',  initial: 'В', fullNames: ['Вячеслав Леонидович Кондратьев', 'Вячеслав Кондратьев'] },
+  { surname: 'Быков',       initial: 'В', fullNames: ['Василь Владимирович Быков', 'Василь Быков'] },
+  { surname: 'Твардовский', initial: 'А', fullNames: ['Александр Трифонович Твардовский', 'Александр Твардовский'] },
+  { surname: 'Твордовский', initial: 'А', fixTypo: 'Твардовский', fullNames: [] }, // опечатка из ТЗ
+  { surname: 'Окуджава',    initial: 'Б', fullNames: ['Булат Шалвович Окуджава', 'Булат Окуджава'] },
+  { surname: 'Заболоцкий',  initial: 'Н', fullNames: ['Николай Алексеевич Заболоцкий', 'Николай Заболоцкий'] },
+  { surname: 'Высоцкий',    initial: 'В', fullNames: ['Владимир Семёнович Высоцкий', 'Владимир Семенович Высоцкий', 'Владимир Высоцкий'] },
+  { surname: 'Евтушенко',   initial: 'Е', fullNames: ['Евгений Александрович Евтушенко', 'Евгений Евтушенко'] },
+];
+
+// Границы слова для кириллицы (т.к. \b в JS не дружит с не-ASCII)
+const CYR = 'А-Яа-яЁёA-Za-z';
+const notLetterBefore = `(?<![${CYR}])`;
+const notLetterAfter = `(?![${CYR}])`;
+
+function buildReplacements() {
+  const ops = [];
+
+  for (const a of AUTHORS) {
+    const target = `${a.initial}.${a.fixTypo || a.surname}`;
+
+    // 1) Полные ФИО -> инициал.Фамилия
+    for (const full of a.fullNames) {
+      const re = new RegExp(`${notLetterBefore}${full}${notLetterAfter}`, 'g');
+      ops.push({ re, replacement: target, label: full });
+    }
+
+    // 2) Опечатка "Твордовский" (голая фамилия, без инициала или с любым инициалом) -> "А.Твардовский"
+    if (a.fixTypo) {
+      const re = new RegExp(
+        `(?:[${CYR}]\\.\\s*)?${notLetterBefore}${a.surname}${notLetterAfter}`,
+        'g'
+      );
+      ops.push({ re, replacement: target, label: a.surname });
+      continue; // это не самостоятельный автор, дальше не обрабатываем
+    }
+
+    // 3) Голая фамилия без инициала -> "И.Фамилия"
+    //    Не трогаем, если перед фамилией уже стоит "И." или "И. " (любой инициал)
+    const bareRe = new RegExp(
+      `(?<![${CYR}]\\.\\s?)${notLetterBefore}${a.surname}${notLetterAfter}`,
+      'g'
+    );
+    ops.push({ re: bareRe, replacement: target, label: a.surname });
+  }
+
+  return ops;
+}
+
+async function walk(dir, files = []) {
+  const entries = await fs.readdir(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    if (entry.isDirectory()) {
+      if (SKIP_DIRS.has(entry.name)) continue;
+      await walk(path.join(dir, entry.name), files);
+    } else {
+      const ext = path.extname(entry.name);
+      if (ALLOWED_EXT.has(ext)) {
+        files.push(path.join(dir, entry.name));
+      }
+    }
+  }
+  return files;
+}
+
+async function processFile(filePath, ops) {
+  const original = await fs.readFile(filePath, 'utf8');
+  let updated = original;
+  let changesInFile = 0;
+
+  for (const { re, replacement, label } of ops) {
+    const matches = updated.match(re);
+    if (matches && matches.length) {
+      changesInFile += matches.length;
+      updated = updated.replace(re, replacement);
+    }
+  }
+
+  if (changesInFile > 0) {
+    console.log(`${DRY_RUN ? '[dry-run] ' : ''}${filePath}: ${changesInFile} замен(а/ы)`);
+    if (!DRY_RUN) {
+      await fs.writeFile(`${filePath}.bak`, original, 'utf8');
+      await fs.writeFile(filePath, updated, 'utf8');
+    }
+  }
+
+  return changesInFile;
+}
+
+async function main() {
+  const ops = buildReplacements();
+  const files = await walk(ROOT);
+
+  let totalFiles = 0;
+  let totalChanges = 0;
+
+  for (const file of files) {
+    const changes = await processFile(file, ops);
+    if (changes > 0) {
+      totalFiles += 1;
+      totalChanges += changes;
+    }
+  }
+
+  console.log('---');
+  console.log(`Файлов изменено: ${totalFiles}`);
+  console.log(`Всего замен: ${totalChanges}`);
+  if (DRY_RUN) {
+    console.log('Это был dry-run, файлы не изменялись. Запустите без --dry-run, чтобы применить.');
+  } else if (totalFiles > 0) {
+    console.log('Резервные копии сохранены рядом с оригиналами как *.bak');
+  }
+}
+
+main().catch((err) => {
+  console.error('Ошибка выполнения скрипта:', err);
+  process.exit(1);
+});

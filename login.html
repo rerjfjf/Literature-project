@@ -1,0 +1,78 @@
+<!doctype html> <html lang="ru"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <title>Вход - Литература о ВОВ</title> <link rel="stylesheet" href="styles.css" /> <style>.login-shell { min-height: 100vh; display: grid; grid-template-columns: minmax(320px, 0.9fr) minmax(360px, 1fr); }.login-aside { position: relative; overflow: hidden; background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 28%, transparent), transparent 55%), linear-gradient(to bottom, var(--page-soft), var(--bg)); border-right: 1px solid var(--line); display: flex; flex-direction: column; justify-content: space-between; padding: clamp(28px, 4vw, 52px); }.login-aside-logo { display: grid; gap: 4px; }.login-aside-logo span { color: var(--accent); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }.login-aside-logo strong { font-family: var(--serif); font-size: clamp(1.4rem, 2.5vw, 1.9rem); line-height: 1.15; }.login-aside-quote { display: grid; gap: 12px; }.login-aside-quote blockquote { margin: 0; padding: 0; border: 0; font-family: var(--serif); font-size: clamp(1.1rem, 2vw, 1.4rem); font-style: italic; line-height: 1.55; color: var(--text); }.login-aside-quote cite { color: var(--muted); font-size: 0.88rem; font-style: normal; font-weight: 700; }.login-aside-authors { display: flex; flex-wrap: wrap; gap: 6px; }.login-aside-chip { padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--page); color: var(--muted); font-size: 0.78rem; font-weight: 600; }.login-main { display: flex; flex-direction: column; justify-content: center; padding: clamp(28px, 5vw, 64px); background: var(--page); }.login-back { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font-size: 0.88rem; font-weight: 700; text-decoration: none; margin-bottom: 32px; transition: color 160ms; }.login-back:hover { color: var(--accent); }.login-tabs { display: flex; gap: 0; margin-bottom: 28px; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; width: max-content; }.login-tab { padding: 10px 22px; border: 0; background: var(--page); color: var(--muted); font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: background 160ms, color 160ms; }.login-tab.is-active { background: var(--accent); color: #fff; }.login-tab:not(.is-active):hover { background: color-mix(in srgb, var(--accent) 10%, var(--page)); color: var(--accent-strong); }.login-form { display: none; flex-direction: column; gap: 16px; max-width: 400px; }.login-form.is-active { display: flex; }.login-form h2 { margin: 0 0 4px; font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.2rem); }.login-form.form-sub { color: var(--muted); font-size: 0.9rem; margin: 0; }.login-form label { display: grid; gap: 7px; color: var(--muted); font-size: 0.88rem; font-weight: 700; }.login-form input { width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--page-soft); color: var(--text); font: inherit; font-size: 1rem; outline: none; transition: border-color 160ms, box-shadow 160ms; }.login-form input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent); }.submit-btn { min-height: 50px; font-size: 1rem; background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; border-radius: var(--radius); cursor: pointer; transition: background 160ms; }.submit-btn:hover { background: var(--accent-strong); border-color: var(--accent-strong); }.login-form.form-hint { color: var(--muted); font-size: 0.82rem; line-height: 1.4; margin: 0; }.login-error { display: none; padding: 10px 14px; border-radius: var(--radius); background: color-mix(in srgb, #c0392b 12%, var(--page)); border: 1px solid color-mix(in srgb, #c0392b 30%, var(--line)); color: #c0392b; font-size: 0.9rem; font-weight: 600; }.login-error.is-visible { display: block; } @media (max-width: 760px) {.login-shell { grid-template-columns: 1fr; }.login-aside { border-right: 0; border-bottom: 1px solid var(--line); padding: 24px; min-height: auto; }.login-aside-quote { display: none; } } </style> </head> <body> <div class="login-shell"> <aside class="login-aside"> <div class="login-aside-logo"> <span>Электронный учебник</span> <strong>Литература о Великой Отечественной войне</strong> </div> <div class="login-aside-quote"> <blockquote> «Я знаю, никакой моей вины в том, что другие не пришли с войны. В том, что они - кто старше, кто моложе - остались там, и не о том же речь, что я их мог, но не сумел сберечь...» </blockquote> <cite>- А. Т. Твардовский</cite> </div> <div> <p style="color:var(--muted);font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin:0 0 8px;">Изучаемые авторы</p> <div class="login-aside-authors"> <span class="login-aside-chip">А. Т. Твардовский</span> <span class="login-aside-chip">Б. Ш. Окуджава</span> <span class="login-aside-chip">Н. А. Заболоцкий</span> <span class="login-aside-chip">В. С. Высоцкий</span> <span class="login-aside-chip">Е. А. Евтушенко</span> <span class="login-aside-chip">А. Н. Рыбаков</span> <span class="login-aside-chip">А. А. Ахматова</span> <span class="login-aside-chip">Б. Л. Васильев</span> <span class="login-aside-chip">В. В. Быков</span> </div> </div> </aside> <main class="login-main"> <a href="cover.html" class="login-back">← На главную</a> <div class="login-tabs"> <button class="login-tab is-active" data-tab="login">Вход</button> <button class="login-tab" data-tab="register">Регистрация</button> </div> <!-- Форма входа --> <form class="login-form is-active" id="loginForm"> <div> <h2>Добро пожаловать</h2> <p class="form-sub">Войдите чтобы отправлять задания и получать оценки ИИ</p> </div> <div class="login-error" id="loginError"></div> <label> Email <input name="email" type="email" autocomplete="email" placeholder="you@example.com" required /> </label> <label> Пароль <input name="password" type="password" autocomplete="current-password" placeholder="••••••" required /> </label> <button class="text-button submit-btn" type="submit">Войти в учебник</button> </form> <!-- Форма регистрации --> <form class="login-form" id="registerForm"> <div> <h2>Создать аккаунт</h2> <p class="form-sub">Зарегистрируйтесь чтобы сохранять оценки и работать с преподавателем</p> </div> <div class="login-error" id="registerError"></div> <label> ФИО <input name="fullName" type="text" placeholder="Иванов Иван Иванович" required /> </label> <label> Email <input name="email" type="email" autocomplete="email" placeholder="you@example.com" required /> </label> <label> Пароль <input name="password" type="password" autocomplete="new-password" placeholder="Минимум 6 символов" minlength="6" required /> </label> <button class="text-button submit-btn" type="submit">Создать аккаунт</button> <p class="form-hint">ФИО принимается только кириллицей: Фамилия Имя Отчество.</p> </form> </main> </div> <script>
+  // Тема
+  if (localStorage.getItem("reader-theme") === "dark") {
+    document.documentElement.classList.add("theme-dark");
+  }
+
+  // Переключение вкладок
+  const tabs = document.querySelectorAll(".login-tab");
+  const forms = {
+    login: document.getElementById("loginForm"),
+    register: document.getElementById("registerForm"),
+  };
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => t.classList.remove("is-active"));
+      tab.classList.add("is-active");
+      Object.values(forms).forEach((f) => f.classList.remove("is-active"));
+      forms[tab.dataset.tab].classList.add("is-active");
+    });
+  });
+
+  function showError(id, msg) {
+    const el = document.getElementById(id);
+    el.textContent = msg;
+    el.classList.add("is-visible");
+  }
+  function hideError(id) {
+    document.getElementById(id).classList.remove("is-visible");
+  }
+
+  // Вход
+  document.getElementById("loginForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    hideError("loginError");
+    const fd = new FormData(e.currentTarget);
+    try {
+      const res = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: fd.get("email"),
+          password: fd.get("password"),
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Ошибка входа");
+      localStorage.setItem("reader-token", data.token);
+      window.location.href = "index.html";
+    } catch (err) {
+      showError("loginError", err.message);
+    }
+  });
+
+  // Регистрация
+  document.getElementById("registerForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    hideError("registerError");
+    const fd = new FormData(e.currentTarget);
+    try {
+      const res = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: fd.get("fullName"),
+          email: fd.get("email"),
+          password: fd.get("password"),
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Ошибка регистрации");
+      localStorage.setItem("reader-token", data.token);
+      window.location.href = "index.html";
+    } catch (err) {
+      showError("registerError", err.message);
+    }
+  });
+</script> </body> </html>

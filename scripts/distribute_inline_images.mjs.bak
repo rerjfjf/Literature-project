@@ -1,0 +1,159 @@
+import fs from "node:fs";
+import path from "node:path";
+import vm from "node:vm";
+
+const root = path.resolve(new URL("..", import.meta.url).pathname);
+const partsDir = path.join(root, "content_parts");
+
+const files = [
+  ["author_tvardovsky.js", "TEXTBOOK_TVARDOVSKY"],
+  ["author_okudzhava.js", "TEXTBOOK_OKUDZHAVA"],
+  ["author_zabolotsky.js", "TEXTBOOK_ZABOLOTSKY"],
+  ["author_vysotsky.js", "TEXTBOOK_VYSOTSKY"],
+  ["author_evtyushenko.js", "TEXTBOOK_EVTYUSHENKO"],
+  ["author_rybakov.js", "TEXTBOOK_RYBAKOV"],
+  ["author_akhmatova.js", "TEXTBOOK_AKHMATOVA"],
+  ["author_vasilyev.js", "TEXTBOOK_VASILYEV"],
+  ["author_bykov.js", "TEXTBOOK_BYKOV"],
+  ["author_kondratyev.js", "TEXTBOOK_KONDRATYEV"],
+];
+
+const authorNames = {
+  tvardovsky: "А. Т. Твардовский",
+  okudzhava: "Б. Ш. Окуджава",
+  zabolotsky: "Н. А. Заболоцкий",
+  vysotsky: "В. С. Высоцкий",
+  evtyushenko: "Е. А. Евтушенко",
+  rybakov: "А. Н. Рыбаков",
+  akhmatova: "А. А. Ахматова",
+  vasilyev: "Б. Л. Васильев",
+  bykov: "В. В. Быков",
+  kondratyev: "В. Л. Кондратьев",
+};
+
+const preferredFirst = {
+  tvardovsky: ["заставка", "IMG_4946"],
+  okudzhava: ["1703539910864", "16457"],
+  zabolotsky: ["zabolotskiy", "1200_0"],
+  vysotsky: ["VladimirVysotsky", "visotskiy"],
+  evtyushenko: ["Евтушенко", "sgsd"],
+  rybakov: ["Анатолий", "206554"],
+  akhmatova: ["10.51.42", "10.51.54"],
+  vasilyev: ["12___", "1890907"],
+  bykov: ["10.51.10", "10.51.27"],
+  kondratyev: ["353293", "image.php"],
+};
+
+function loadBook(file, variable) {
+  const source = fs.readFileSync(path.join(partsDir, file), "utf8");
+  const context = { window: {} };
+  vm.createContext(context);
+  vm.runInContext(source, context, { filename: file });
+  return context.window[variable];
+}
+
+function writeBook(file, variable, book) {
+  const title = book.authors?.[0]?.fullName || book.authors?.[0]?.name || variable;
+  fs.writeFileSync(
+    path.join(partsDir, file),
+    `// Автор: ${title}\nwindow.${variable} = ${JSON.stringify(book, null, 2)};\n`,
+  );
+}
+
+function imageFiles(authorId) {
+  const dir = path.join(root, "images", authorId);
+  if (!fs.existsSync(dir)) return [];
+  const files = fs.readdirSync(dir)
+    .filter((name) => /\.(avif|jpe?g|png|webp|gif|svg)$/i.test(name))
+    .filter((name) => !/author-card\.svg$/i.test(name))
+    .map((name) => `images/${authorId}/${name}`);
+
+  const preferred = preferredFirst[authorId] || [];
+  return files.sort((a, b) => {
+    const aIndex = preferred.findIndex((token) => a.includes(token));
+    const bIndex = preferred.findIndex((token) => b.includes(token));
+    const aw = aIndex === -1 ? 99 : aIndex;
+    const bw = bIndex === -1 ? 99 : bIndex;
+    return aw - bw || a.localeCompare(b, "ru");
+  }).slice(0, 10);
+}
+
+function allSections(book) {
+  return book.chapters.flatMap((chapter) =>
+    chapter.sections.map((section) => ({ chapter, section })),
+  );
+}
+
+function sectionScore(section, chapter) {
+  const text = `${chapter.title} ${section.title} ${section.lead || ""}`.toLowerCase();
+  if (/тренаж|задани|практик|итог|источник|литературовед|критик|обобщ/.test(text)) return -50;
+  let score = 0;
+  if (/биограф|детство|жизн|путь|войн|произвед|повест|стих|поэм|песн|памят|фронт|ржев|блокад|партизан/.test(text)) score += 20;
+  const paragraphCount = (section.blocks || []).filter((block) => block.type === "p").length;
+  score += Math.min(paragraphCount, 12);
+  if ((section.blocks || []).some((block) => block.type === "trainer" || block.type === "terms" || block.type === "gallery")) score -= 10;
+  return score;
+}
+
+function removeOldDistributedImages(book) {
+  for (const { section } of allSections(book)) {
+    section.blocks = (section.blocks || []).filter((block) => block.insertedBy !== "distribute_inline_images");
+  }
+}
+
+function pickSections(book, imageCount) {
+  return allSections(book)
+    .map((entry, index) => ({ ...entry, index, score: sectionScore(entry.section, entry.chapter) }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score || a.index - b.index)
+    .slice(0, imageCount)
+    .sort((a, b) => a.index - b.index);
+}
+
+function insertAfterParagraph(blocks, imageBlock) {
+  const paragraphIndexes = blocks
+    .map((block, index) => [block, index])
+    .filter(([block]) => block.type === "p")
+    .map(([, index]) => index);
+  const target = paragraphIndexes[Math.min(1, paragraphIndexes.length - 1)];
+  if (target === undefined) {
+    blocks.push(imageBlock);
+    return;
+  }
+  blocks.splice(target + 1, 0, imageBlock);
+}
+
+let total = 0;
+
+for (const [file, variable] of files) {
+  const book = loadBook(file, variable);
+  const authorId = book.authors?.[0]?.id;
+  if (!authorId) continue;
+
+  removeOldDistributedImages(book);
+
+  const images = imageFiles(authorId);
+  const sections = pickSections(book, images.length);
+  const count = Math.min(images.length, sections.length);
+
+  for (let i = 0; i < count; i += 1) {
+    const { section } = sections[i];
+    const src = images[i];
+    const captionTitle = section.title.replace(/[.。]+$/g, "");
+    const imageBlock = {
+      type: "image",
+      src,
+      alt: `${authorNames[authorId] || book.authors[0].name} — ${captionTitle}`,
+      caption: `${authorNames[authorId] || book.authors[0].name}. Иллюстрация к разделу «${captionTitle}».`,
+      insertedBy: "distribute_inline_images",
+    };
+    section.blocks ||= [];
+    insertAfterParagraph(section.blocks, imageBlock);
+    total += 1;
+  }
+
+  writeBook(file, variable, book);
+  console.log(`${authorId}: inserted ${count} inline images`);
+}
+
+console.log(`Total inline images inserted: ${total}`);

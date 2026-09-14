@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Электронный учебник</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="icon-button mobile-only" id="tocToggle" type="button" aria-label="Открыть оглавление" title="Оглавление">
+        <span aria-hidden="true">☰</span>
+      </button>
+      <a href="cover.html" class="book-mark" style="text-decoration:none;color:inherit;">
+        <span class="book-mark__label">Учебник</span>
+        <strong id="bookTitle">Электронный учебник</strong>
+      </a>
+      <div class="topbar__actions">
+        <label class="search">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Поиск по учебнику" autocomplete="off" />
+        </label>
+        <button class="text-button" id="accountToggle" type="button">Войти</button>
+        <button class="text-button text-button--ghost" id="aiDialogToggle" type="button">ИИ-диалог</button>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Переключить тему" title="Тема">
+          <span aria-hidden="true">◐</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="account-panel" id="accountPanel" hidden>
+      <button class="icon-button modal-close" id="accountClose" type="button" aria-label="Закрыть кабинет" title="Закрыть">
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="dashboard" id="dashboard" hidden>
+        <div class="dashboard__head">
+          <div>
+            <span id="roleLabel">Кабинет</span>
+            <strong id="userName"></strong>
+          </div>
+          <button class="text-button" id="logoutButton" type="button">Выйти</button>
+        </div>
+        <div id="dashboardBody" class="dashboard-body"></div>
+      </div>
+      <footer class="account-panel__footer">
+        <a class="text-button text-button--full" id="openLitfairLink" href="http://localhost:5002">
+          Открыть платформу LitFair →
+        </a>
+      </footer>
+    </section>
+
+    <div class="reader-layout">
+      <aside class="toc-panel" id="tocPanel" aria-label="Оглавление">
+        <div class="toc-panel__head">
+          <div>
+            <span>Оглавление</span>
+            <strong id="tocTitle">Содержание</strong>
+          </div>
+          <button class="icon-button mobile-only" id="tocClose" type="button" aria-label="Закрыть оглавление" title="Закрыть">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <nav id="toc" class="toc"></nav>
+      </aside>
+
+      <main class="reading-area">
+       
+        <article class="book-page" id="bookPage" tabindex="-1">
+          <div class="chapter-kicker" id="chapterKicker"></div>
+          <h1 id="sectionTitle"></h1>
+          <p class="lead" id="sectionLead"></p>
+          <div id="sectionBody" class="section-body"></div>
+        </article>
+
+        
+
+         <div class="page-tools">
+          <button class="text-button" id="prevSection" type="button">← Предыдущий раздел</button>
+          <div class="progress-wrap" aria-label="Прогресс чтения">
+            <span id="progressLabel">0%</span>
+            <div class="progress-track"><span id="progressBar"></span></div>
+          </div>
+          <button class="text-button" id="nextSection" type="button">Следующий раздел →</button>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay" hidden></div>
+
+  
+  <script src="content_parts/preface.js"></script>
+  <script src="content_parts/author_intro.js"></script>
+  <script src="content_parts/author_akhmatova.js"></script>
+  <script src="content_parts/author_rybakov.js"></script>
+  <script src="content_parts/author_bykov.js"></script> 
+  <script src="content_parts/author_vasilyev.js"></script> 
+  <script src="content_parts/author_kondratyev.js"></script> 
+  <script src="content_parts/author_tvardovsky.js"></script>
+  <script src="content_parts/author_zabolotsky.js"></script>
+  <script src="content_parts/author_okudzhava.js"></script>
+  <script src="content_parts/author_vysotsky.js"></script> 
+  <script src="content_parts/author_evtyushenko.js"></script>
+  <script src="content_parts/author_overview.js"></script>
+  <script src="content_parts/author_conclusion.js"></script>
+  <script src="content_parts/author_appendices.js"></script>
+  
+  <!-- 2. Затем загрузчик и приложение -->
+  <script src="content_parts/content_index.js"></script>
+  <script src="content_loader.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+  
+ 
+</body>
+</html>

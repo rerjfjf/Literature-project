@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Управление видео</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .admin-shell { width: min(900px, 100%); margin: 0 auto; padding: clamp(18px, 3vw, 34px); }
+    .login-card {
+      display: grid;
+      gap: 12px;
+      width: min(360px, 100%);
+      margin: 90px auto;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--page);
+    }
+    .login-card input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 10px 12px;
+      background: var(--page);
+      color: var(--text);
+      outline: none;
+    }
+    .login-card p.error { color: var(--accent-strong); margin: 0; font-size: 0.88rem; }
+    .admin-topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .admin-group + .admin-group { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); }
+    .admin-group h2 { font-family: var(--serif); margin: 0 0 12px; font-size: 1.2rem; }
+    .admin-item { padding: 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--page-soft); margin-bottom: 10px; }
+    .admin-row { display: grid; grid-template-columns: minmax(0, 1fr) max-content; gap: 10px; align-items: center; }
+    .admin-row input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 8px 10px;
+      background: var(--page);
+      color: var(--text);
+      outline: none;
+    }
+    .admin-meta { font-size: 0.85rem; color: var(--muted); line-height: 1.35; margin-bottom: 8px; }
+    .admin-meta strong { color: var(--text); }
+    .admin-status { font-size: 0.8rem; color: var(--muted); margin-top: 6px; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="admin-shell">
+    <section class="login-card" id="loginCard">
+      <h1 style="font-family:var(--serif); margin:0; font-size:1.4rem;">Панель видео</h1>
+      <label>
+        Пароль
+        <input type="password" id="passwordInput" autocomplete="off" />
+      </label>
+      <button class="text-button" id="loginButton" type="button">Войти</button>
+      <p class="error" id="loginError" hidden></p>
+    </section>
+
+    <div id="panel" hidden>
+      <div class="admin-topbar">
+        <h1 style="font-family:var(--serif); margin:0; font-size:1.5rem;">Ссылки на видео</h1>
+        <button class="text-button text-button--ghost" id="logoutButton" type="button">Выйти</button>
+      </div>
+      <div id="groupsRoot"></div>
+    </div>
+  </div>
+
+  <script src="content_parts/author_intro.js"></script>
+  <script src="content_parts/author_tvardovsky.js"></script>
+  <script src="content_parts/author_okudzhava.js"></script>
+  <script src="content_parts/author_zabolotsky.js"></script>
+  <script src="content_parts/author_vysotsky.js"></script>
+  <script src="content_parts/author_evtyushenko.js"></script>
+  <script src="content_parts/author_rybakov.js"></script>
+  <script src="content_parts/author_akhmatova.js"></script>
+  <script src="content_parts/author_vasilyev.js"></script>
+  <script src="content_parts/author_bykov.js"></script>
+  <script src="content_parts/author_kondratyev.js"></script>
+  <script src="content_parts/author_overview.js"></script>
+  <script src="content_parts/author_conclusion.js"></script>
+  <script src="content_parts/author_appendices.js"></script>
+  <script src="content_loader.js"></script>
+  <script>
+    const TOKEN_KEY = "video-admin-token";
+
+    const loginCard = document.getElementById("loginCard");
+    const panel = document.getElementById("panel");
+    const passwordInput = document.getElementById("passwordInput");
+    const loginButton = document.getElementById("loginButton");
+    const loginError = document.getElementById("loginError");
+    const logoutButton = document.getElementById("logoutButton");
+    const groupsRoot = document.getElementById("groupsRoot");
+
+    function collectVideoBlocks() {
+      const book = window.TEXTBOOK;
+      const authors = book.authors || [];
+      const list = [];
+      book.chapters.forEach((chapter) => {
+        chapter.sections.forEach((section) => {
+          const authorId = chapter.authorId || book.authorId;
+          const author = authors.find((a) => a.id === authorId) || { name: authorId, fullName: authorId };
+          (section.blocks || []).forEach((block, blockIndex) => {
+            if (block.type !== "video") return;
+            const videoId = `${authorId}:${section.id}:${blockIndex}`;
+            list.push({
+              videoId,
+              authorId,
+              authorName: author.fullName || author.name,
+              sectionTitle: section.title,
+              blockTitle: block.title || "Видеоматериал",
+            });
+          });
+        });
+      });
+      return list;
+    }
+
+    async function login() {
+      loginError.hidden = true;
+      const password = passwordInput.value;
+      if (!password) return;
+      loginButton.disabled = true;
+      loginButton.textContent = "Проверка...";
+      try {
+        const response = await fetch("/api/videos/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ password }),
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || "Неверный пароль");
+        sessionStorage.setItem(TOKEN_KEY, data.token);
+        await showPanel();
+      } catch (error) {
+        loginError.textContent = error.message;
+        loginError.hidden = false;
+      } finally {
+        loginButton.disabled = false;
+        loginButton.textContent = "Войти";
+      }
+    }
+
+    function logout() {
+      sessionStorage.removeItem(TOKEN_KEY);
+      panel.hidden = true;
+      loginCard.hidden = false;
+      passwordInput.value = "";
+    }
+
+    async function showPanel() {
+      loginCard.hidden = true;
+      panel.hidden = false;
+      await renderRows();
+    }
+
+    async function renderRows() {
+      const items = collectVideoBlocks();
+      let stored = {};
+      try {
+        const response = await fetch("/api/videos");
+        const data = await response.json();
+        stored = data.videos || {};
+      } catch {
+        // покажем пустые поля, если сервер недоступен
+      }
+
+      const groups = new Map();
+      items.forEach((item) => {
+        if (!groups.has(item.authorId)) groups.set(item.authorId, { name: item.authorName, items: [] });
+        groups.get(item.authorId).items.push(item);
+      });
+
+      groupsRoot.innerHTML = "";
+
+      if (!items.length) {
+        groupsRoot.innerHTML = `<p style="color:var(--muted)">В учебнике пока нет видеоблоков.</p>`;
+        return;
+      }
+
+      groups.forEach((group) => {
+        const wrap = document.createElement("section");
+        wrap.className = "admin-group";
+        const heading = document.createElement("h2");
+        heading.textContent = group.name;
+        wrap.append(heading);
+
+        group.items.forEach((item) => {
+          const entry = stored[item.videoId] || {};
+          const box = document.createElement("div");
+          box.className = "admin-item";
+
+          const meta = document.createElement("div");
+          meta.className = "admin-meta";
+          meta.innerHTML = `<strong>${entry.title || item.blockTitle}</strong><br>${item.sectionTitle}`;
+
+          const row = document.createElement("div");
+          row.className = "admin-row";
+          const input = document.createElement("input");
+          input.type = "url";
+          input.placeholder = "https://www.youtube.com/watch?v=...";
+          input.value = entry.url || "";
+
+          const saveButton = document.createElement("button");
+          saveButton.className = "text-button";
+          saveButton.type = "button";
+          saveButton.textContent = "Сохранить";
+
+          const status = document.createElement("div");
+          status.className = "admin-status";
+          status.textContent = entry.updatedAt
+            ? `Обновлено: ${new Date(entry.updatedAt).toLocaleString("ru-RU")}`
+            : "Ссылка не задана";
+
+          saveButton.addEventListener("click", async () => {
+            saveButton.disabled = true;
+            saveButton.textContent = "Сохранение...";
+            try {
+              const token = sessionStorage.getItem(TOKEN_KEY);
+              const response = await fetch(`/api/videos/${encodeURIComponent(item.videoId)}`, {
+                method: "PUT",
+                headers: {
+                  "Content-Type": "application/json",
+                  Authorization: `Bearer ${token}`,
+                },
+                body: JSON.stringify({ url: input.value.trim() }),
+              });
+              const data = await response.json();
+              if (!response.ok) throw new Error(data.error || "Ошибка сохранения");
+              status.textContent = "Сохранено только что";
+              saveButton.textContent = "Сохранено";
+            } catch (error) {
+              if (String(error.message).toLowerCase().includes("вход")) {
+                logout();
+                return;
+              }
+              status.textContent = error.message;
+              saveButton.textContent = "Ошибка, повторить";
+            } finally {
+              saveButton.disabled = false;
+              setTimeout(() => {
+                saveButton.textContent = "Сохранить";
+              }, 1800);
+            }
+          });
+
+          row.append(input, saveButton);
+          box.append(meta, row, status);
+          wrap.append(box);
+        });
+
+        groupsRoot.append(wrap);
+      });
+    }
+
+    loginButton.addEventListener("click", login);
+    passwordInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") login();
+    });
+    logoutButton.addEventListener("click", logout);
+
+    if (sessionStorage.getItem(TOKEN_KEY)) {
+      showPanel();
+    }
+  </script>
+</body>
+</html>
