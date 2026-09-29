@@ -13,12 +13,12 @@
     window.TEXTBOOK_TVARDOVSKY,   // 8. А. Т. Твардовский
     window.TEXTBOOK_ZABOLOTSKY,   // 9. Н. А. Заболоцкий
     window.TEXTBOOK_OKUDZHAVA,    // 10. Б. Ш. Окуджава
-    window.TEXTBOOK_VYSOTSKY,     // 11. В. С. Высоцкий (если файла нет, .filter(Boolean) его просто пропустит без ошибок)
+    window.TEXTBOOK_VYSOTSKY,     // 11. В. С. Высоцкий 
     window.TEXTBOOK_EVTYUSHENKO,  // 12. Е. А. Евтушенко
     window.TEXTBOOK_OVERVIEW,     // 13. Итог учебника
     window.TEXTBOOK_CONCLUSION,   // 14. Заключение
     window.TEXTBOOK_APPENDICES    // 15. Приложения
-  ].filter(Boolean); // .filter(Boolean) автоматически убирает undefined, если какого-то файла (например, Высоцкого) пока нет
+  ].filter(Boolean); // .filter(Boolean) автоматически убирает undefined, если какого-то файла пока нет
 
   if (!parts.length) {
     console.error("content_loader: не найден ни один файл автора!");
