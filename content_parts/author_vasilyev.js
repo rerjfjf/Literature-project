@@ -303,7 +303,7 @@ window.TEXTBOOK_VASILYEV = {
             }
           ],
           "image": {
-            "src": "images/vasilyev/vasilyev-biografiya-b-l-vasileva.jpg",
+            "src": "images/vasilyev/12___.png",
             "alt": "Б. Л. Васильев - Биография Б. Л. Васильева",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -339,7 +339,7 @@ window.TEXTBOOK_VASILYEV = {
             }
           ],
           "image": {
-            "src": "images/vasilyev/vasilyev-voyna-v-proizvedeniyah-b-l-vasileva.jpg",
+            "src": "images/vasilyev/1890907jun.jpg",
             "alt": "Б. Л. Васильев - Война в произведениях Б. Л. Васильева",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -480,7 +480,7 @@ window.TEXTBOOK_VASILYEV = {
             }
           ],
           "image": {
-            "src": "images/vasilyev/vasilyev-povest-borisa-vasileva-a-zori-zdes-tihie-opublikovannaya-v-1969-godu-sta.jpg",
+            "src": "images/vasilyev/notes_1432184785.jpg",
             "alt": "Б. Л. Васильев - Повесть Б. Л. Васильева А зори здесь тихие, опубликованная в 1969 году, стала о…",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -632,7 +632,7 @@ window.TEXTBOOK_VASILYEV = {
             }
           ],
           "image": {
-            "src": "images/vasilyev/vasilyev-povest-borisa-vasileva-a-zori-zdes-tihie-predstavlyaet-soboy-unikalnoe-y.jpg",
+            "src": "images/vasilyev/WhatsApp Image 2026-06-12 at 10.52.01.jpeg",
             "alt": "Б. Л. Васильев - Повесть Б. Л. Васильева А зори здесь тихие представляет собой уникальное явлени…",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -708,7 +708,7 @@ window.TEXTBOOK_VASILYEV = {
             }
           ],
           "image": {
-            "src": "images/vasilyev/vasilyev-povest-borisa-vasileva-a-zori-zdes-tihie-poyavivshis-na-ishode-ottepelno.jpg",
+            "src": "images/vasilyev/WhatsApp Image 2026-06-12 at 10.52.02 (1).jpeg",
             "alt": "Б. Л. Васильев - Повесть Б. Л. Васильева А зори здесь тихие, появившись на исходе оттепельной эп…",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -740,7 +740,7 @@ window.TEXTBOOK_VASILYEV = {
             }
           ],
           "image": {
-            "src": "images/vasilyev/vasilyev-v-spiskah-ne-znachilsya.jpg",
+            "src": "images/vasilyev/WhatsApp Image 2026-06-12 at 10.52.02 (2).jpeg",
             "alt": "Б. Л. Васильев - «В списках не значился»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -780,7 +780,7 @@ window.TEXTBOOK_VASILYEV = {
             }
           ],
           "image": {
-            "src": "images/vasilyev/vasilyev-zavtra-byla-voyna.jpg",
+            "src": "images/vasilyev/WhatsApp Image 2026-06-12 at 10.52.02 (3).jpeg",
             "alt": "Б. Л. Васильев - «Завтра была война»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -877,7 +877,7 @@ window.TEXTBOOK_VASILYEV = {
             }
           ],
           "image": {
-            "src": "images/vasilyev/vasilyev-v-okopah-stalingrada.jpg",
+            "src": "images/vasilyev/WhatsApp Image 2026-06-12 at 10.52.02 (4).jpeg",
             "alt": "Б. Л. Васильев - «В окопах Сталинграда»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -957,7 +957,7 @@ window.TEXTBOOK_VASILYEV = {
             }
           ],
           "image": {
-            "src": "images/vasilyev/vasilyev-uroven-1-bazovyy-znanie-i-ponimanie-teksta.jpg",
+            "src": "images/vasilyev/WhatsApp Image 2026-06-12 at 10.52.02.jpeg",
             "alt": "Б. Л. Васильев - Уровень 1. Базовый (Знание и понимание текста)",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1018,7 +1018,7 @@ window.TEXTBOOK_VASILYEV = {
             }
           ],
           "image": {
-            "src": "images/vasilyev/vasilyev-uroven-2-sredniy-analiz-i-interpretatsiya.jpg",
+            "src": "images/vasilyev/12___.png",
             "alt": "Б. Л. Васильев - Уровень 2. Средний (Анализ и интерпретация)",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1083,7 +1083,7 @@ window.TEXTBOOK_VASILYEV = {
             }
           ],
           "image": {
-            "src": "images/vasilyev/vasilyev-uroven-3-prodvinutyy-sintez-otsenka-i-kontekst.jpg",
+            "src": "images/vasilyev/1890907jun.jpg",
             "alt": "Б. Л. Васильев - Уровень 3. Продвинутый (Синтез, оценка и контекст)",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1116,7 +1116,7 @@ window.TEXTBOOK_VASILYEV = {
             }
           ],
           "image": {
-            "src": "images/vasilyev/vasilyev-literaturovedcheskie-issledovaniya.jpg",
+            "src": "images/vasilyev/notes_1432184785.jpg",
             "alt": "Б. Л. Васильев - Литературоведческие исследования",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"

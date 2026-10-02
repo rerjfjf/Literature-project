@@ -497,7 +497,7 @@ window.TEXTBOOK_BYKOV = {
             }
           ],
           "image": {
-            "src": "images/bykov/bykov-v-v-bykov-zhizn-i-tvorcheskiy-put.jpg",
+            "src": "images/bykov/WhatsApp Image 2026-06-12 at 10.51.10 (1).jpeg",
             "alt": "В. В. Быков - В. В. Быков. Жизнь и творческий путь",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -713,7 +713,7 @@ window.TEXTBOOK_BYKOV = {
             }
           ],
           "image": {
-            "src": "images/bykov/bykov-voyna-v-proizvedeniyah-v-v-bykova.jpg",
+            "src": "images/bykov/WhatsApp Image 2026-06-12 at 10.51.10 (2).jpeg",
             "alt": "В. В. Быков - Война в произведениях В. В. Быкова",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -997,7 +997,7 @@ window.TEXTBOOK_BYKOV = {
             }
           ],
           "image": {
-            "src": "images/bykov/bykov-sotnikov.jpg",
+            "src": "images/bykov/WhatsApp Image 2026-06-12 at 10.51.10.jpeg",
             "alt": "В. В. Быков - «Сотников»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1189,7 +1189,7 @@ window.TEXTBOOK_BYKOV = {
             }
           ],
           "image": {
-            "src": "images/bykov/bykov-sotnikov.jpg",
+            "src": "images/bykov/WhatsApp Image 2026-06-12 at 10.51.11 (1).jpeg",
             "alt": "В. В. Быков - «Сотников»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1214,7 +1214,7 @@ window.TEXTBOOK_BYKOV = {
             }
           ],
           "image": {
-            "src": "images/bykov/bykov-rostovye-zadaniya-dlya-uchenika-po-povesti-vasilya-bykova-sotnikov.jpg",
+            "src": "images/bykov/WhatsApp Image 2026-06-12 at 10.51.11 (2).jpeg",
             "alt": "В. В. Быков - Ростовые задания для обучающегося по повести В. В. Быкова «Сотников»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1414,7 +1414,7 @@ window.TEXTBOOK_BYKOV = {
             }
           ],
           "image": {
-            "src": "images/bykov/bykov-uroven-1-bazovyy.jpg",
+            "src": "images/bykov/WhatsApp Image 2026-06-12 at 10.51.11.jpeg",
             "alt": "В. В. Быков - УРОВЕНЬ 1. БАЗОВЫЙ",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1614,7 +1614,7 @@ window.TEXTBOOK_BYKOV = {
             }
           ],
           "image": {
-            "src": "images/bykov/bykov-uroven-2-analiticheskiy.jpg",
+            "src": "images/bykov/WhatsApp Image 2026-06-12 at 10.51.27.jpeg",
             "alt": "В. В. Быков - УРОВЕНЬ 2. АНАЛИТИЧЕСКИЙ",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1935,7 +1935,7 @@ window.TEXTBOOK_BYKOV = {
             }
           ],
           "image": {
-            "src": "images/bykov/bykov-uroven-3-tvorcheskiy-i-issledovatelskiy.jpg",
+            "src": "images/bykov/WhatsApp Image 2026-06-12 at 10.51.10 (1).jpeg",
             "alt": "В. В. Быков - УРОВЕНЬ 3. ТВОРЧЕСКИЙ И ИССЛЕДОВАТЕЛЬСКИЙ",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -2195,7 +2195,7 @@ window.TEXTBOOK_BYKOV = {
             }
           ],
           "image": {
-            "src": "images/bykov/bykov-chelovek-na-vesah-voyny-uroki-prozy-vasilya-bykova.jpg",
+            "src": "images/bykov/WhatsApp Image 2026-06-12 at 10.51.10 (2).jpeg",
             "alt": "В. В. Быков - Человек на весах войны: уроки прозы В. В. Быкова",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"

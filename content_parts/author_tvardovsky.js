@@ -73,22 +73,22 @@ window.TEXTBOOK_TVARDOVSKY = {
  "title":  "Фотоматериалы к авторскому разделу ",
  "images": [
 {
- "src":  "images/tvardovsky/Gemini_Generated_Image_na2shlna2shlna2s.png ",
+ "src":  "images/tvardovsky/1c495df4-07fd-58cb-b6a3-12bc3337b2e5.jpeg",
  "alt":  "А. Т. Твардовский: фотоматериал 1 ",
  "caption":  "А. Т. Твардовский. Материал 1 "
 },
 {
- "src":  "images/tvardovsky/IMG_4946.PNG ",
+ "src":  "images/tvardovsky/5641d100-e01e-11f0-aae2-2191c0e48a3b.jpg.webp",
  "alt":  "А. Т. Твардовский: фотоматериал 2 ",
  "caption":  "А. Т. Твардовский. Материал 2 "
 },
 {
- "src":  "images/tvardovsky/IMG_4947.PNG ",
+ "src":  "images/tvardovsky/7jzw46ijmyonpsa7ptznialdh23yaweh.jpg",
  "alt":  "А. Т. Твардовский: фотоматериал 3 ",
  "caption":  "А. Т. Твардовский. Материал 3 "
 },
 {
- "src":  "images/tvardovsky/IMG_4948.PNG ",
+ "src":  "images/tvardovsky/заставка_Твардовский.jpg",
  "alt":  "А. Т. Твардовский: фотоматериал 4 ",
  "caption":  "А. Т. Твардовский. Материал 4 "
 }
@@ -149,7 +149,7 @@ window.TEXTBOOK_TVARDOVSKY = {
  "blocks": [
 {
  "type": "image",
- "src":  "images/tvardovsky/Gemini_Generated_Image_na2shlna2shlna2s.png ",
+ "src":  "images/tvardovsky/IMG_6287.JPG",
  "caption":  "Визуальное вступление к теме фронтовой памяти в творчестве А. Т. Твардовского. "
 },
 {
@@ -197,7 +197,7 @@ window.TEXTBOOK_TVARDOVSKY = {
  "blocks": [
 {
  "type": "image",
- "src":  "images/tvardovsky/IMG_4948.PNG ",
+ "src":  "images/tvardovsky/IMG_6288.JPG",
  "caption":  "Биографический путь А. Т. Твардовского и связь личной судьбы с историей XX века. "
 },
 {
@@ -210,7 +210,7 @@ window.TEXTBOOK_TVARDOVSKY = {
 },
 {
  "type": "image",
- "src":  "images/tvardovsky/заставка_Твардовский.jpg ",
+ "src":  "images/tvardovsky/IMG_6289.JPG",
  "alt":  "А. Т. Твардовский - Биография А. Т. Твардовского ",
  "caption":  "А. Т. Твардовский. Иллюстрация к разделу \"Биография А. Т. Твардовского\". ",
  "insertedBy":  "distribute_inline_images "
@@ -268,7 +268,7 @@ window.TEXTBOOK_TVARDOVSKY = {
 },
 {
  "type": "image",
- "src":  "images/tvardovsky/IMG_4946.PNG ",
+ "src":  "images/tvardovsky/IMG_6290.JPG",
  "alt":  "А. Т. Твардовский - Переход от биографии к произведению ",
  "caption":  "А. Т. Твардовский. Иллюстрация к разделу \"Переход от биографии к произведению\". ",
  "insertedBy":  "distribute_inline_images "
@@ -447,7 +447,7 @@ window.TEXTBOOK_TVARDOVSKY = {
  "blocks": [
 {
  "type": "image",
- "src":  "images/tvardovsky/IMG_4946.PNG ",
+ "src":  "images/tvardovsky/1c495df4-07fd-58cb-b6a3-12bc3337b2e5.jpeg",
  "caption":  "Образ солдата и фронтового пути в художественном мире А. Т. Твардовского. "
 },
 {
@@ -460,7 +460,7 @@ window.TEXTBOOK_TVARDOVSKY = {
 },
 {
  "type": "image",
- "src":  "images/tvardovsky/1c495df4-07fd-58cb-b6a3-12bc3337b2e5.jpeg ",
+ "src":  "images/tvardovsky/5641d100-e01e-11f0-aae2-2191c0e48a3b.jpg.webp",
  "alt":  "А. Т. Твардовский - Поэма  \"Василий Тёркин \" (1941-1945) ",
  "caption":  "А. Т. Твардовский. Иллюстрация к разделу \"Поэма  \"Василий Тёркин \" (1941-1945)\". ",
  "insertedBy":  "distribute_inline_images "
@@ -874,7 +874,7 @@ window.TEXTBOOK_TVARDOVSKY = {
 },
 {
  "type": "image",
- "src":  "images/tvardovsky/5641d100-e01e-11f0-aae2-2191c0e48a3b.jpg.webp ",
+ "src":  "images/tvardovsky/7jzw46ijmyonpsa7ptznialdh23yaweh.jpg",
  "alt":  "А. Т. Твардовский - Интересное из произведения ",
  "caption":  "А. Т. Твардовский. Иллюстрация к разделу \"Интересное из произведения\". ",
  "insertedBy":  "distribute_inline_images "
@@ -1012,7 +1012,7 @@ window.TEXTBOOK_TVARDOVSKY = {
 },
 {
  "type": "image",
- "src":  "images/tvardovsky/7jzw46ijmyonpsa7ptznialdh23yaweh.jpg ",
+ "src":  "images/tvardovsky/заставка_Твардовский.jpg",
  "alt":  "А. Т. Твардовский - Цена победы ",
  "caption":  "А. Т. Твардовский. Иллюстрация к разделу \"Цена победы\". ",
  "insertedBy":  "distribute_inline_images "
@@ -1107,7 +1107,7 @@ window.TEXTBOOK_TVARDOVSKY = {
 },
 {
  "type": "image",
- "src":  "images/tvardovsky/Gemini_Generated_Image_na2shlna2shlna2s.png ",
+ "src":  "images/tvardovsky/IMG_6287.JPG",
  "alt":  "А. Т. Твардовский - Человек и система ",
  "caption":  "А. Т. Твардовский. Иллюстрация к разделу \"Человек и система\". ",
  "insertedBy":  "distribute_inline_images "
@@ -1154,7 +1154,7 @@ window.TEXTBOOK_TVARDOVSKY = {
 },
 {
  "type": "image",
- "src":  "images/tvardovsky/IMG_4947.PNG ",
+ "src":  "images/tvardovsky/IMG_6288.JPG",
  "alt":  "А. Т. Твардовский - Память как долг ",
  "caption":  "А. Т. Твардовский. Иллюстрация к разделу \"Память как долг\". ",
  "insertedBy":  "distribute_inline_images "
@@ -1218,7 +1218,7 @@ window.TEXTBOOK_TVARDOVSKY = {
 },
 {
  "type": "image",
- "src":  "images/tvardovsky/IMG_4948.PNG ",
+ "src":  "images/tvardovsky/IMG_6289.JPG",
  "alt":  "А. Т. Твардовский - Информация для раздумий ",
  "caption":  "А. Т. Твардовский. Иллюстрация к разделу \"Информация для раздумий\". ",
  "insertedBy":  "distribute_inline_images "
@@ -2943,7 +2943,7 @@ window.TEXTBOOK_TVARDOVSKY = {
  "blocks": [
 {
  "type": "image",
- "src":  "images/tvardovsky/IMG_4947.PNG ",
+ "src":  "images/tvardovsky/IMG_6290.JPG",
  "caption":  "Трагическое пространство войны и память о погибших в поэзии А. Т. Твардовского. "
 },
 {

@@ -93,7 +93,7 @@ window.TEXTBOOK_OKUDZHAVA = {
 "caption": "Б. Ш. Окуджава. Материал 4"
 },
 {
-"src": "images/okudzhava/WhatsApp Image 2026-06-30 at 08.56.48.jpeg",
+"src": "images/okudzhava/16457da6c90de3.jpg",
 "alt": "Б. Ш. Окуджава: фотоматериал 5",
 "caption": "Б. Ш. Окуджава. Материал 5"
 },
@@ -1346,7 +1346,7 @@ window.TEXTBOOK_OKUDZHAVA = {
 },
 {
 "type": "image",
-"src": "images/okudzhava/WhatsApp Image 2026-06-30 at 08.56.48.jpeg",
+"src": "images/okudzhava/1703539910864.jpeg",
 "alt": "Б. Ш. Окуджава - Личное и историческое",
 "caption": "Б. Ш. Окуджава. Иллюстрация к разделу «Личное и историческое».",
 "insertedBy": "distribute_inline_images"

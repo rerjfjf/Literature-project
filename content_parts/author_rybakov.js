@@ -122,7 +122,7 @@ window.TEXTBOOK_RYBAKOV = {
             },
             {
               "type": "image",
-              "src": "images/rybakov/Анатолий Наумович А. Н. Рыбаков.jpg",
+              "src": "images/rybakov/206554619y.jpg",
               "alt": "А. Н. Рыбаков - Человек и система перед лицом общей беды: противоречия советского патриотизма в творчестве А.Рыбакова",
               "caption": "А. Н. Рыбаков. Иллюстрация к разделу «Человек и система перед лицом общей беды: противоречия советского патриотизма в творчестве А.Рыбакова».",
               "insertedBy": "distribute_inline_images"
@@ -257,7 +257,7 @@ window.TEXTBOOK_RYBAKOV = {
             }
           ],
           "image": {
-            "src": "images/rybakov/rybakov-biografiya-a-n-rybakova.jpg",
+            "src": "images/rybakov/Анатолий Наумович Рыбаков.jpg",
             "alt": "А. Н. Рыбаков - Биография А. Н. Рыбакова",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -286,7 +286,7 @@ window.TEXTBOOK_RYBAKOV = {
             }
           ],
           "image": {
-            "src": "images/rybakov/rybakov-voyna-v-proizvedeniyah-a-n-rybakova.jpg",
+            "src": "images/rybakov/WhatsApp Image 2026-06-12 at 10.51.41.jpeg",
             "alt": "А. Н. Рыбаков - Война в произведениях А. Н. Рыбакова",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -730,7 +730,7 @@ window.TEXTBOOK_RYBAKOV = {
             }
           ],
           "image": {
-            "src": "images/rybakov/rybakov-deti-arbata.jpg",
+            "src": "images/rybakov/WhatsApp Image 2026-06-12 at 10.51.42 (1).jpeg",
             "alt": "А. Н. Рыбаков - «Дети Арбата»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -814,7 +814,7 @@ window.TEXTBOOK_RYBAKOV = {
             }
           ],
           "image": {
-            "src": "images/rybakov/rybakov-uroven-1-bazovyy-znanie-i-vosproizvedenie-teksta.jpg",
+            "src": "images/rybakov/WhatsApp Image 2026-06-12 at 10.51.42 (2).jpeg",
             "alt": "А. Н. Рыбаков - Уровень 1. Базовый (Знание и воспроизведение текста)",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -914,7 +914,7 @@ window.TEXTBOOK_RYBAKOV = {
             }
           ],
           "image": {
-            "src": "images/rybakov/rybakov-uroven-2-sredniy-analiz-i-interpretatsiya.jpg",
+            "src": "images/rybakov/WhatsApp Image 2026-06-12 at 10.51.42.jpeg",
             "alt": "А. Н. Рыбаков - Уровень 2. Средний (Анализ и интерпретация)",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1010,7 +1010,7 @@ window.TEXTBOOK_RYBAKOV = {
             }
           ],
           "image": {
-            "src": "images/rybakov/rybakov-uroven-3-prodvinutyy-sintez-otsenka-i-aktualizatsiya.jpg",
+            "src": "images/rybakov/WhatsApp Image 2026-07-02 at 01.38.55.jpeg",
             "alt": "А. Н. Рыбаков - Уровень 3. Углублённый (Синтез, оценка и актуализация)",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"

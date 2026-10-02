@@ -75,42 +75,42 @@ window.TEXTBOOK_AKHMATOVA = {
                 {
                   "src": "images/akhmatova/IMG_6279.JPG",
                   "alt": "А. А. Ахматова: фотоматериал 1",
-                  "caption": "А. А. Ахматова. Материал 1"
+                  "caption": "А. А. Ахматова. Фотоматериал 1."
                 },
                 {
-                  "src": "images/akhmatova/IMG_6279.JPG",
+                  "src": "images/akhmatova/IMG_6280.JPG",
                   "alt": "А. А. Ахматова: фотоматериал 2",
-                  "caption": "А. А. Ахматова. Материал 2"
+                  "caption": "А. А. Ахматова. Фотоматериал 2."
                 },
                 {
-                  "src": "images/akhmatova/IMG_6279.JPG",
+                  "src": "images/akhmatova/IMG_6281.JPG",
                   "alt": "А. А. Ахматова: фотоматериал 3",
-                  "caption": "А. А. Ахматова. Материал 3"
+                  "caption": "А. А. Ахматова. Фотоматериал 3."
                 },
                 {
-                  "src": "images/akhmatova/IMG_6279.JPG",
+                  "src": "images/akhmatova/IMG_6282.JPG",
                   "alt": "А. А. Ахматова: фотоматериал 4",
-                  "caption": "А. А. Ахматова. Материал 4"
+                  "caption": "А. А. Ахматова. Фотоматериал 4."
                 },
                 {
-                  "src": "images/akhmatova/IMG_6279.JPG",
+                  "src": "images/akhmatova/IMG_6283.JPG",
                   "alt": "А. А. Ахматова: фотоматериал 5",
-                  "caption": "А. А. Ахматова. Материал 5"
+                  "caption": "А. А. Ахматова. Фотоматериал 5."
                 },
                 {
-                  "src": "images/akhmatova/IMG_6279.JPG",
+                  "src": "images/akhmatova/IMG_6284.JPG",
                   "alt": "А. А. Ахматова: фотоматериал 6",
-                  "caption": "А. А. Ахматова. Материал 6"
+                  "caption": "А. А. Ахматова. Фотоматериал 6."
                 },
                 {
-                  "src": "images/akhmatova/IMG_6279.JPG",
+                  "src": "images/akhmatova/IMG_6285.JPG",
                   "alt": "А. А. Ахматова: фотоматериал 7",
-                  "caption": "А. А. Ахматова. Материал 7"
+                  "caption": "А. А. Ахматова. Фотоматериал 7."
                 },
                 {
-                  "src": "images/akhmatova/IMG_6279.JPG",
+                  "src": "images/akhmatova/IMG_6286.JPG",
                   "alt": "А. А. Ахматова: фотоматериал 8",
-                  "caption": "А. А. Ахматова. Материал 8"
+                  "caption": "А. А. Ахматова. Фотоматериал 8."
                 }
               ]
             },
@@ -142,7 +142,7 @@ window.TEXTBOOK_AKHMATOVA = {
             },
             {
               "type": "image",
-              "src": "images/akhmatova/IMG_6279.JPG",
+              "src": "images/akhmatova/IMG_6280.JPG",
               "alt": "А. А. Ахматова. Иллюстрация к разделу.",
               "caption": "А. А. Ахматова. Иллюстрация к разделу.",
               "insertedBy": "akhmatova_editorial_pass"
@@ -182,7 +182,7 @@ window.TEXTBOOK_AKHMATOVA = {
             },
             {
               "type": "image",
-              "src": "images/akhmatova/IMG_6279.JPG",
+              "src": "images/akhmatova/IMG_6281.JPG",
               "alt": "А. А. Ахматова. Иллюстрация к разделу.",
               "caption": "А. А. Ахматова. Иллюстрация к разделу.",
               "insertedBy": "akhmatova_editorial_pass"
@@ -365,7 +365,7 @@ window.TEXTBOOK_AKHMATOVA = {
             }
           ],
           "image": {
-            "src": "images/akhmatova/IMG_6279.JPG",
+            "src": "images/akhmatova/IMG_6282.JPG",
             "alt": "А. А. Ахматова - Знакомство с автором и биография",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -394,7 +394,7 @@ window.TEXTBOOK_AKHMATOVA = {
             },
             {
               "type": "image",
-              "src": "images/akhmatova/IMG_6279.JPG",
+              "src": "images/akhmatova/IMG_6283.JPG",
               "alt": "А. А. Ахматова. Иллюстрация к разделу.",
               "caption": "А. А. Ахматова. Иллюстрация к разделу.",
               "insertedBy": "akhmatova_editorial_pass"
@@ -949,7 +949,7 @@ window.TEXTBOOK_AKHMATOVA = {
             }
           ],
           "image": {
-            "src": "images/akhmatova/IMG_6279.JPG",
+            "src": "images/akhmatova/IMG_6284.JPG",
             "alt": "А. А. Ахматова - \"Реквием\"",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -980,7 +980,7 @@ window.TEXTBOOK_AKHMATOVA = {
             },
             {
               "type": "image",
-              "src": "images/akhmatova/IMG_6279.JPG",
+              "src": "images/akhmatova/IMG_6285.JPG",
               "alt": "А. А. Ахматова. Иллюстрация к разделу.",
               "caption": "А. А. Ахматова. Иллюстрация к разделу.",
               "insertedBy": "akhmatova_editorial_pass"
@@ -1010,7 +1010,7 @@ window.TEXTBOOK_AKHMATOVA = {
             },
             {
               "type": "image",
-              "src": "images/akhmatova/IMG_6279.JPG",
+              "src": "images/akhmatova/IMG_6286.JPG",
               "alt": "А. А. Ахматова. Иллюстрация к разделу.",
               "caption": "А. А. Ахматова. Иллюстрация к разделу.",
               "insertedBy": "akhmatova_editorial_pass"
@@ -1036,7 +1036,7 @@ window.TEXTBOOK_AKHMATOVA = {
             },
             {
               "type": "image",
-              "src": "images/akhmatova/IMG_6279.JPG",
+              "src": "images/akhmatova/IMG_6280.JPG",
               "alt": "А. А. Ахматова. Иллюстрация к разделу.",
               "caption": "А. А. Ахматова. Иллюстрация к разделу.",
               "insertedBy": "akhmatova_editorial_pass"
@@ -1108,7 +1108,7 @@ window.TEXTBOOK_AKHMATOVA = {
             }
           ],
           "image": {
-            "src": "images/akhmatova/IMG_6279.JPG",
+            "src": "images/akhmatova/IMG_6281.JPG",
             "alt": "А. А. Ахматова - Уровень 1 - Базовый (знание текста)",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1137,7 +1137,7 @@ window.TEXTBOOK_AKHMATOVA = {
             },
             {
               "type": "image",
-              "src": "images/akhmatova/IMG_6279.JPG",
+              "src": "images/akhmatova/IMG_6282.JPG",
               "alt": "А. А. Ахматова. Иллюстрация к разделу.",
               "caption": "А. А. Ахматова. Иллюстрация к разделу.",
               "insertedBy": "akhmatova_editorial_pass"
@@ -1172,7 +1172,7 @@ window.TEXTBOOK_AKHMATOVA = {
             }
           ],
           "image": {
-            "src": "images/akhmatova/IMG_6279.JPG",
+            "src": "images/akhmatova/IMG_6283.JPG",
             "alt": "А. А. Ахматова - Уровень 2 - Средний (анализ)",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1233,7 +1233,7 @@ window.TEXTBOOK_AKHMATOVA = {
             }
           ],
           "image": {
-            "src": "images/akhmatova/IMG_6279.JPG",
+            "src": "images/akhmatova/IMG_6284.JPG",
             "alt": "А. А. Ахматова - Уровень 3 - Углублённый (синтез и оценка)",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"

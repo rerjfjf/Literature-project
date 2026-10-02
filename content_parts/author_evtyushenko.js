@@ -151,7 +151,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             },
             {
               "type": "image",
-              "src": "images/evtyushenko/Е. А. Евтушенко+1.jpg.png",
+              "src": "images/evtyushenko/1F79D391-E21B-4B18-812E-118B8DA61CB0.PNG",
               "alt": "Е. А. Евтушенко - Детство. Сибирь и война вокруг",
               "caption": "Е. А. Евтушенко. Иллюстрация к разделу «Детство. Сибирь и война вокруг».",
               "insertedBy": "distribute_inline_images"
@@ -210,7 +210,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-detstvo-sibir-i-voyna-vokrug-intro.jpg",
+            "src": "images/evtyushenko/5DF9EB5C-2CAA-4EAD-887E-2AF893E51CF7.PNG",
             "alt": "Е. А. Евтушенко - Детство. Сибирь и война вокруг",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -366,7 +366,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-moskva-literaturnyy-institut-i-rozhdenie-golosa-intro.jpg",
+            "src": "images/evtyushenko/Евтушенко+1.jpg.png",
             "alt": "Е. А. Евтушенко - Москва. Литературный институт и рождение голоса",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -522,7 +522,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-shestidesyatniki-poet-na-stadione-intro.jpg",
+            "src": "images/evtyushenko/CD4B9FAC-3FA4-4A82-A2BF-FB976249BF6E.PNG",
             "alt": "Е. А. Евтушенко - Шестидесятники. Поэт на стадионе",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -719,7 +719,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-vlast-skandaly-i-granitsy-svobody-intro.jpg",
+            "src": "images/evtyushenko/i.png",
             "alt": "Е. А. Евтушенко - Власть, скандалы и границы свободы",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -835,7 +835,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-pozdnie-gody-amerika-i-vozvraschenie-intro.jpg",
+            "src": "images/evtyushenko/images.jpeg",
             "alt": "Е. А. Евтушенко - Поздние годы. Америка и возвращение",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -876,7 +876,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-istochniki.jpg",
+            "src": "images/evtyushenko/IMG_6292.JPG",
             "alt": "Е. А. Евтушенко - Источники",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -988,7 +988,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-vvedenie.jpg",
+            "src": "images/evtyushenko/IMG_6293.JPG",
             "alt": "Е. А. Евтушенко - Война в произведениях Е. А. Евтушенко",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1013,7 +1013,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-pochemu-voyna-ego-glazami-intro.jpg",
+            "src": "images/evtyushenko/IMG_6294.JPG",
             "alt": "Е. А. Евтушенко - Почему война. Его глазами",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1058,7 +1058,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-voyna-kak-nezazhivayuschaya-rana-pokoleniya.jpg",
+            "src": "images/evtyushenko/sgsdgsdgsdgsdg1.jpg",
             "alt": "Е. А. Евтушенко - Война как незаживающая рана поколения",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1138,7 +1138,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-pochemu-obvinenie-a-ne-elegiya-1.jpg",
+            "src": "images/evtyushenko/upload-RIAN_00088168.HR.ru-pic905-895x505-57082.jpg",
             "alt": "Е. А. Евтушенко - Почему обвинение, а не элегия",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1195,7 +1195,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-voyna-i-antisemitizm-2.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.29.11 (1).jpeg",
             "alt": "Е. А. Евтушенко - Война и антисемитизм",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1267,7 +1267,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-voennye-posledstviya-kotorye-on-opisyval-3.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.29.11.jpeg",
             "alt": "Е. А. Евтушенко - Военные последствия, которые он описывал",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1324,7 +1324,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-chto-mozhet-unesti-student-iz-etogo-razdela-4.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.35.10.jpeg",
             "alt": "Е. А. Евтушенко - Что может унести студент из этого раздела",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1353,7 +1353,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-istochniki-5.jpg",
+            "src": "images/evtyushenko/1F79D391-E21B-4B18-812E-118B8DA61CB0.PNG",
             "alt": "Е. А. Евтушенко - Источники",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1390,7 +1390,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-voennaya-lirika-e-a-evtushenko-pamyat-kak-nravstvennaya-obyazannost.jpg",
+            "src": "images/evtyushenko/5DF9EB5C-2CAA-4EAD-887E-2AF893E51CF7.PNG",
             "alt": "Е. А. Евтушенко - Военная лирика Е. А. Евтушенко: память как нравственная обязанность",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1478,7 +1478,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-babiy-yar-1.jpg",
+            "src": "images/evtyushenko/Евтушенко+1.jpg.png",
             "alt": "Е. А. Евтушенко - стихотворение Е. А. Евтушенко «Бабий Яр»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1595,7 +1595,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-hotyat-li-russkie-voyny-2.jpg",
+            "src": "images/evtyushenko/CD4B9FAC-3FA4-4A82-A2BF-FB976249BF6E.PNG",
             "alt": "Е. А. Евтушенко - стихотворение Е. А. Евтушенко «Хотят ли русские войны»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1704,7 +1704,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-shtrafniki-3.jpg",
+            "src": "images/evtyushenko/i.png",
             "alt": "Е. А. Евтушенко - стихотворение Е. А. Евтушенко «Штрафники»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1813,7 +1813,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-frontovik-4.jpg",
+            "src": "images/evtyushenko/images.jpeg",
             "alt": "Е. А. Евтушенко - стихотворение Е. А. Евтушенко «Фронтовик»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1862,7 +1862,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-istochniki-5.jpg",
+            "src": "images/evtyushenko/IMG_6292.JPG",
             "alt": "Е. А. Евтушенко - Источники",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -1891,7 +1891,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-opisanie-proizvedeniy-chast-vtoraya-pamyat-i-utrata-intro.jpg",
+            "src": "images/evtyushenko/IMG_6293.JPG",
             "alt": "Е. А. Евтушенко - Описание произведений. Часть вторая. Память и утрата",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -2028,7 +2028,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-malchiki.jpg",
+            "src": "images/evtyushenko/IMG_6294.JPG",
             "alt": "Е. А. Евтушенко - «Мальчики»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -2165,7 +2165,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-vdova-1.jpg",
+            "src": "images/evtyushenko/sgsdgsdgsdgsdg1.jpg",
             "alt": "Е. А. Евтушенко - «Вдова»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -2274,7 +2274,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-partizanskie-mogily-2.jpg",
+            "src": "images/evtyushenko/upload-RIAN_00088168.HR.ru-pic905-895x505-57082.jpg",
             "alt": "Е. А. Евтушенко - «Партизанские могилы»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -2391,7 +2391,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-svadby-3.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.29.11 (1).jpeg",
             "alt": "Е. А. Евтушенко - «Свадьбы»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -2532,7 +2532,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-tretiy-sneg-4.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.29.11.jpeg",
             "alt": "Е. А. Евтушенко - «Третий снег»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -2577,7 +2577,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-istochniki-5.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.35.10.jpeg",
             "alt": "Е. А. Евтушенко - Источники",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -2610,7 +2610,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-opisanie-proizvedeniy-chast-tretya-filosofskaya-lirika-intro.jpg",
+            "src": "images/evtyushenko/1F79D391-E21B-4B18-812E-118B8DA61CB0.PNG",
             "alt": "Е. А. Евтушенко - Описание произведений. Часть третья. Философская лирика",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -2751,7 +2751,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-idut-belye-snegi.jpg",
+            "src": "images/evtyushenko/5DF9EB5C-2CAA-4EAD-887E-2AF893E51CF7.PNG",
             "alt": "Е. А. Евтушенко - «Идут белые снеги»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -2896,7 +2896,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-lyudey-neinteresnyh-v-mire-net-1.jpg",
+            "src": "images/evtyushenko/Евтушенко+1.jpg.png",
             "alt": "Е. А. Евтушенко - стихотворение Е. А. Евтушенко «Людей неинтересных в мире нет»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3021,7 +3021,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-so-mnoyu-vot-chto-proishodit-2.jpg",
+            "src": "images/evtyushenko/CD4B9FAC-3FA4-4A82-A2BF-FB976249BF6E.PNG",
             "alt": "Е. А. Евтушенко - «Со мною вот что происходит»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3158,7 +3158,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-grazhdane-poslushayte-menya-3.jpg",
+            "src": "images/evtyushenko/i.png",
             "alt": "Е. А. Евтушенко - «Граждане, послушайте меня»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3259,7 +3259,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-obschiy-vyvod-ko-vsem-trem-chastyam-opisaniya-proizvedeniy-intro.jpg",
+            "src": "images/evtyushenko/images.jpeg",
             "alt": "Е. А. Евтушенко - Общий вывод ко всем трём частям описания произведений",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3296,7 +3296,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-istochniki.jpg",
+            "src": "images/evtyushenko/IMG_6292.JPG",
             "alt": "Е. А. Евтушенко - Источники",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3321,7 +3321,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-chelovek-epohi-dva-vzglyada-intro.jpg",
+            "src": "images/evtyushenko/IMG_6293.JPG",
             "alt": "Е. А. Евтушенко - Человек эпохи. Два взгляда",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3394,7 +3394,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-vzglyad-iznutri-epohi.jpg",
+            "src": "images/evtyushenko/IMG_6294.JPG",
             "alt": "Е. А. Евтушенко - Взгляд изнутри эпохи",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3447,7 +3447,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-vzglyad-avtora-1.jpg",
+            "src": "images/evtyushenko/sgsdgsdgsdgsdg1.jpg",
             "alt": "Е. А. Евтушенко - Взгляд автора",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3524,7 +3524,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-voennye-posledstviya-kak-glavnaya-tema-2.jpg",
+            "src": "images/evtyushenko/upload-RIAN_00088168.HR.ru-pic905-895x505-57082.jpg",
             "alt": "Е. А. Евтушенко - Военные последствия как главная тема",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3573,7 +3573,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-chto-izmenilos-so-vremenem-3.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.29.11 (1).jpeg",
             "alt": "Е. А. Евтушенко - Что изменилось со временем",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3630,7 +3630,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-kak-prochitannoe-menyaet-mirovozzrenie-4.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.29.11.jpeg",
             "alt": "Е. А. Евтушенко - Как прочитанное меняет мировоззрение",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3648,7 +3648,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-video-svidetelstva-sovremennikov-o-e-a-evtushenko-i-ego-voennyh-stihah-5.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.35.10.jpeg",
             "alt": "Е. А. Евтушенко - [ВИДЕО: свидетельства современников о Е. А. Евтушенко и его военных стихах]",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3689,7 +3689,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-istochniki-6.jpg",
+            "src": "images/evtyushenko/1F79D391-E21B-4B18-812E-118B8DA61CB0.PNG",
             "alt": "Е. А. Евтушенко - Источники",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3714,7 +3714,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-kak-eto-sozdavalos-intro.jpg",
+            "src": "images/evtyushenko/5DF9EB5C-2CAA-4EAD-887E-2AF893E51CF7.PNG",
             "alt": "Е. А. Евтушенко - Как это создавалось",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3755,7 +3755,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-istoriya-sozdaniya-babego-yara.jpg",
+            "src": "images/evtyushenko/Евтушенко+1.jpg.png",
             "alt": "Е. А. Евтушенко - История создания «Бабьего Яра»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3800,7 +3800,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-reaktsiya-na-babiy-yar-1.jpg",
+            "src": "images/evtyushenko/CD4B9FAC-3FA4-4A82-A2BF-FB976249BF6E.PNG",
             "alt": "Е. А. Евтушенко - Реакция на стихотворение Е. А. Евтушенко «Бабий Яр»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3841,7 +3841,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-kak-sozdavalos-hotyat-li-russkie-voyny-2.jpg",
+            "src": "images/evtyushenko/i.png",
             "alt": "Е. А. Евтушенко - Как создавалось стихотворение Е. А. Евтушенко «Хотят ли русские войны»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3886,7 +3886,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-vstrechi-s-veteranami-i-ih-vliyanie-na-voennuyu-poeziyu-3.jpg",
+            "src": "images/evtyushenko/images.jpeg",
             "alt": "Е. А. Евтушенко - Встречи с ветеранами и их влияние на военную поэзию",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3935,7 +3935,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-reaktsiya-veteranov-na-voennuyu-poeziyu-4.jpg",
+            "src": "images/evtyushenko/IMG_6292.JPG",
             "alt": "Е. А. Евтушенко - Реакция ветеранов на военную поэзию",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -3964,7 +3964,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-neozhidannyy-fakt-5.jpg",
+            "src": "images/evtyushenko/IMG_6293.JPG",
             "alt": "Е. А. Евтушенко - Неожиданный факт",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -4021,7 +4021,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-istochniki-6.jpg",
+            "src": "images/evtyushenko/IMG_6294.JPG",
             "alt": "Е. А. Евтушенко - Источники",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -4046,7 +4046,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-problemy-proizvedeniy-chast-pervaya-intro.jpg",
+            "src": "images/evtyushenko/sgsdgsdgsdgsdg1.jpg",
             "alt": "Е. А. Евтушенко - Проблемы произведений. Часть первая",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -4195,7 +4195,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-zamolchannaya-pravda-o-voyne.jpg",
+            "src": "images/evtyushenko/upload-RIAN_00088168.HR.ru-pic905-895x505-57082.jpg",
             "alt": "Е. А. Евтушенко - Замолчанная правда о войне",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -4344,7 +4344,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-voyna-i-antisemitizm-1.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.29.11 (1).jpeg",
             "alt": "Е. А. Евтушенко - Война и антисемитизм",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -4485,7 +4485,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-tsena-pobedy-i-nevidimye-poteri-2.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.29.11.jpeg",
             "alt": "Е. А. Евтушенко - Цена Победы и невидимые потери",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -4522,7 +4522,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-istochniki-3.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.35.10.jpeg",
             "alt": "Е. А. Евтушенко - Источники",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -4547,7 +4547,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-problemy-proizvedeniy-chast-vtoraya-intro.jpg",
+            "src": "images/evtyushenko/1F79D391-E21B-4B18-812E-118B8DA61CB0.PNG",
             "alt": "Е. А. Евтушенко - Проблемы произведений. Часть вторая",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -4724,7 +4724,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-grazhdanskaya-otvetstvennost-i-pamyat-kak-politicheskiy-akt.jpg",
+            "src": "images/evtyushenko/5DF9EB5C-2CAA-4EAD-887E-2AF893E51CF7.PNG",
             "alt": "Е. А. Евтушенко - Гражданская ответственность и память как политический акт",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -4913,7 +4913,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-chelovek-i-istoriya-1.jpg",
+            "src": "images/evtyushenko/Евтушенко+1.jpg.png",
             "alt": "Е. А. Евтушенко - Человек и история",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -5086,7 +5086,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-zhenschina-i-voyna-2.jpg",
+            "src": "images/evtyushenko/CD4B9FAC-3FA4-4A82-A2BF-FB976249BF6E.PNG",
             "alt": "Е. А. Евтушенко - Женщина и война",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -5363,7 +5363,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-informatsiya-dlya-razdumiy-intro.jpg",
+            "src": "images/evtyushenko/i.png",
             "alt": "Е. А. Евтушенко - Информация для раздумий",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -5384,7 +5384,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-voprosy-dlya-pismennogo-razmyshleniya.jpg",
+            "src": "images/evtyushenko/images.jpeg",
             "alt": "Е. А. Евтушенко - Вопросы для письменного размышления",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -5417,7 +5417,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-istochniki-1.jpg",
+            "src": "images/evtyushenko/IMG_6292.JPG",
             "alt": "Е. А. Евтушенко - Источники",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -5442,7 +5442,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-voprosy-po-proizvedeniyam-intro.jpg",
+            "src": "images/evtyushenko/IMG_6293.JPG",
             "alt": "Е. А. Евтушенко - Вопросы по произведениям",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -5482,7 +5482,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-uroven-1-ponimanie-teksta-intro.jpg",
+            "src": "images/evtyushenko/IMG_6294.JPG",
             "alt": "Е. А. Евтушенко - Шаг 1. Читательский дневник: погружение в текст",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -5503,7 +5503,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-zadanie-posle-urovnya-1.jpg",
+            "src": "images/evtyushenko/sgsdgsdgsdgsdg1.jpg",
             "alt": "Е. А. Евтушенко - Задание после уровня 1",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -5541,7 +5541,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-uroven-2-analiz-i-interpretatsiya-intro.jpg",
+            "src": "images/evtyushenko/upload-RIAN_00088168.HR.ru-pic905-895x505-57082.jpg",
             "alt": "Е. А. Евтушенко - Шаг 2. Художественный мир: тайны мастерства и интерпретация",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -5562,7 +5562,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-zadanie-posle-urovnya-2.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.29.11 (1).jpeg",
             "alt": "Е. А. Евтушенко - Задание после уровня 2",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -5597,7 +5597,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-uroven-3-suzhdenie-i-pozitsiya-intro.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.29.11.jpeg",
             "alt": "Е. А. Евтушенко - Шаг 3. Голос поколений: размышления и нравственный выбор",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -5618,7 +5618,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-zadanie-posle-urovnya-3.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.35.10.jpeg",
             "alt": "Е. А. Евтушенко - Задание после уровня 3",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -5674,7 +5674,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
           "lead": "Произведения Е. А. Евтушенко показывают войну как событие, которое продолжается в памяти общества спустя десятилетия после окончания боёв. Его стихи обращают внимание на тех людей и те темы, которые долгое время оставались вне официального рассказа о Победе. Именно поэтому чтение его военной лирики становится не только знакомством с литературой, но и серьёзным разговором о совести, ответственности и исторической памяти.",
           "blocks": [],
           "image": {
-            "src": "images/evtyushenko/ev-sec-itogovoe-razmyshlenie-intro.jpg",
+            "src": "images/evtyushenko/1F79D391-E21B-4B18-812E-118B8DA61CB0.PNG",
             "alt": "Е. А. Евтушенко - Итоговое размышление",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -5694,7 +5694,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
           "lead": "**Выберите одну из проблем, рассмотренных в этом разделе. Напишите эссе объёмом не менее 15 предложений. Покажите, как данная проблема раскрывается в двух-трёх конкретных произведениях Е. А. Евтушенко. Приведите конкретные образы и укажите, из каких произведений они взяты. Объясните, почему данная проблема остаётся актуальной для современного общества и как она связана с темой памяти о Великой Отечественной войне.**",
           "blocks": [],
           "image": {
-            "src": "images/evtyushenko/ev-sec-pismennoe-zadanie-intro.jpg",
+            "src": "images/evtyushenko/5DF9EB5C-2CAA-4EAD-887E-2AF893E51CF7.PNG",
             "alt": "Е. А. Евтушенко - Письменное задание",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -5731,7 +5731,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-istochniki.jpg",
+            "src": "images/evtyushenko/Евтушенко+1.jpg.png",
             "alt": "Е. А. Евтушенко - Источники",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -5756,7 +5756,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-zadaniya-intro.jpg",
+            "src": "images/evtyushenko/CD4B9FAC-3FA4-4A82-A2BF-FB976249BF6E.PNG",
             "alt": "Е. А. Евтушенко - Задания",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -5849,7 +5849,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-zadanie-1-pismo-v-redaktsiyu-intro.jpg",
+            "src": "images/evtyushenko/i.png",
             "alt": "Е. А. Евтушенко - Задание 1. Письмо в редакцию",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -5938,7 +5938,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-zadanie-2-monolog-vdovy-intro.jpg",
+            "src": "images/evtyushenko/images.jpeg",
             "alt": "Е. А. Евтушенко - Задание 2. Монолог вдовы",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6043,7 +6043,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-zadanie-3-reportazh-s-babego-yara-intro.jpg",
+            "src": "images/evtyushenko/IMG_6292.JPG",
             "alt": "Е. А. Евтушенко - Задание 3. Репортаж с Бабьего Яра",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6136,7 +6136,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-zadanie-4-rech-na-otkrytii-pamyatnika-intro.jpg",
+            "src": "images/evtyushenko/IMG_6293.JPG",
             "alt": "Е. А. Евтушенко - Задание 4. Речь на открытии памятника",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6161,7 +6161,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-obschie-rekomendatsii-intro.jpg",
+            "src": "images/evtyushenko/IMG_6294.JPG",
             "alt": "Е. А. Евтушенко - Общие рекомендации",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6190,7 +6190,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-zadaniya-s-proverkoy-iskusstvennogo-intellekta-intro.jpg",
+            "src": "images/evtyushenko/sgsdgsdgsdgsdg1.jpg",
             "alt": "Е. А. Евтушенко - Задания с проверкой искусственного интеллекта",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6300,7 +6300,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-zadanie-1-retsenziya-na-voennoe-stihotvorenie-intro.jpg",
+            "src": "images/evtyushenko/upload-RIAN_00088168.HR.ru-pic905-895x505-57082.jpg",
             "alt": "Е. А. Евтушенко - Задание 1. Рецензия на военное стихотворение",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6421,7 +6421,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-zadanie-2-emotsionalnyy-portret-geroya-intro.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.29.11 (1).jpeg",
             "alt": "Е. А. Евтушенко - Задание 2. Эмоциональный портрет героя",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6530,7 +6530,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-zadanie-3-otzyv-ot-litsa-veterana-intro.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.29.11.jpeg",
             "alt": "Е. А. Евтушенко - Задание 3. Отзыв от лица ветерана",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6651,7 +6651,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-zadanie-4-sravnitelnyy-otzyv-intro.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.35.10.jpeg",
             "alt": "Е. А. Евтушенко - Задание 4. Сравнительный отзыв",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6689,7 +6689,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-kak-budet-otsenivatsya-rabota-intro.jpg",
+            "src": "images/evtyushenko/1F79D391-E21B-4B18-812E-118B8DA61CB0.PNG",
             "alt": "Е. А. Евтушенко - Как будет оцениваться работа",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6714,7 +6714,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-sravnitelnaya-tablitsa-i-zadanie-intro.jpg",
+            "src": "images/evtyushenko/5DF9EB5C-2CAA-4EAD-887E-2AF893E51CF7.PNG",
             "alt": "Е. А. Евтушенко - Сравнительная таблица и задание",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6771,7 +6771,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-sravnitelnaya-tablitsa.jpg",
+            "src": "images/evtyushenko/Евтушенко+1.jpg.png",
             "alt": "Е. А. Евтушенко - Сравнительная таблица",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6872,7 +6872,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-zadanie-dlya-studenta-1.jpg",
+            "src": "images/evtyushenko/CD4B9FAC-3FA4-4A82-A2BF-FB976249BF6E.PNG",
             "alt": "Е. А. Евтушенко - Задание для студента",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6897,7 +6897,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-videomaterialy-razdela-intro.jpg",
+            "src": "images/evtyushenko/i.png",
             "alt": "Е. А. Евтушенко - Видеоматериалы раздела",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6915,7 +6915,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-video-1-e-a-evtushenko-chitaet-babiy-yar.jpg",
+            "src": "images/evtyushenko/images.jpeg",
             "alt": "Е. А. Евтушенко - [ВИДЕО 1: Е. А. Евтушенко читает стихотворение Е. А. Евтушенко «Бабий Яр»]",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6933,7 +6933,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-video-2-vecher-v-politehnicheskom-muzee-poety-shestidesyatniki-1.jpg",
+            "src": "images/evtyushenko/IMG_6292.JPG",
             "alt": "Е. А. Евтушенко - [ВИДЕО 2: Вечер в Политехническом музее. Поэты-шестидесятники]",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6951,7 +6951,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-video-3-trinadtsataya-simfoniya-d-d-shostakovicha-2.jpg",
+            "src": "images/evtyushenko/IMG_6293.JPG",
             "alt": "Е. А. Евтушенко - [ВИДЕО 3: Тринадцатая симфония Д. Д. Шостаковича]",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6969,7 +6969,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-video-4-dokumentalnyy-film-ili-intervyu-o-e-a-evtushenko-3.jpg",
+            "src": "images/evtyushenko/IMG_6294.JPG",
             "alt": "Е. А. Евтушенко - [ВИДЕО 4: Документальный фильм или интервью о Е. А. Евтушенко]",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -6987,7 +6987,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-video-5-babiy-yar-segodnya-4.jpg",
+            "src": "images/evtyushenko/sgsdgsdgsdgsdg1.jpg",
             "alt": "Е. А. Евтушенко - [ВИДЕО 5: Бабий Яр сегодня]",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -7012,7 +7012,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-istochniki-i-literatura-intro.jpg",
+            "src": "images/evtyushenko/upload-RIAN_00088168.HR.ru-pic905-895x505-57082.jpg",
             "alt": "Е. А. Евтушенко - Источники и литература",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -7045,7 +7045,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-1-pervichnye-istochniki.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.29.11 (1).jpeg",
             "alt": "Е. А. Евтушенко - 1. Первичные источники",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -7074,7 +7074,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-2-biograficheskie-istochniki-1.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.29.11.jpeg",
             "alt": "Е. А. Евтушенко - 2. Биографические источники",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -7103,7 +7103,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-3-nauchnye-i-kriticheskie-raboty-2.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.35.10.jpeg",
             "alt": "Е. А. Евтушенко - 3. Научные и критические работы",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -7128,7 +7128,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-4-materialy-o-babem-yare-3.jpg",
+            "src": "images/evtyushenko/1F79D391-E21B-4B18-812E-118B8DA61CB0.PNG",
             "alt": "Е. А. Евтушенко - 4. Материалы о «Бабьем Яре»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -7153,7 +7153,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-5-o-trinadtsatoy-simfonii-d-d-shostakovicha-4.jpg",
+            "src": "images/evtyushenko/5DF9EB5C-2CAA-4EAD-887E-2AF893E51CF7.PNG",
             "alt": "Е. А. Евтушенко - 5. О Тринадцатой симфонии Д. Д. Шостаковича",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -7395,7 +7395,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-6-onlayn-resursy-5.jpg",
+            "src": "images/evtyushenko/Евтушенко+1.jpg.png",
             "alt": "Е. А. Евтушенко - 6. Онлайн-ресурсы",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -7420,7 +7420,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-stranitsy-biografii-kotoryh-net-v-uchebnikah-chast-pervaya-intro.jpg",
+            "src": "images/evtyushenko/CD4B9FAC-3FA4-4A82-A2BF-FB976249BF6E.PNG",
             "alt": "Е. А. Евтушенко - Страницы биографии, которых нет в учебниках. Часть первая",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -7477,7 +7477,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-kiev-den-kogda-poyavilsya-babiy-yar.jpg",
+            "src": "images/evtyushenko/i.png",
             "alt": "Е. А. Евтушенко - Киев. День, когда появился стихотворение Е. А. Евтушенко «Бабий Яр»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -7550,7 +7550,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-pervoe-chtenie-babego-yara-1.jpg",
+            "src": "images/evtyushenko/images.jpeg",
             "alt": "Е. А. Евтушенко - Первое чтение «Бабьего Яра»",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -7607,7 +7607,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-kogda-n-s-hruschev-kritikoval-e-a-evtushenko-lichno-2.jpg",
+            "src": "images/evtyushenko/IMG_6292.JPG",
             "alt": "Е. А. Евтушенко - Когда Н. С. Хрущёв критиковал Е. А. Евтушенко лично",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -7716,7 +7716,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-druzhba-s-d-d-shostakovichem-i-rozhdenie-trinadtsatoy-simfonii-3.jpg",
+            "src": "images/evtyushenko/IMG_6293.JPG",
             "alt": "Е. А. Евтушенко - Дружба с Д. Д. Шостаковичем и рождение Тринадцатой симфонии",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -7765,7 +7765,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-istochniki-4.jpg",
+            "src": "images/evtyushenko/IMG_6294.JPG",
             "alt": "Е. А. Евтушенко - Источники",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -7790,7 +7790,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-stranitsy-biografii-kotoryh-net-v-uchebnikah-chast-vtoraya-intro.jpg",
+            "src": "images/evtyushenko/sgsdgsdgsdgsdg1.jpg",
             "alt": "Е. А. Евтушенко - Страницы биографии, которых нет в учебниках. Часть вторая",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -7863,7 +7863,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-pismo-l-i-brezhnevu-o-chehoslovakii.jpg",
+            "src": "images/evtyushenko/upload-RIAN_00088168.HR.ru-pic905-895x505-57082.jpg",
             "alt": "Е. А. Евтушенко - Письмо Л. И. Брежневу о Чехословакии",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -7956,7 +7956,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-a-a-voznesenskiy-i-pokolenie-shestidesyatnikov-1.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.29.11 (1).jpeg",
             "alt": "Е. А. Евтушенко - А. А. Вознесенский и поколение шестидесятников",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -8053,7 +8053,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-fotografiya-kak-vtoraya-professiya-2.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.29.11.jpeg",
             "alt": "Е. А. Евтушенко - Фотография как вторая профессия",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -8102,7 +8102,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-poslednie-razmyshleniya-o-voyne-3.jpg",
+            "src": "images/evtyushenko/WhatsApp Image 2026-07-02 at 01.35.10.jpeg",
             "alt": "Е. А. Евтушенко - Последние размышления о войне",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -8159,7 +8159,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-maloizvestnyy-fakt-pisma-ot-neznakomyh-frontovikov-4.jpg",
+            "src": "images/evtyushenko/1F79D391-E21B-4B18-812E-118B8DA61CB0.PNG",
             "alt": "Е. А. Евтушенко - Малоизвестный факт. Письма от незнакомых фронтовиков",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -8176,7 +8176,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-zadanie-dlya-studenta-5.jpg",
+            "src": "images/evtyushenko/5DF9EB5C-2CAA-4EAD-887E-2AF893E51CF7.PNG",
             "alt": "Е. А. Евтушенко - Задание для студента",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
@@ -8225,7 +8225,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             }
           ],
           "image": {
-            "src": "images/evtyushenko/ev-sec-istochniki-6.jpg",
+            "src": "images/evtyushenko/Евтушенко+1.jpg.png",
             "alt": "Е. А. Евтушенко - Источники",
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
