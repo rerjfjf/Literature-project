@@ -18,6 +18,7 @@ const VIDEOS_PATH = join(DATA_DIR, "videos.json");
 // тариф), где диск эфемерный и файлы data/*.json стираются при ре-деплое.
 // Без DATABASE_URL поведение не меняется — всё хранится в файлах, как раньше.
 // Схема в БД: одна таблица book_state(kind text PRIMARY KEY, data jsonb).
+// ...
 
 const DEFAULT_DB = { users: [], groups: [], submissions: [] };
 
