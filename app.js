@@ -671,7 +671,6 @@ function renderSectionAiPrompt(section) {
     try {
       const result = await api("/api/ai/dialog", {
         method: "POST",
-        auth: false,
         body: {
           prompt: `${question.textContent} Дай четкий, содержательный ответ на 8-10 предложений. Свяжи раздел с современным читателем, военным контекстом, авторской позицией и конкретными образами. Не используй сленг, неопределенные слова и технические комментарии.`,
           author: author.fullName || author.name,
@@ -1470,8 +1469,11 @@ function renderTrainerExplanations(wrapper, questions, answers) {
 function renderAssignment(block, section, blockIndex) {
   const author = getAuthor(section.authorId);
   const assignmentId = `${section.authorId}:${section.id}:${blockIndex}`;
-  const answerKey = `reader-answer:${assignmentId}`;
+  // Черновик привязан к пользователю: на общем школьном компьютере чужой текст не покажется.
+  const answerKey = `reader-answer:${state.user?.id || "guest"}:${assignmentId}`;
+  const metaKey = `${answerKey}:meta`;
   const savedAnswer = localStorage.getItem(answerKey) || "";
+  const inputMeta = loadInputMeta(metaKey, savedSubmission?.answer || savedAnswer);
   const savedSubmission = state.submissions.find((item) => item.assignmentId === assignmentId);
   const savedGrade = savedSubmission?.ai || null;
 
@@ -1511,7 +1513,10 @@ function renderAssignment(block, section, blockIndex) {
   textarea.placeholder = "Введите ответ здесь. ИИ проверит работу и сохранит оценку в личном кабинете.";
   textarea.rows = 7;
   textarea.disabled = Boolean(savedGrade);
-  textarea.addEventListener("input", () => localStorage.setItem(answerKey, textarea.value));
+  trackInputSource(textarea, inputMeta, () => {
+    localStorage.setItem(answerKey, textarea.value);
+    localStorage.setItem(metaKey, JSON.stringify({ prov: inputMeta.prov, pasteEvents: inputMeta.pasteEvents }));
+  });
   answer.append(textarea);
 
   const actions = document.createElement("div");
@@ -1554,6 +1559,11 @@ function renderAssignment(block, section, blockIndex) {
           topic: section.title,
           question: block.text,
           answer: textarea.value,
+          inputMeta: {
+            typed: Math.round(inputMeta.typed),
+            pasted: Math.round(inputMeta.pasted),
+            pasteEvents: inputMeta.pasteEvents,
+          },
           context: sectionContext(section),
         },
       });
@@ -1583,7 +1593,81 @@ function renderAssignment(block, section, blockIndex) {
 
 function formatEvaluation(ai) {
   if (!ai) return "Оценка пока не готова.";
-  return `Оценка: ${ai.score}/100 (${ai.mark}). ${ai.comment}`;
+  const mode = ai.inputModeLabel && ai.inputMode !== "typed" ? ` Способ ввода: ${ai.inputModeLabel}, применена своя шкала (до проверки: ${ai.rawScore}).` : "";
+  return `Оценка: ${ai.score}/100 (${ai.mark}).${mode} ${ai.comment}`;
+}
+
+// ─── Откуда взялся текст: набран или вставлен ───────────────────────────────
+// Для каждого символа ответа храним происхождение: t — набран, p — вставлен
+// (paste/drop или резкий скачок длины без клавиатуры), u — неизвестно (черновик
+// без истории). На каждом input сравниваем старый и новый текст, находим изменённый
+// участок и обновляем строку происхождения. Это подсказка для сервера, а не
+// доказательство: данные приходят из браузера, и их можно подделать.
+const INPUT_JUMP_THRESHOLD = 15;
+
+function loadInputMeta(key, text = "") {
+  let prov = "";
+  try {
+    const saved = JSON.parse(localStorage.getItem(key) || "null");
+    if (saved && typeof saved.prov === "string") prov = saved.prov;
+    var pasteEvents = Number(saved?.pasteEvents) || 0;
+  } catch {
+    /* повреждённые данные — начинаем заново */
+  }
+  // Если история не совпадает с текстом (его правили в обход страницы) — считаем неизвестной.
+  if (prov.length !== text.length) prov = "u".repeat(text.length);
+  return recountInputMeta({ prov, pasteEvents: pasteEvents || 0 });
+}
+
+function recountInputMeta(meta) {
+  let typed = 0;
+  let pasted = 0;
+  for (const mark of meta.prov) {
+    if (mark === "t") typed += 1;
+    else if (mark === "p") pasted += 1;
+  }
+  meta.typed = typed;
+  meta.pasted = pasted;
+  return meta;
+}
+
+function trackInputSource(textarea, meta, persist) {
+  let prevValue = textarea.value;
+  let pendingPaste = false;
+
+  textarea.addEventListener("paste", () => { pendingPaste = true; });
+  textarea.addEventListener("drop", () => { pendingPaste = true; });
+
+  textarea.addEventListener("input", (event) => {
+    const value = textarea.value;
+
+    // Общий префикс и суффикс старого и нового текста → изменённый участок посередине.
+    let start = 0;
+    const maxStart = Math.min(prevValue.length, value.length);
+    while (start < maxStart && prevValue[start] === value[start]) start += 1;
+    let end = 0;
+    const maxEnd = Math.min(prevValue.length, value.length) - start;
+    while (end < maxEnd && prevValue[prevValue.length - 1 - end] === value[value.length - 1 - end]) end += 1;
+
+    const removed = prevValue.length - start - end;
+    const inserted = value.length - start - end;
+    const byPaste =
+      pendingPaste ||
+      /^insertFrom(Paste|Drop)/.test(event.inputType || "") ||
+      inserted > INPUT_JUMP_THRESHOLD;
+
+    if (inserted > 0 && byPaste) meta.pasteEvents += 1;
+    pendingPaste = false;
+
+    meta.prov =
+      meta.prov.slice(0, start) +
+      (byPaste ? "p" : "t").repeat(Math.max(0, inserted)) +
+      meta.prov.slice(start + removed);
+    recountInputMeta(meta);
+
+    prevValue = value;
+    persist();
+  });
 }
 
 function sectionContext(section) {
