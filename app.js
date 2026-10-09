@@ -1473,9 +1473,9 @@ function renderAssignment(block, section, blockIndex) {
   const answerKey = `reader-answer:${state.user?.id || "guest"}:${assignmentId}`;
   const metaKey = `${answerKey}:meta`;
   const savedAnswer = localStorage.getItem(answerKey) || "";
-  const inputMeta = loadInputMeta(metaKey, savedSubmission?.answer || savedAnswer);
   const savedSubmission = state.submissions.find((item) => item.assignmentId === assignmentId);
   const savedGrade = savedSubmission?.ai || null;
+  const inputMeta = loadInputMeta(metaKey, savedSubmission?.answer || savedAnswer);
 
   const wrapper = document.createElement("div");
   wrapper.className = "assignment-layout";
