@@ -1455,3 +1455,11 @@ blockquote {
     box-shadow: none;
   }
 }
+
+/* Пересдача */
+.retake-box { display: grid; gap: 8px; margin-top: 10px; }
+.retake-form { display: grid; gap: 10px; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--page-soft); }
+.retake-form label, .retake-item label { display: grid; gap: 6px; color: var(--muted); font-size: 0.88rem; font-weight: 700; }
+.retake-form input, .retake-item input[type="text"] { width: 100%; padding: 9px 11px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--page); color: var(--text); font: inherit; }
+.retake-message { color: var(--muted); }
+.retake-item { display: grid; gap: 6px; }

@@ -20,7 +20,7 @@ const VIDEOS_PATH = join(DATA_DIR, "videos.json");
 // Схема в БД: одна таблица book_state(kind text PRIMARY KEY, data jsonb).
 // ...
 
-const DEFAULT_DB = { users: [], groups: [], submissions: [] };
+const DEFAULT_DB = { users: [], groups: [], submissions: [], retakes: [] };
 
 let PgPool = null;
 let SAVE_QUEUE = Promise.resolve();
@@ -112,7 +112,9 @@ createServer(async (req, res) => {
     }
     serveStatic(res, url.pathname);
   } catch (error) {
-    console.error(error);
+    if (error.status !== 401 && error.status !== 429) console.error(error.status ? error.message : error);
+    // После отказа по размеру тело запроса не дочитано: просим клиента не переиспользовать соединение.
+    if (error.status === 413) res.setHeader("Connection", "close");
     sendJson(res, error.status || 500, { error: error.status ? error.message : "Ошибка сервера" });
   }
 }).listen(PORT, "0.0.0.0", () => {
@@ -143,6 +145,13 @@ async function handleApi(req, res, url) {
   if (route === "GET /api/users") return listUsers(req, res);
   if (req.method === "PATCH" && url.pathname.startsWith("/api/users/")) {
     return updateUser(req, res, url.pathname.split("/").at(-1));
+  }
+
+  if (route === "POST /api/retakes") return createRetake(req, res);
+  if (route === "GET /api/retakes/my") return myRetakes(req, res);
+  if (route === "GET /api/retakes") return teacherRetakes(req, res);
+  if (req.method === "PATCH" && url.pathname.startsWith("/api/retakes/")) {
+    return resolveRetake(req, res, url.pathname.split("/").at(-1));
   }
 
   if (route === "POST /api/submissions") return submitAnswer(req, res);
@@ -266,14 +275,14 @@ async function updateUser(req, res, userId) {
 async function submitAnswer(req, res) {
   const user = requireRole(req, ["student", "teacher", "admin"]);
   const body = await readBody(req);
-  const assignmentId = String(body.assignmentId || "");
-  const sectionId = String(body.sectionId || "");
+  const assignmentId = String(body.assignmentId || "").slice(0, 200);
+  const sectionId = String(body.sectionId || "").slice(0, 200);
   const blockIndex = Number(body.blockIndex);
-  const question = String(body.question || "").trim();
+  const question = String(body.question || "").trim().slice(0, 3000);
   const answer = String(body.answer || "").trim().slice(0, 6000);
   const context = String(body.context || "").slice(0, 8000);
-  const author = String(body.author || "");
-  const topic = String(body.topic || "");
+  const author = String(body.author || "").slice(0, 200);
+  const topic = String(body.topic || "").slice(0, 300);
   if (!assignmentId || !question || !answer) return sendJson(res, 400, { error: "Нужны задание и ответ" });
   if (answer.length < 80) return sendJson(res, 400, { error: "Ответ слишком короткий для честной оценки. Напишите подробнее." });
   const db = readDb();
@@ -318,6 +327,138 @@ async function submitAnswer(req, res) {
     writeDb(db);
     sendJson(res, 500, { error: "ИИ не смог оценить ответ.", detail: publicAiError(error.message), submission });
   }
+}
+
+// ═══ Пересдача: ученик просит, преподаватель разрешает или отклоняет ═══════════
+// Запрос хранится в db.retakes. Преподаватель видит его в кабинете (ученик, группа,
+// оценка, желаемый балл). При одобрении прошлая попытка уходит в submission.attempts,
+// работа разблокируется, и ученик снова может отправить ответ на проверку ИИ.
+
+function groupOf(db, userId) {
+  const student = db.users.find((item) => item.id === userId);
+  return student?.groupId ? db.groups.find((group) => group.id === student.groupId) || null : null;
+}
+
+// Админ управляет всеми; преподаватель — только учениками своих групп.
+function canManageStudent(db, actor, studentId) {
+  if (actor.role === "admin") return true;
+  const group = groupOf(db, studentId);
+  return Boolean(group && group.teacherId === actor.id);
+}
+
+function retakeView(db, retake) {
+  const student = db.users.find((item) => item.id === retake.studentId);
+  const group = groupOf(db, retake.studentId);
+  return {
+    ...retake,
+    student: student ? { id: student.id, fullName: student.fullName, email: student.email } : null,
+    groupName: group?.name || null,
+  };
+}
+
+async function createRetake(req, res) {
+  const user = requireRole(req, ["student", "teacher", "admin"]);
+  rateLimit(req, "retake", 10, 60 * 60_000);
+  const body = await readBody(req);
+  const assignmentId = String(body.assignmentId || "").slice(0, 200);
+  const db = readDb();
+  db.retakes ||= [];
+  const submission = db.submissions.find((item) => item.studentId === user.id && item.assignmentId === assignmentId);
+  if (!submission || !submission.locked) {
+    return sendJson(res, 400, { error: "Пересдача доступна только для задания, которое уже оценено" });
+  }
+  if (db.retakes.some((item) => item.submissionId === submission.id && item.status === "pending")) {
+    return sendJson(res, 409, { error: "Запрос на пересдачу уже отправлен и ждёт ответа преподавателя" });
+  }
+  let desiredScore = null;
+  if (body.desiredScore !== undefined && body.desiredScore !== null && String(body.desiredScore).trim() !== "") {
+    const value = Number(body.desiredScore);
+    if (!Number.isFinite(value) || value < 0 || value > 100) {
+      return sendJson(res, 400, { error: "Желаемый балл должен быть числом от 0 до 100" });
+    }
+    desiredScore = Math.round(value);
+  }
+  const retake = {
+    id: randomUUID(),
+    submissionId: submission.id,
+    studentId: user.id,
+    assignmentId,
+    topic: submission.topic || "",
+    author: submission.author || "",
+    scoreAtRequest: submission.finalScore ?? submission.ai?.score ?? null,
+    markAtRequest: submission.ai?.mark ?? null,
+    inputMode: submission.inputMode || null,
+    desiredScore,
+    note: String(body.note || "").trim().slice(0, 500),
+    status: "pending",
+    createdAt: new Date().toISOString(),
+  };
+  db.retakes.push(retake);
+  writeDb(db);
+  sendJson(res, 200, { retake });
+}
+
+function myRetakes(req, res) {
+  const user = requireUser(req);
+  const db = readDb();
+  sendJson(res, 200, { retakes: (db.retakes || []).filter((item) => item.studentId === user.id) });
+}
+
+function teacherRetakes(req, res) {
+  const user = requireRole(req, ["teacher", "admin"]);
+  const db = readDb();
+  const retakes = (db.retakes || [])
+    .filter((item) => canManageStudent(db, user, item.studentId))
+    .map((item) => retakeView(db, item))
+    .sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt)));
+  sendJson(res, 200, { retakes });
+}
+
+async function resolveRetake(req, res, retakeId) {
+  const user = requireRole(req, ["teacher", "admin"]);
+  const body = await readBody(req);
+  const action = String(body.action || "");
+  if (!["approve", "decline"].includes(action)) return sendJson(res, 400, { error: "Нужно действие: approve или decline" });
+  const db = readDb();
+  const retake = (db.retakes || []).find((item) => item.id === retakeId);
+  if (!retake) return sendJson(res, 404, { error: "Запрос не найден" });
+  if (!canManageStudent(db, user, retake.studentId)) {
+    return sendJson(res, 403, { error: "Это запрос ученика не из ваших групп" });
+  }
+  if (retake.status !== "pending") return sendJson(res, 409, { error: "Запрос уже обработан" });
+
+  retake.status = action === "approve" ? "approved" : "declined";
+  retake.teacherComment = String(body.comment || "").trim().slice(0, 500);
+  retake.resolvedAt = new Date().toISOString();
+  retake.resolvedBy = user.id;
+
+  if (action === "approve") {
+    const submission = db.submissions.find((item) => item.id === retake.submissionId);
+    if (submission) {
+      submission.attempts ||= [];
+      submission.attempts.push({
+        answer: submission.answer,
+        score: submission.finalScore ?? submission.ai?.score ?? null,
+        mark: submission.ai?.mark ?? null,
+        inputMode: submission.inputMode || null,
+        evaluatedAt: submission.evaluatedAt || null,
+        teacherReview: submission.teacherReview || null,
+      });
+      submission.previousScore = submission.finalScore ?? submission.ai?.score ?? null;
+      submission.answer = "";
+      submission.ai = null;
+      submission.teacherReview = null;
+      submission.finalScore = null;
+      submission.inputMeta = null;
+      submission.inputMode = null;
+      submission.locked = false;
+      submission.status = "retake_allowed";
+      submission.retakeAllowedAt = new Date().toISOString();
+      submission.updatedAt = submission.retakeAllowedAt;
+    }
+  }
+  writeDb(db);
+  sendJson(res, 200, { retake: retakeView(db, retake) });
 }
 
 async function aiHealth(req, res) {
@@ -408,12 +549,15 @@ async function reviewSubmission(req, res, submissionId) {
   const db = readDb();
   const submission = db.submissions.find((item) => item.id === submissionId);
   if (!submission) return sendJson(res, 404, { error: "Работа не найдена" });
+  if (!canManageStudent(db, user, submission.studentId)) {
+    return sendJson(res, 403, { error: "Можно оценивать только работы учеников своих групп" });
+  }
   const score = Number(body.finalScore);
   if (!Number.isFinite(score) || score < 0 || score > 100) return sendJson(res, 400, { error: "Оценка должна быть от 0 до 100" });
   submission.teacherReview = {
     teacherId: user.id,
     finalScore: Math.round(score),
-    comment: String(body.comment || ""),
+    comment: String(body.comment || "").slice(0, 2000),
     reviewedAt: new Date().toISOString(),
   };
   submission.finalScore = submission.teacherReview.finalScore;
@@ -923,11 +1067,23 @@ function writeDb(db) {
   enqueuePgSave("db", db);
 }
 
+const MAX_BODY_BYTES = 1_000_000; // 1 МБ: хватает для ответа и контекста раздела, но не даёт забить память
+
 async function readBody(req) {
   const chunks = [];
-  for await (const chunk of req) chunks.push(chunk);
+  let size = 0;
+  for await (const chunk of req) {
+    size += chunk.length;
+    if (size > MAX_BODY_BYTES) throw Object.assign(new Error("Слишком большой запрос"), { status: 413 });
+    chunks.push(chunk);
+  }
   if (!chunks.length) return {};
-  return JSON.parse(Buffer.concat(chunks).toString("utf-8"));
+  try {
+    const parsed = JSON.parse(Buffer.concat(chunks).toString("utf-8"));
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch {
+    throw Object.assign(new Error("Некорректный JSON в запросе"), { status: 400 });
+  }
 }
 
 function sendJson(res, status, payload) {
@@ -999,10 +1155,14 @@ function verifyToken(token) {
   const [body, signature] = String(token || "").split(".");
   if (!body || !signature) return null;
   const expected = createHmac("sha256", getJwtSecret()).update(body).digest("base64url");
-  if (expected !== signature) return null;
-  const payload = JSON.parse(Buffer.from(body, "base64url").toString("utf-8"));
-  if (payload.exp < Date.now()) return null;
-  return payload;
+  if (!safeEqual(expected, signature)) return null;
+  try {
+    const payload = JSON.parse(Buffer.from(body, "base64url").toString("utf-8"));
+    if (!payload || !(payload.exp >= Date.now())) return null;
+    return payload;
+  } catch {
+    return null;
+  }
 }
 
 function getJwtSecret() {

@@ -22,6 +22,8 @@ const state = {
   token: localStorage.getItem("reader-token") || "",
   user: null,
   submissions: [],
+  retakes: [],
+  teacherRetakes: [],
   groups: [],
   users: [],
 };
@@ -283,6 +285,8 @@ function logout() {
   state.token = "";
   state.user = null;
   state.submissions = [];
+  state.retakes = [];
+  state.teacherRetakes = [];
   state.groups = [];
   state.users = [];
   localStorage.removeItem("reader-token");
@@ -301,24 +305,46 @@ function renderAuth() {
   elements.userName.textContent = state.user.fullName;
   elements.roleLabel.textContent = roleName(state.user.role);
   renderDashboard();
+  updateAccountBadge();
+}
+
+// Сколько запросов на пересдачу ждёт преподавателя: число на кнопке «Кабинет».
+function updateAccountBadge() {
+  if (!state.user) return;
+  const pending = (state.teacherRetakes || []).filter((item) => item.status === "pending").length;
+  elements.accountToggle.textContent = pending ? `Кабинет (${pending})` : "Кабинет";
+}
+
+// Всё, что пришло от пользователей (ФИО, email, названия, ответы, комментарии ИИ),
+// перед вставкой через innerHTML нужно экранировать: иначе это XSS в кабинете преподавателя.
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (char) => (
+    { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]
+  ));
 }
 
 async function refreshDashboardData() {
   if (!state.user) return;
 
-  const requests = [api("/api/submissions/my").catch(() => ({ submissions: [] }))];
+  const isStaff = ["teacher", "admin"].includes(state.user.role);
+  const [mine, myRetakes, groups, users, teacherSubs, teacherRetakes] = await Promise.all([
+    api("/api/submissions/my").catch(() => ({ submissions: [] })),
+    api("/api/retakes/my").catch(() => ({ retakes: [] })),
+    isStaff ? api("/api/groups").catch(() => ({ groups: [] })) : null,
+    isStaff ? api("/api/users").catch(() => ({ users: [] })) : null,
+    isStaff ? api("/api/submissions/teacher").catch(() => ({ submissions: [] })) : null,
+    isStaff ? api("/api/retakes").catch(() => ({ retakes: [] })) : null,
+  ]);
 
-  if (["teacher", "admin"].includes(state.user.role)) {
-    requests.push(api("/api/groups").catch(() => ({ groups: [] })));
-    requests.push(api("/api/users").catch(() => ({ users: [] })));
-    requests.push(api("/api/submissions/teacher").catch(() => ({ submissions: [] })));
+  state.submissions = mine.submissions || [];
+  state.retakes = myRetakes.retakes || [];
+  if (isStaff) {
+    state.groups = groups.groups || [];
+    state.users = users.users || [];
+    state.teacherSubmissions = teacherSubs.submissions || [];
+    state.teacherRetakes = teacherRetakes.retakes || [];
   }
-
-  const results = await Promise.all(requests);
-  state.submissions = results[0].submissions || [];
-  if (results[1]) state.groups = results[1].groups || [];
-  if (results[2]) state.users = results[2].users || [];
-  if (results[3]) state.teacherSubmissions = results[3].submissions || [];
+  updateAccountBadge();
 }
 
 function renderDashboard() {
@@ -392,7 +418,7 @@ function renderTeacherPanel(isAdmin) {
   submissions.forEach((item) => subList.append(renderSubmissionItem(item, true)));
 
   submissionsCard.append(subList);
-  wrap.append(groupsCard, usersCard, submissionsCard);
+  wrap.append(renderRetakesCard(), groupsCard, usersCard, submissionsCard);
   return wrap;
 }
 
@@ -405,7 +431,7 @@ function renderGroupsList() {
   state.groups.forEach((group) => {
     const item = document.createElement("div");
     item.className = "data-item";
-    item.innerHTML = `<strong>${group.name}</strong><small>ID: ${group.id}</small>`;
+    item.innerHTML = `<strong>${escapeHtml(group.name)}</strong><small>ID: ${escapeHtml(group.id)}</small>`;
     list.append(item);
   });
 
@@ -422,16 +448,16 @@ function renderUsersList(isAdmin) {
     const item = document.createElement("div");
     item.className = "data-item";
     const groupOptions = [`<option value="">Без группы</option>`]
-      .concat(state.groups.map((group) => `<option value="${group.id}" ${user.groupId === group.id ? "selected" : ""}>${group.name}</option>`))
+      .concat(state.groups.map((group) => `<option value="${escapeHtml(group.id)}" ${user.groupId === group.id ? "selected" : ""}>${escapeHtml(group.name)}</option>`))
       .join("");
 
     item.innerHTML = `
-      <strong>${user.fullName}</strong>
-      <small>${user.email} · ${roleName(user.role)}</small>
-      <label>Группа<select data-action="group" data-user="${user.id}">${groupOptions}</select></label>
+      <strong>${escapeHtml(user.fullName)}</strong>
+      <small>${escapeHtml(user.email)} · ${roleName(user.role)}</small>
+      <label>Группа<select data-action="group" data-user="${escapeHtml(user.id)}">${groupOptions}</select></label>
       ${
         isAdmin
-          ? `<label>Роль<select data-action="role" data-user="${user.id}">
+          ? `<label>Роль<select data-action="role" data-user="${escapeHtml(user.id)}">
               <option value="student" ${user.role === "student" ? "selected" : ""}>Студент</option>
               <option value="teacher" ${user.role === "teacher" ? "selected" : ""}>Преподаватель</option>
               <option value="admin" ${user.role === "admin" ? "selected" : ""}>Администратор</option>
@@ -458,15 +484,102 @@ function renderUsersList(isAdmin) {
 function renderSubmissionItem(item, showStudent = false) {
   const node = document.createElement("div");
   node.className = "data-item";
-  const score = item.finalScore ?? item.ai?.score ?? "-";
+  const retakeAllowed = item.status === "retake_allowed";
+  const score = retakeAllowed
+    ? `пересдача разрешена${item.previousScore != null ? `, было ${item.previousScore}` : ""}`
+    : item.finalScore ?? item.ai?.score ?? "-";
 
   node.innerHTML = `
-    <strong>${item.topic || item.sectionId}</strong>
-    <span class="status-pill">Оценка: ${score}</span>
-    <small>${showStudent && item.student ? `${item.student.fullName} · ` : ""}${item.author || ""}</small>
-    <small>${item.ai?.comment || item.error || "Ожидает проверки"}</small>
+    <strong>${escapeHtml(item.topic || item.sectionId)}</strong>
+    <span class="status-pill">${retakeAllowed ? "" : "Оценка: "}${escapeHtml(score)}</span>
+    <small>${showStudent && item.student ? `${escapeHtml(item.student.fullName)} · ` : ""}${escapeHtml(item.author || "")}</small>
+    <small>${escapeHtml(item.ai?.comment || item.error || (retakeAllowed ? "Ждёт нового ответа ученика" : "Ожидает проверки"))}</small>
   `;
 
+  return node;
+}
+
+// ─── Пересдача: список запросов в кабинете преподавателя ────────────────────
+const INPUT_MODE_TEXT = { mixed: "частично вставлен", pasted: "вставлен целиком", unverified: "способ ввода не подтверждён" };
+
+function renderRetakesCard() {
+  const card = document.createElement("div");
+  card.className = "panel-card";
+  const retakes = state.teacherRetakes || [];
+  const pending = retakes.filter((item) => item.status === "pending").length;
+
+  const title = document.createElement("h3");
+  title.textContent = pending ? `Запросы на пересдачу (${pending})` : "Запросы на пересдачу";
+  card.append(title);
+
+  const list = document.createElement("div");
+  list.className = "data-list";
+  if (!retakes.length) {
+    list.innerHTML = `<p class="toc-empty">Запросов на пересдачу пока нет.</p>`;
+  }
+  retakes.forEach((retake) => list.append(renderRetakeItem(retake)));
+  card.append(list);
+  return card;
+}
+
+function renderRetakeItem(retake) {
+  const node = document.createElement("div");
+  node.className = "data-item retake-item";
+
+  const addLine = (tag, text, className) => {
+    const element = document.createElement(tag);
+    if (className) element.className = className;
+    element.textContent = text;
+    node.append(element);
+    return element;
+  };
+
+  addLine("strong", retake.student?.fullName || "Ученик не найден");
+  addLine("small", `Группа: ${retake.groupName || "не назначена"}`);
+  addLine("small", `Задание: ${retake.topic || "—"}${retake.author ? ` · ${retake.author}` : ""}`);
+  const mark = retake.markAtRequest ? ` (${retake.markAtRequest})` : "";
+  addLine("span", `Оценка: ${retake.scoreAtRequest ?? "—"}${mark}`, "status-pill");
+  addLine("small", `Желаемый балл: ${retake.desiredScore ?? "не указан"}`);
+  if (INPUT_MODE_TEXT[retake.inputMode]) addLine("small", `Ответ был: ${INPUT_MODE_TEXT[retake.inputMode]}`);
+  if (retake.note) addLine("small", `Комментарий ученика: ${retake.note}`);
+
+  if (retake.status !== "pending") {
+    const verdict = retake.status === "approved" ? "Пересдача разрешена" : "Запрос отклонён";
+    addLine("small", `${verdict}${retake.teacherComment ? `: ${retake.teacherComment}` : ""}`, "status-pill");
+    return node;
+  }
+
+  const comment = document.createElement("input");
+  comment.type = "text";
+  comment.maxLength = 500;
+  comment.placeholder = "Комментарий ученику (необязательно)";
+  node.append(comment);
+
+  const actions = document.createElement("div");
+  actions.className = "assignment-actions";
+  const resolve = async (action) => {
+    actions.querySelectorAll("button").forEach((button) => { button.disabled = true; });
+    try {
+      await api(`/api/retakes/${retake.id}`, { method: "PATCH", body: { action, comment: comment.value } });
+      await refreshDashboardData();
+      renderDashboard();
+    } catch (error) {
+      actions.querySelectorAll("button").forEach((button) => { button.disabled = false; });
+      addLine("small", error.message);
+    }
+  };
+  const approve = document.createElement("button");
+  approve.type = "button";
+  approve.className = "text-button";
+  approve.textContent = "Разрешить пересдачу";
+  approve.addEventListener("click", () => resolve("approve"));
+  const decline = document.createElement("button");
+  decline.type = "button";
+  decline.className = "text-button";
+  decline.textContent = "Отклонить";
+  decline.addEventListener("click", () => resolve("decline"));
+  actions.append(approve, decline);
+  node.append(actions);
   return node;
 }
 
@@ -1472,8 +1585,21 @@ function renderAssignment(block, section, blockIndex) {
   // Черновик привязан к пользователю: на общем школьном компьютере чужой текст не покажется.
   const answerKey = `reader-answer:${state.user?.id || "guest"}:${assignmentId}`;
   const metaKey = `${answerKey}:meta`;
-  const savedAnswer = localStorage.getItem(answerKey) || "";
   const savedSubmission = state.submissions.find((item) => item.assignmentId === assignmentId);
+  // Пересдача разрешена: один раз очищаем старый черновик, чтобы поле было пустым на всех устройствах.
+  if (savedSubmission?.status === "retake_allowed" && savedSubmission.retakeAllowedAt) {
+    const clearedFlag = `reader-retake-cleared:${answerKey}:${savedSubmission.retakeAllowedAt}`;
+    try {
+      if (!localStorage.getItem(clearedFlag)) {
+        localStorage.removeItem(answerKey);
+        localStorage.removeItem(metaKey);
+        localStorage.setItem(clearedFlag, "1");
+      }
+    } catch {
+      /* без localStorage черновиков всё равно нет */
+    }
+  }
+  const savedAnswer = localStorage.getItem(answerKey) || "";
   const savedGrade = savedSubmission?.ai || null;
   const inputMeta = loadInputMeta(metaKey, savedSubmission?.answer || savedAnswer);
 
@@ -1521,6 +1647,84 @@ function renderAssignment(block, section, blockIndex) {
 
   const actions = document.createElement("div");
   actions.className = "assignment-actions";
+
+  // ─── Пересдача (кнопка появляется, когда задание оценено) ───────────────
+  let isGraded = Boolean(savedGrade);
+  const retakeBox = document.createElement("div");
+  retakeBox.className = "retake-box";
+
+  const renderRetakeControls = () => {
+    retakeBox.innerHTML = "";
+    if (!isGraded) return;
+    const latest = (state.retakes || [])
+      .filter((item) => item.assignmentId === assignmentId)
+      .sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt)))[0];
+
+    const toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "text-button";
+    const message = document.createElement("small");
+    message.className = "retake-message";
+
+    if (latest?.status === "pending") {
+      toggle.textContent = "Запрос на пересдачу отправлен";
+      toggle.disabled = true;
+      message.textContent = "Преподаватель увидит запрос в кабинете и ответит на него.";
+      retakeBox.append(toggle, message);
+      return;
+    }
+    toggle.textContent = latest?.status === "declined" ? "Запросить пересдачу снова" : "Пересдача";
+    if (latest?.status === "declined") {
+      message.textContent = `Преподаватель отклонил запрос${latest.teacherComment ? `: ${latest.teacherComment}` : "."}`;
+    }
+
+    const form = document.createElement("form");
+    form.className = "retake-form";
+    form.hidden = true;
+    const desiredLabel = document.createElement("label");
+    desiredLabel.textContent = "Желаемый балл (необязательно)";
+    const desired = document.createElement("input");
+    desired.type = "number";
+    desired.min = "0";
+    desired.max = "100";
+    desired.placeholder = "например, 80";
+    desiredLabel.append(desired);
+    const noteLabel = document.createElement("label");
+    noteLabel.textContent = "Комментарий преподавателю (необязательно)";
+    const note = document.createElement("input");
+    note.type = "text";
+    note.maxLength = 500;
+    noteLabel.append(note);
+    const send = document.createElement("button");
+    send.type = "submit";
+    send.className = "text-button";
+    send.textContent = "Отправить запрос";
+    const hint = document.createElement("small");
+    hint.className = "retake-message";
+    if (!state.user?.groupId) {
+      hint.textContent = "Вы не состоите в группе: запрос увидит только администратор.";
+    }
+    form.append(desiredLabel, noteLabel, send, hint);
+
+    toggle.addEventListener("click", () => { form.hidden = !form.hidden; });
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      send.disabled = true;
+      try {
+        const result = await api("/api/retakes", {
+          method: "POST",
+          body: { assignmentId, desiredScore: desired.value, note: note.value },
+        });
+        state.retakes = [...(state.retakes || []), result.retake];
+        renderRetakeControls();
+      } catch (error) {
+        send.disabled = false;
+        hint.textContent = error.message;
+      }
+    });
+
+    retakeBox.append(toggle, message, form);
+  };
 
   const checkButton = document.createElement("button");
   checkButton.type = "button";
@@ -1572,6 +1776,8 @@ function renderAssignment(block, section, blockIndex) {
       status.textContent = formatEvaluation(result.submission.ai);
       textarea.disabled = true;
       checkButton.textContent = "Оценка сохранена";
+      isGraded = true;
+      renderRetakeControls();
     } catch (error) {
       checkButton.disabled = false;
       checkButton.textContent = "Проверить с ИИ";
@@ -1582,10 +1788,15 @@ function renderAssignment(block, section, blockIndex) {
 
   const status = document.createElement("output");
   status.className = "grade-status";
-  status.textContent = savedGrade ? formatEvaluation(savedGrade) : "Оценка появится здесь после проверки ИИ и сохранится в кабинете.";
+  status.textContent = savedGrade
+    ? formatEvaluation(savedGrade)
+    : savedSubmission?.status === "retake_allowed"
+      ? `Преподаватель разрешил пересдачу${savedSubmission.previousScore != null ? ` (прошлая оценка: ${savedSubmission.previousScore})` : ""}. Напишите новый ответ.`
+      : "Оценка появится здесь после проверки ИИ и сохранится в кабинете.";
 
   actions.append(checkButton, status);
-  content.append(title, text, answer, actions);
+  renderRetakeControls();
+  content.append(title, text, answer, actions, retakeBox);
   wrapper.append(qr, content);
 
   return wrapper;
