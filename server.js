@@ -302,7 +302,7 @@ async function submitAnswer(req, res) {
   if (!existing) db.submissions.push(submission);
   writeDb(db);
   try {
-    const evaluation = applyInputScale(await evaluateWithAi({ author, topic, question, answer, context }), inputMode);
+    const evaluation = applyInputScale(await evaluateWithAi({ author, topic, question, answer, context, inputMode }), inputMode);
     submission.inputMeta = inputMeta;
     submission.inputMode = inputMode;
     submission.ai = evaluation;
@@ -484,11 +484,27 @@ function writeVideosDb(db) {
 // и присылает inputMeta. Режим и итоговая шкала определяются здесь, на сервере.
 // Это эвристика: данные приходят из браузера и их можно подделать, поэтому режим
 // сохраняется в работе, а преподаватель видит его и может поправить оценку.
+// Порядок применения: 1) если ИИ-оценка >= minRaw (то есть это честная попытка, а не мусор/«не по теме»),
+// к ней добавляется bonus и поднимается до floor; 2) умножается на factor; 3) режется по cap.
+// Поэтому при ручном наборе нормальные ответы попадают примерно в 50–80, а откровенно слабые не завышаются.
 const INPUT_SCALES = {
-  typed: { factor: 1.0, cap: 100, label: "набран вручную" },
-  mixed: { factor: 0.9, cap: 85, label: "частично вставлен" },
-  pasted: { factor: 0.7, cap: 60, label: "вставлен целиком" },
-  unverified: { factor: 1.0, cap: 75, label: "способ ввода не подтверждён" },
+  typed: { bonus: 15, floor: 50, minRaw: 25, factor: 1.0, cap: 100, label: "набран вручную" },
+  mixed: { bonus: 0, floor: 0, minRaw: 0, factor: 0.85, cap: 75, label: "частично вставлен" },
+  pasted: { bonus: 0, floor: 0, minRaw: 0, factor: 0.6, cap: 50, label: "вставлен целиком" },
+  unverified: { bonus: 0, floor: 0, minRaw: 0, factor: 1.0, cap: 75, label: "способ ввода не подтверждён" },
+};
+
+// Дополнение к промпту оценщика: как строго проверять в каждом режиме.
+const INPUT_MODE_PROMPTS = {
+  typed: `Режим ввода: ученик ПЕЧАТАЛ ответ сам. Оценивай доброжелательно и поддерживающе: засчитывай искренние попытки,
+не наказывай строго за неточные формулировки и небольшие ошибки, отмечай то, что получилось. Типичный старательный ответ
+должен получать заметно выше среднего. Если ответ не по теме или состоит из общих фраз — правила ниже всё равно действуют.`,
+  mixed: `Режим ввода: часть ответа вставлена, часть набрана. Оценивай нейтрально: вставленные фрагменты не засчитывай
+как самостоятельное мышление, набранные — оценивай обычным образом.`,
+  pasted: `Режим ввода: ответ ВСТАВЛЕН целиком (скорее всего скопирован). Оценивай СТРОГО: энциклопедические или обезличенные
+формулировки, общий пересказ, отсутствие личной позиции, примеров из текста и живой речи ученика резко снижай оценку.
+За «Самостоятельность вывода» ставь не больше 5 из 15, за «Аргументацию и примеры» — не больше 12 из 25.`,
+  unverified: `Режим ввода: способ ввода неизвестен. Оценивай обычным образом.`,
 };
 const PASTE_SHARE_PASTED = 0.7; // доля вставки, с которой ответ считается «вставленным»
 const PASTE_SHARE_MIXED = 0.2;
@@ -512,11 +528,16 @@ function classifyInput(meta, length) {
 function applyInputScale(evaluation, mode) {
   const scale = INPUT_SCALES[mode] || INPUT_SCALES.unverified;
   const rawScore = evaluation.score;
-  const score = Math.min(scale.cap, Math.round(rawScore * scale.factor));
+  let value = rawScore;
+  if (rawScore >= scale.minRaw) {
+    value += scale.bonus;
+    if (scale.floor) value = Math.max(scale.floor, value);
+  }
+  const score = Math.max(0, Math.min(scale.cap, Math.min(100, Math.round(value * scale.factor))));
   return { ...evaluation, rawScore, score, mark: scoreToMark(score), inputMode: mode, inputModeLabel: scale.label };
 }
 
-async function evaluateWithAi({ author, topic, question, answer, context }) {
+async function evaluateWithAi({ author, topic, question, answer, context, inputMode = "unverified" }) {
   const api = getAiConfig();
   const prompt = `Ты строгий, но справедливый преподаватель литературы. Оцени письменный ответ ученика по 100-балльной шкале.
 
@@ -531,6 +552,8 @@ async function evaluateWithAi({ author, topic, question, answer, context }) {
 <<<ANSWER
 ${answer.replace(/ANSWER>>>|<<<ANSWER/g, "")}
 ANSWER>>>
+
+${INPUT_MODE_PROMPTS[inputMode] || INPUT_MODE_PROMPTS.unverified}
 
 Правила оценивания:
 1. Не завышай оценку за общий пересказ без конкретики.
