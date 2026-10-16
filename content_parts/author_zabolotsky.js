@@ -6,7 +6,7 @@ window.TEXTBOOK_ZABOLOTSKY = {
     {
       "id": "zabolotsky",
       "name": "Н. А. Заболоцкий",
-      "fullName": "Николай Алексеевич Заболоцкий",
+      "fullName": "Н. А. Заболоцкий",
       "qr": "qrcodes/zabolotsky.png",
       "photo": "images/zabolotsky/1200_0_770b29e8030b7b9695affaeeabba877f.jpg",
       "keywords": [
