@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&family=Montserrat:wght@400;600;800&family=Unbounded:wght@600;800&display=swap");
+
+/* themes.css — подключать ПОСЛЕ styles.css.
+   Скин задаётся атрибутом <html data-skin="classic | book | vivid">.
+   «classic» ничего не меняет. Тёмная тема (класс theme-dark) работает внутри каждого скина. */
+
+/* ───────────── Кнопка выбора оформления (во всех скинах) ───────────── */
+.skin-switch { position: relative; display: inline-flex; }
+.skin-switch__btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid var(--line); border-radius: var(--radius, 8px);
+  padding: 8px 12px; background: var(--page); color: var(--text);
+  font: inherit; font-size: 0.9rem; cursor: pointer;
+}
+.skin-switch__icon { width: 16px; height: 16px; border-radius: 50%; background: conic-gradient(#ec4899, #8b5cf6, #3b82f6, #10b981, #f59e0b, #ec4899); }
+.skin-menu {
+  position: absolute; right: 0; top: calc(100% + 8px); z-index: 200;
+  width: min(300px, 86vw); padding: 8px; display: grid; gap: 4px;
+  border: 1px solid var(--line); border-radius: 14px;
+  background: var(--page); color: var(--text); box-shadow: 0 18px 50px rgba(0, 0, 0, 0.3);
+}
+.skin-menu[hidden] { display: none; }
+.skin-opt {
+  display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: center;
+  text-align: left; padding: 10px 12px; border: 1px solid transparent; border-radius: 10px;
+  background: transparent; color: inherit; font: inherit; cursor: pointer;
+}
+.skin-opt:hover { background: color-mix(in srgb, var(--accent) 8%, transparent); }
+.skin-opt[aria-checked="true"] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.skin-opt__sw { width: 28px; height: 28px; border-radius: 8px; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15); }
+.skin-opt strong { display: block; }
+.skin-opt small { color: var(--muted); line-height: 1.3; }
+@media (max-width: 720px) {
+  .skin-switch__text { display: none; }
+  .skin-switch__btn { padding: 8px 10px; }
+  .skin-menu { position: fixed; left: 12px; right: 12px; top: auto; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); width: auto; }
+}
+
+/* ═════════════════════════════ КНИГА ═════════════════════════════ */
+:root[data-skin="book"] {
+  --page: #f6efdc; --page-soft: #efe5cb; --line: #d6c7a3;
+  --text: #2d2216; --muted: #7a6a4f; --accent: #8c2f1f; --accent-strong: #6e1f12;
+  --radius: 4px;
+  --serif: "EB Garamond", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: var(--serif);
+  --paper-noise: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .1 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  color-scheme: light;
+  background: #3a2616;
+}
+:root.theme-dark[data-skin="book"] {
+  --page: #2a2118; --page-soft: #33291d; --line: #4a3b29;
+  --text: #eadfc5; --muted: #b39f7c; --accent: #d9a441; --accent-strong: #f0c46a;
+  color-scheme: dark; background: #1c130b;
+}
+:root[data-skin="book"] body {
+  font-family: var(--serif); color: var(--text); min-height: 100vh;
+  background: radial-gradient(ellipse at 50% -10%, #7a5536 0%, #47301c 50%, #2a190d 100%);
+}
+:root.theme-dark[data-skin="book"] body { background: radial-gradient(ellipse at 50% -10%, #3b2a1a 0%, #221810 55%, #140d07 100%); }
+:root[data-skin="book"] .app-shell { background: transparent; }
+
+:root[data-skin="book"] .topbar {
+  background: linear-gradient(#4f321c, #33200f); color: #f3e6c8;
+  border-bottom: 2px solid #b8893c; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+}
+:root[data-skin="book"] .topbar :is(.book-mark, .book-mark strong) { color: #f3e6c8; font-family: var(--serif); }
+:root[data-skin="book"] .topbar .book-mark__label { color: #d9b36a; font-variant: small-caps; letter-spacing: 0.14em; }
+:root[data-skin="book"] .topbar :is(.text-button, .icon-button, .search, .skin-switch__btn) {
+  background: rgba(255, 235, 190, 0.08); border: 1px solid rgba(217, 179, 106, 0.5); color: #f3e6c8; font-family: var(--serif);
+}
+:root[data-skin="book"] .topbar .search input { color: #f3e6c8; font-family: var(--serif); }
+:root[data-skin="book"] .topbar .search input::placeholder { color: #cbb58a; }
+
+:root[data-skin="book"] .toc-panel {
+  background: var(--page-soft); color: var(--text); border-right: 1px solid var(--line);
+  box-shadow: inset -12px 0 20px -14px rgba(60, 36, 12, 0.55);
+}
+:root[data-skin="book"] .toc :is(a, button) { font-family: var(--serif); color: var(--text); border-radius: 2px; }
+:root[data-skin="book"] .toc :is(a, button):hover { color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); }
+:root[data-skin="book"] .toc :is([aria-current="true"], [aria-current="page"], .is-active, .active, .current) {
+  color: var(--accent); font-weight: 700; box-shadow: inset 4px 0 0 var(--accent);
+}
+
+/* Страница книги */
+:root[data-skin="book"] .book-page {
+  position: relative;
+  color: var(--text); font-family: var(--serif); font-size: 1.14rem; line-height: 1.75;
+  text-align: justify; -webkit-hyphens: auto; hyphens: auto;
+  padding: clamp(28px, 5vw, 70px) clamp(22px, 6vw, 84px) clamp(32px, 5vw, 64px) clamp(34px, 7vw, 104px);
+  background:
+    linear-gradient(90deg, rgba(70, 40, 10, 0.3) 0, rgba(70, 40, 10, 0.1) 18px, transparent 70px),
+    var(--paper-noise),
+    linear-gradient(#f8f1de, #f1e7cc);
+  border: 1px solid #cdbb8f; border-radius: 2px 8px 8px 2px;
+  box-shadow:
+    1px 1px 0 #efe5c8, 2px 2px 0 #d9ccaa, 3px 3px 0 #efe5c8, 4px 4px 0 #d9ccaa, 5px 5px 0 #efe5c8, 6px 6px 0 #cdbb8f,
+    0 22px 44px rgba(0, 0, 0, 0.55);
+}
+:root.theme-dark[data-skin="book"] .book-page {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0, rgba(0, 0, 0, 0.15) 18px, transparent 70px),
+    var(--paper-noise),
+    linear-gradient(#30271c, #271f16);
+  border-color: #4a3b29;
+  box-shadow: 1px 1px 0 #3a2f21, 2px 2px 0 #2a2118, 3px 3px 0 #3a2f21, 4px 4px 0 #2a2118, 5px 5px 0 #4a3b29, 0 22px 44px rgba(0, 0, 0, 0.7);
+}
+:root[data-skin="book"] .chapter-kicker {
+  text-align: center; font-variant: small-caps; letter-spacing: 0.2em; color: var(--accent); font-size: 0.98rem; text-transform: none;
+}
+:root[data-skin="book"] #sectionTitle {
+  font-family: var(--serif); font-weight: 500; text-align: center; line-height: 1.2;
+  font-size: clamp(1.8rem, 4.6vw, 2.8rem); margin: 0.25em 0 0.5em; text-wrap: balance;
+}
+:root[data-skin="book"] #sectionTitle::after {
+  content: "❦"; display: block; margin-top: 0.3em; font-size: 1.3rem; color: var(--accent);
+}
+:root[data-skin="book"] .lead { font-style: italic; text-align: center; color: var(--muted); max-width: 34em; margin: 0 auto 1.6em; }
+:root[data-skin="book"] .section-body > p { text-indent: 1.5em; margin: 0; }
+:root[data-skin="book"] .section-body > p:first-child { text-indent: 0; }
+:root[data-skin="book"] .section-body > p:first-child::first-letter {
+  float: left; font-size: 3.7em; line-height: 0.8; padding: 0.06em 0.1em 0 0; color: var(--accent); font-weight: 500;
+}
+:root[data-skin="book"] .section-body h2 {
+  font-family: var(--serif); font-weight: 500; font-variant: small-caps; letter-spacing: 0.06em; text-align: center; margin: 1.6em 0 0.6em;
+}
+:root[data-skin="book"] .section-body blockquote { margin: 1.2em 1em; padding-left: 1em; border-left: 2px solid var(--accent); font-style: italic; }
+:root[data-skin="book"] .book-page a { color: var(--accent); }
+
+/* Нижняя панель лежит на «столе» */
+:root[data-skin="book"] .page-tools { color: #ecdcb6; }
+:root[data-skin="book"] .page-tools .text-button {
+  background: rgba(255, 235, 190, 0.08); border: 1px solid rgba(217, 179, 106, 0.5); color: #f3e6c8;
+  font-family: var(--serif); font-variant: small-caps; letter-spacing: 0.06em;
+}
+:root[data-skin="book"] .page-tools .text-button:disabled { opacity: 0.4; }
+:root[data-skin="book"] .progress-track { height: 6px; background: rgba(0, 0, 0, 0.4); border-radius: 3px; overflow: hidden; }
+:root[data-skin="book"] #progressBar { display: block; height: 100%; background: linear-gradient(90deg, #8c2f1f, #c0472f); }
+:root[data-skin="book"] #progressLabel { color: #ecdcb6; font-variant: small-caps; }
+
+/* Перелистывание страницы */
+.page-flip { position: fixed; z-index: 60; pointer-events: none; perspective: 2200px; }
+.page-flip__leaf {
+  position: absolute; inset: 0; transform-origin: left center; will-change: transform;
+  animation: flipNext 0.72s cubic-bezier(0.45, 0.05, 0.3, 1) forwards;
+}
+.page-flip__clip { position: absolute; inset: 0; overflow: hidden; border-radius: 2px 8px 8px 2px; }
+.page-flip__clip > * { position: absolute; left: 0; margin: 0 !important; }
+.page-flip__shade {
+  position: absolute; inset: 0; opacity: 0;
+  background: linear-gradient(90deg, rgba(40, 20, 0, 0), rgba(40, 20, 0, 0.55));
+  animation: flipShade 0.72s ease-in forwards;
+}
+.page-flip--prev .page-flip__leaf { animation-name: flipPrev; }
+.page-flip--prev .page-flip__shade { animation-name: flipShadeBack; }
+@keyframes flipNext { from { transform: rotateY(0); } to { transform: rotateY(-90deg); } }
+@keyframes flipPrev { from { transform: rotateY(-90deg); } to { transform: rotateY(0); } }
+@keyframes flipShade { to { opacity: 1; } }
+@keyframes flipShadeBack { from { opacity: 1; } to { opacity: 0; } }
+
+@media (max-width: 720px) {
+  :root[data-skin="book"] .book-page {
+    font-size: 1.06rem; line-height: 1.68; padding: 26px 18px 32px 26px;
+    box-shadow: 2px 2px 0 #d9ccaa, 4px 4px 0 #cdbb8f, 0 10px 24px rgba(0, 0, 0, 0.5);
+  }
+  :root.theme-dark[data-skin="book"] .book-page { box-shadow: 2px 2px 0 #3a2f21, 4px 4px 0 #4a3b29, 0 10px 24px rgba(0, 0, 0, 0.7); }
+  :root[data-skin="book"] .section-body > p:first-child::first-letter { font-size: 3.2em; }
+}
+
+/* ═════════════════════════════ ЯРКИЙ ═════════════════════════════ */
+:root[data-skin="vivid"] {
+  --page: #ffffff; --page-soft: #f6f1ff; --line: #e1d6ff;
+  --text: #1b1140; --muted: #6a5c9a; --accent: #7c3aed; --accent-strong: #db2777;
+  --radius: 16px;
+  --serif: "Unbounded", "Montserrat", system-ui, sans-serif;
+  --sans: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --v-card: rgba(255, 255, 255, 0.72); --v-spot: 124, 58, 237;
+  --v-rainbow: #ec4899, #8b5cf6, #3b82f6, #06b6d4, #10b981, #f59e0b, #ec4899;
+  color-scheme: light;
+  background: linear-gradient(135deg, #ffe3f3 0%, #e4e0ff 45%, #d6f3ff 100%) fixed;
+}
+:root.theme-dark[data-skin="vivid"] {
+  --page: #140c33; --page-soft: #1d1247; --line: #3a2a7a;
+  --text: #f4efff; --muted: #b7a8ee; --accent: #a78bfa; --accent-strong: #f472b6;
+  --v-card: rgba(30, 18, 78, 0.58); --v-spot: 167, 139, 250;
+  color-scheme: dark; background: #080420;
+}
+:root[data-skin="vivid"] body { background: transparent; color: var(--text); font-family: var(--sans); position: relative; }
+:root[data-skin="vivid"] .app-shell { background: transparent; }
+
+/* Живой фон: цветные пятна плывут, за курсором идёт световое пятно */
+:root[data-skin="vivid"] body::before {
+  content: ""; position: fixed; inset: -25%; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(40% 40% at 20% 25%, rgba(236, 72, 153, 0.5), transparent 70%),
+    radial-gradient(35% 35% at 80% 20%, rgba(59, 130, 246, 0.45), transparent 70%),
+    radial-gradient(45% 45% at 70% 80%, rgba(245, 158, 11, 0.4), transparent 70%),
+    radial-gradient(40% 40% at 25% 85%, rgba(16, 185, 129, 0.38), transparent 70%);
+  animation: vividDrift 26s ease-in-out infinite alternate;
+}
+:root[data-skin="vivid"] body::after {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 30%), rgba(var(--v-spot), 0.2), transparent 60%);
+}
+@keyframes vividDrift {
+  from { transform: translate3d(-3%, -2%, 0) rotate(0deg) scale(1); }
+  to { transform: translate3d(4%, 3%, 0) rotate(14deg) scale(1.15); }
+}
+
+:root[data-skin="vivid"] .topbar {
+  background: linear-gradient(90deg, var(--v-rainbow)) 0 100% / 200% 3px repeat-x, var(--v-card);
+  -webkit-backdrop-filter: blur(18px) saturate(1.6); backdrop-filter: blur(18px) saturate(1.6);
+  animation: vividStrip 8s linear infinite; color: var(--text);
+}
+:root[data-skin="vivid"] .topbar strong { font-family: var(--serif); font-weight: 800; letter-spacing: -0.01em; }
+:root[data-skin="vivid"] .topbar .book-mark__label { color: var(--accent-strong); font-weight: 700; }
+@keyframes vividStrip { to { background-position: 200% 100%, 0 0; } }
+
+:root[data-skin="vivid"] :is(.text-button) {
+  border: 0; border-radius: 999px; padding: 10px 18px; color: #fff; font-family: var(--sans); font-weight: 700;
+  background: linear-gradient(120deg, #7c3aed, #ec4899, #f59e0b, #7c3aed); background-size: 250% 100%;
+  box-shadow: 0 8px 22px -6px rgba(236, 72, 153, 0.65);
+  transition: transform 0.25s cubic-bezier(0.2, 0.9, 0.3, 1.4), box-shadow 0.25s, background-position 0.7s;
+}
+:root[data-skin="vivid"] .text-button:hover { background-position: 100% 0; transform: translateY(-2px) scale(1.04); box-shadow: 0 14px 30px -8px rgba(124, 58, 237, 0.75); }
+:root[data-skin="vivid"] .text-button:active { transform: scale(0.96); }
+:root[data-skin="vivid"] .text-button:disabled { opacity: 0.45; filter: saturate(0.4); transform: none; box-shadow: none; }
+:root[data-skin="vivid"] .text-button--ghost { background: var(--v-card); color: var(--text); box-shadow: inset 0 0 0 2px rgba(139, 92, 246, 0.6); }
+:root[data-skin="vivid"] :is(.icon-button, .skin-switch__btn) {
+  background: var(--v-card); border: 1px solid var(--line); color: var(--text); border-radius: 999px;
+  transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.4), box-shadow 0.3s;
+}
+:root[data-skin="vivid"] .icon-button:hover { transform: rotate(20deg) scale(1.12); box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.35); }
+:root[data-skin="vivid"] .search { border-radius: 999px; background: var(--v-card); transition: box-shadow 0.25s; }
+:root[data-skin="vivid"] .search:focus-within { box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.5), 0 10px 30px -8px rgba(236, 72, 153, 0.5); }
+
+:root[data-skin="vivid"] .toc-panel {
+  background: var(--v-card); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); border-right: 1px solid var(--line);
+}
+:root[data-skin="vivid"] .toc :is(a, button) { font-family: var(--sans); border-radius: 12px; transition: transform 0.2s, background 0.2s, color 0.2s; }
+:root[data-skin="vivid"] .toc :is(a, button):hover { transform: translateX(5px); color: var(--accent-strong); background: color-mix(in srgb, var(--accent) 14%, transparent); }
+:root[data-skin="vivid"] .toc :is([aria-current="true"], [aria-current="page"], .is-active, .active, .current) {
+  color: var(--accent-strong); font-weight: 700; background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 22%, transparent), transparent);
+  box-shadow: inset 4px 0 0 var(--accent-strong);
+}
+
+:root[data-skin="vivid"] .book-page {
+  position: relative; border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 28px;
+  padding: clamp(22px, 4vw, 56px); font-size: 1.05rem; line-height: 1.75;
+  background: linear-gradient(90deg, var(--v-rainbow)) 0 0 / 200% 5px repeat-x, var(--v-card);
+  -webkit-backdrop-filter: blur(22px) saturate(1.5); backdrop-filter: blur(22px) saturate(1.5);
+  box-shadow: 0 30px 80px -20px rgba(124, 58, 237, 0.55);
+  animation: vividStripBook 8s linear infinite, vividGlow 9s ease-in-out infinite alternate;
+}
+:root.theme-dark[data-skin="vivid"] .book-page { border-color: rgba(255, 255, 255, 0.12); }
+@keyframes vividStripBook { to { background-position: 200% 0, 0 0; } }
+@keyframes vividGlow {
+  0% { box-shadow: 0 30px 80px -20px rgba(236, 72, 153, 0.55); }
+  50% { box-shadow: 0 30px 80px -20px rgba(59, 130, 246, 0.55); }
+  100% { box-shadow: 0 30px 80px -20px rgba(124, 58, 237, 0.6); }
+}
+:root[data-skin="vivid"] .chapter-kicker {
+  display: inline-block; margin-bottom: 14px; padding: 4px 14px; border-radius: 999px; color: #fff;
+  background: linear-gradient(90deg, #ec4899, #8b5cf6); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: none;
+}
+:root[data-skin="vivid"] #sectionTitle {
+  font-family: var(--serif); font-weight: 800; line-height: 1.12; letter-spacing: -0.02em;
+  font-size: clamp(1.6rem, 5vw, 3rem); text-wrap: balance;
+  background: linear-gradient(90deg, var(--v-rainbow)); background-size: 200% auto;
+  -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+  animation: vividText 7s linear infinite;
+}
+@keyframes vividText { to { background-position: 200% center; } }
+:root[data-skin="vivid"] .lead { font-size: 1.12rem; color: var(--muted); }
+:root[data-skin="vivid"] .section-body strong { background: linear-gradient(transparent 62%, rgba(236, 72, 153, 0.32) 0); }
+:root[data-skin="vivid"] .section-body h2 {
+  font-family: var(--serif); font-weight: 800; font-size: clamp(1.2rem, 3.2vw, 1.7rem);
+  padding-left: 14px; border-left: 6px solid transparent; border-image: linear-gradient(#ec4899, #8b5cf6, #3b82f6) 1;
+}
+:root[data-skin="vivid"] .book-page a { color: var(--accent-strong); font-weight: 600; }
+
+:root[data-skin="vivid"] .progress-track { height: 9px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 18%, transparent); overflow: hidden; }
+:root[data-skin="vivid"] #progressBar {
+  display: block; height: 100%; border-radius: 999px; transition: width 0.6s cubic-bezier(0.2, 0.9, 0.3, 1);
+  background: linear-gradient(90deg, var(--v-rainbow)); background-size: 200% 100%; animation: vividText 5s linear infinite;
+  box-shadow: 0 0 14px rgba(236, 72, 153, 0.8);
+}
+:root[data-skin="vivid"] #progressLabel { font-weight: 800; color: var(--accent-strong); }
+
+/* Появление страницы при смене раздела (класс ставит themes.js) */
+:root[data-skin="vivid"] .book-page.skin-enter :is(.chapter-kicker, .lead, .section-body > *) { animation: vividRise 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+:root[data-skin="vivid"] .book-page.skin-enter #sectionTitle {
+  animation: vividPop 0.85s cubic-bezier(0.2, 0.9, 0.3, 1.3) both, vividText 7s linear 0.85s infinite;
+}
+:root[data-skin="vivid"] .book-page.skin-enter .lead { animation-delay: 0.12s; }
+:root[data-skin="vivid"] .book-page.skin-enter .section-body > :nth-child(1) { animation-delay: 0.18s; }
+:root[data-skin="vivid"] .book-page.skin-enter .section-body > :nth-child(2) { animation-delay: 0.26s; }
+:root[data-skin="vivid"] .book-page.skin-enter .section-body > :nth-child(3) { animation-delay: 0.34s; }
+:root[data-skin="vivid"] .book-page.skin-enter .section-body > :nth-child(4) { animation-delay: 0.42s; }
+:root[data-skin="vivid"] .book-page.skin-enter .section-body > :nth-child(5) { animation-delay: 0.5s; }
+:root[data-skin="vivid"] .book-page.skin-enter .section-body > :nth-child(6) { animation-delay: 0.58s; }
+:root[data-skin="vivid"] .book-page.skin-enter .section-body > :nth-child(n + 7) { animation-delay: 0.66s; }
+@keyframes vividRise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+@keyframes vividPop { from { opacity: 0; transform: scale(0.85) translateY(10px); } to { opacity: 1; transform: none; } }
+
+/* Конфетти при нажатии «Следующий/Предыдущий раздел» */
+.vivid-confetti {
+  position: fixed; z-index: 300; width: 8px; height: 12px; border-radius: 2px; pointer-events: none;
+  animation: vividConfetti 0.9s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+}
+@keyframes vividConfetti { to { transform: translate(var(--dx), var(--dy)) rotate(var(--r)); opacity: 0; } }
+
+@media (max-width: 720px) {
+  :root[data-skin="vivid"] body::before { animation-duration: 40s; }
+  :root[data-skin="vivid"] .book-page {
+    border-radius: 22px; padding: 22px 16px 26px; font-size: 1rem;
+    -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  }
+  :root[data-skin="vivid"] #sectionTitle { font-size: 1.55rem; }
+  :root[data-skin="vivid"] .page-tools .text-button { padding: 10px 12px; font-size: 0.85rem; }
+}
+@media (hover: none) {
+  :root[data-skin="vivid"] body::after { display: none; }
+  :root[data-skin="vivid"] .text-button:hover, :root[data-skin="vivid"] .icon-button:hover { transform: none; }
+}
+
+/* Уважаем настройку «уменьшить движение» */
+@media (prefers-reduced-motion: reduce) {
+  :root[data-skin] *, :root[data-skin] *::before, :root[data-skin] *::after {
+    animation: none !important; transition-duration: 0.01ms !important;
+  }
+  :root[data-skin="vivid"] #sectionTitle { background-position: 0 center; }
+}
