@@ -134,7 +134,9 @@ window.TEXTBOOK_EVTYUSHENKO = {
     },
     {
       "id": "ev-detstvo-sibir-i-voyna-vokrug",
-      "title": "Детство. Сибирь и война вокруг",
+      "authorId": "evtyushenko",
+      "number": "Раздел 1",
+      "title": "Детство и становление: Сибирь, война и Москва",
       "sections": [
         {
           "id": "ev-sec-detstvo-sibir-i-voyna-vokrug-intro",
@@ -215,15 +217,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 1",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-moskva-literaturnyy-institut-i-rozhdenie-golosa",
-      "title": "Москва. Литературный институт и рождение голоса",
-      "sections": [
+        },
         {
           "id": "ev-sec-moskva-literaturnyy-institut-i-rozhdenie-golosa-intro",
           "title": "Москва. Литературный институт и рождение голоса",
@@ -372,13 +366,13 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "placeholder": "images/placeholder.svg"
           }
         }
-      ],
-      "number": "Раздел 2",
-      "authorId": "evtyushenko"
+      ]
     },
     {
       "id": "ev-shestidesyatniki-poet-na-stadione",
-      "title": "Шестидесятники. Поэт на стадионе",
+      "authorId": "evtyushenko",
+      "number": "Раздел 2",
+      "title": "Шестидесятники, власть и границы свободы",
       "sections": [
         {
           "id": "ev-sec-shestidesyatniki-poet-na-stadione-intro",
@@ -527,15 +521,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 3",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-vlast-skandaly-i-granitsy-svobody",
-      "title": "Власть, скандалы и границы свободы",
-      "sections": [
+        },
         {
           "id": "ev-sec-vlast-skandaly-i-granitsy-svobody-intro",
           "title": "Власть, скандалы и границы свободы",
@@ -725,13 +711,13 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "placeholder": "images/placeholder.svg"
           }
         }
-      ],
-      "number": "Раздел 4",
-      "authorId": "evtyushenko"
+      ]
     },
     {
       "id": "ev-pozdnie-gody-amerika-i-vozvraschenie",
-      "title": "Поздние годы. Америка и возвращение",
+      "authorId": "evtyushenko",
+      "number": "Раздел 3",
+      "title": "Поздние годы и война в творчестве Е. А. Евтушенко",
       "sections": [
         {
           "id": "ev-sec-pozdnie-gody-amerika-i-vozvraschenie-intro",
@@ -881,15 +867,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 5",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-intro",
-      "title": "Война в произведениях Е. А. Евтушенко",
-      "sections": [
+        },
         {
           "id": "ev-vvedenie",
           "title": "Война в произведениях Е. А. Евтушенко",
@@ -993,15 +971,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 6",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-pochemu-voyna-ego-glazami",
-      "title": "Почему война. Его глазами",
-      "sections": [
+        },
         {
           "id": "ev-sec-pochemu-voyna-ego-glazami-intro",
           "title": "Почему война. Его глазами",
@@ -1359,13 +1329,13 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "placeholder": "images/placeholder.svg"
           }
         }
-      ],
-      "number": "Раздел 7",
-      "authorId": "evtyushenko"
+      ]
     },
     {
       "id": "ev-opisanie-proizvedeniy-chast-pervaya-glavnye-voennye-teksty",
-      "title": "Описание произведений. Часть первая. Главные военные тексты",
+      "authorId": "evtyushenko",
+      "number": "Раздел 4",
+      "title": "Описание произведений: военные тексты, память и утрата",
       "sections": [
         {
           "id": "ev-sec-voennaya-lirika-e-a-evtushenko-pamyat-kak-nravstvennaya-obyazannost",
@@ -1495,7 +1465,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
           "blocks": [
             {
               "type": "p",
-              "text": "Из стихотворения Е. А. Евтушенко «Хотят ли русские войны»: «Да, мы умеем воевать, но не хотим, чтобы опять солдаты падали в бою на землю грустную свою. Спросите вы у матерей, спросите у жены моей, и вы тогда понять должны, хотят ли русские войны.»"
+              "text": "Из стихотворения Е. А. Евтушенко «Хотят ли русские войны»: «Да, мы умеем воевать, / но не хотим, чтобы опять / солдаты падали в бою / на землю грустную свою. / Спросите вы у матерей, / спросите у жены моей, / и вы тогда понять должны, / хотят ли русские войны.»"
             },
             {
               "type": "h2",
@@ -1729,7 +1699,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
           "blocks": [
             {
               "type": "p",
-              "text": "Из стихотворения Е. А. Евтушенко «Фронтовик»: «Я разглядел сквозь снежный вихрь: стоял кумир мальчишек сельских – хрустящий, бравый фронтовик.»"
+              "text": "Из стихотворения Е. А. Евтушенко «Фронтовик»: «Я разглядел сквозь снежный вихрь: / стоял кумир мальчишек сельских – / хрустящий, / бравый фронтовик.»"
             },
             {
               "type": "h2",
@@ -1883,15 +1853,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 8",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-opisanie-proizvedeniy-chast-vtoraya-pamyat-i-utrata",
-      "title": "Описание произведений. Часть вторая. Память и утрата",
-      "sections": [
+        },
         {
           "id": "ev-sec-opisanie-proizvedeniy-chast-vtoraya-pamyat-i-utrata-intro",
           "title": "Описание произведений. Часть вторая. Память и утрата",
@@ -2599,13 +2561,13 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "placeholder": "images/placeholder.svg"
           }
         }
-      ],
-      "number": "Раздел 9",
-      "authorId": "evtyushenko"
+      ]
     },
     {
       "id": "ev-opisanie-proizvedeniy-chast-tretya-filosofskaya-lirika",
-      "title": "Описание произведений. Часть третья. Философская лирика",
+      "authorId": "evtyushenko",
+      "number": "Раздел 5",
+      "title": "Философская лирика, общий вывод и человек эпохи",
       "sections": [
         {
           "id": "ev-sec-opisanie-proizvedeniy-chast-tretya-filosofskaya-lirika-intro",
@@ -2780,7 +2742,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
           "blocks": [
             {
               "type": "p",
-              "text": "Из стихотворения Е. А. Евтушенко «Людей неинтересных в мире нет»: «Уходят люди… Их не возвратить. Их тайные миры не возродить. И каждый раз мне хочется опять от этой невозвратности кричать.»"
+              "text": "Из стихотворения Е. А. Евтушенко «Людей неинтересных в мире нет»: «Уходят люди… Их не возвратить. / Их тайные миры не возродить. / И каждый раз мне хочется опять / от этой невозвратности кричать.»"
             },
             {
               "type": "h2",
@@ -3183,15 +3145,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 10",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-obschiy-vyvod-ko-vsem-trem-chastyam-opisaniya-proizvedeniy",
-      "title": "Общий вывод ко всем трём частям описания произведений",
-      "sections": [
+        },
         {
           "id": "ev-sec-obschiy-vyvod-ko-vsem-trem-chastyam-opisaniya-proizvedeniy-intro",
           "title": "Общий вывод ко всем трём частям описания произведений",
@@ -3321,15 +3275,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 11",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-chelovek-epohi-dva-vzglyada",
-      "title": "Человек эпохи. Два взгляда",
-      "sections": [
+        },
         {
           "id": "ev-sec-chelovek-epohi-dva-vzglyada-intro",
           "title": "Человек эпохи. Два взгляда",
@@ -3715,13 +3661,13 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "placeholder": "images/placeholder.svg"
           }
         }
-      ],
-      "number": "Раздел 12",
-      "authorId": "evtyushenko"
+      ]
     },
     {
       "id": "ev-kak-eto-sozdavalos",
-      "title": "Как это создавалось",
+      "authorId": "evtyushenko",
+      "number": "Раздел 6",
+      "title": "Как создавались произведения и какие проблемы они поднимают",
       "sections": [
         {
           "id": "ev-sec-kak-eto-sozdavalos-intro",
@@ -4046,15 +3992,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 13",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-problemy-proizvedeniy-chast-pervaya",
-      "title": "Проблемы произведений. Часть первая",
-      "sections": [
+        },
         {
           "id": "ev-sec-problemy-proizvedeniy-chast-pervaya-intro",
           "title": "Проблемы произведений. Часть первая",
@@ -4547,15 +4485,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 14",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-problemy-proizvedeniy-chast-vtoraya",
-      "title": "Проблемы произведений. Часть вторая",
-      "sections": [
+        },
         {
           "id": "ev-sec-problemy-proizvedeniy-chast-vtoraya-intro",
           "title": "Проблемы произведений. Часть вторая",
@@ -5112,13 +5042,13 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "placeholder": "images/placeholder.svg"
           }
         }
-      ],
-      "number": "Раздел 15",
-      "authorId": "evtyushenko"
+      ]
     },
     {
       "id": "ev-informatsiya-dlya-razdumiy",
-      "title": "Информация для раздумий",
+      "authorId": "evtyushenko",
+      "number": "Раздел 7",
+      "title": "Размышления и вопросы по произведениям",
       "sections": [
         {
           "id": "ev-sec-informatsiya-dlya-razdumiy-intro",
@@ -5442,15 +5372,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 16",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-voprosy-po-proizvedeniyam",
-      "title": "Вопросы по произведениям",
-      "sections": [
+        },
         {
           "id": "ev-sec-voprosy-po-proizvedeniyam-intro",
           "title": "Вопросы по произведениям",
@@ -5467,15 +5389,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 17",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-uroven-1-ponimanie-teksta",
-      "title": "Шаг 1. Читательский дневник: погружение в текст",
-      "sections": [
+        },
         {
           "id": "ev-sec-uroven-1-ponimanie-teksta-intro",
           "title": "Шаг 1. Читательский дневник: погружение в текст",
@@ -5528,15 +5442,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 18",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-uroven-2-analiz-i-interpretatsiya",
-      "title": "Шаг 2. Художественный мир: тайны мастерства и интерпретация",
-      "sections": [
+        },
         {
           "id": "ev-sec-uroven-2-analiz-i-interpretatsiya-intro",
           "title": "Шаг 2. Художественный мир: тайны мастерства и интерпретация",
@@ -5587,15 +5493,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 19",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-uroven-3-suzhdenie-i-pozitsiya",
-      "title": "Шаг 3. Голос поколений: размышления и нравственный выбор",
-      "sections": [
+        },
         {
           "id": "ev-sec-uroven-3-suzhdenie-i-pozitsiya-intro",
           "title": "Шаг 3. Голос поколений: размышления и нравственный выбор",
@@ -5644,9 +5542,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "placeholder": "images/placeholder.svg"
           }
         }
-      ],
-      "number": "Раздел 20",
-      "authorId": "evtyushenko"
+      ]
     },
     {
       "id": "evtyushenko-critics",
@@ -5686,7 +5582,9 @@ window.TEXTBOOK_EVTYUSHENKO = {
     },
     {
       "id": "ev-itogovoe-razmyshlenie",
-      "title": "Итоговое размышление",
+      "authorId": "evtyushenko",
+      "number": "Раздел 8",
+      "title": "Итоговое размышление и письменные задания",
       "sections": [
         {
           "id": "ev-sec-itogovoe-razmyshlenie-intro",
@@ -5699,15 +5597,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 21",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-pismennoe-zadanie",
-      "title": "Письменное задание",
-      "sections": [
+        },
         {
           "id": "ev-sec-pismennoe-zadanie-intro",
           "title": "Письменное задание",
@@ -5756,15 +5646,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 22",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-zadaniya",
-      "title": "Задания",
-      "sections": [
+        },
         {
           "id": "ev-sec-zadaniya-intro",
           "title": "Задания",
@@ -5781,15 +5663,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 23",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-zadanie-1-pismo-v-redaktsiyu",
-      "title": "Задание 1. Письмо в редакцию",
-      "sections": [
+        },
         {
           "id": "ev-sec-zadanie-1-pismo-v-redaktsiyu-intro",
           "title": "Задание 1. Письмо в редакцию",
@@ -5874,15 +5748,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 24",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-zadanie-2-monolog-vdovy",
-      "title": "Задание 2. Монолог вдовы",
-      "sections": [
+        },
         {
           "id": "ev-sec-zadanie-2-monolog-vdovy-intro",
           "title": "Задание 2. Монолог вдовы",
@@ -5963,15 +5829,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 25",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-zadanie-3-reportazh-s-babego-yara",
-      "title": "Задание 3. Репортаж с Бабьего Яра",
-      "sections": [
+        },
         {
           "id": "ev-sec-zadanie-3-reportazh-s-babego-yara-intro",
           "title": "Задание 3. Репортаж с Бабьего Яра",
@@ -6068,15 +5926,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 26",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-zadanie-4-rech-na-otkrytii-pamyatnika",
-      "title": "Задание 4. Речь на открытии памятника",
-      "sections": [
+        },
         {
           "id": "ev-sec-zadanie-4-rech-na-otkrytii-pamyatnika-intro",
           "title": "Задание 4. Речь на открытии памятника",
@@ -6161,15 +6011,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 27",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-obschie-rekomendatsii",
-      "title": "Общие рекомендации",
-      "sections": [
+        },
         {
           "id": "ev-sec-obschie-rekomendatsii-intro",
           "title": "Общие рекомендации",
@@ -6186,15 +6028,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 28",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-zadaniya-s-proverkoy-iskusstvennogo-intellekta",
-      "title": "Задания с проверкой искусственного интеллекта",
-      "sections": [
+        },
         {
           "id": "ev-sec-zadaniya-s-proverkoy-iskusstvennogo-intellekta-intro",
           "title": "Задания с проверкой искусственного интеллекта",
@@ -6215,15 +6049,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 29",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-zadanie-1-retsenziya-na-voennoe-stihotvorenie",
-      "title": "Задание 1. Рецензия на военное стихотворение",
-      "sections": [
+        },
         {
           "id": "ev-sec-zadanie-1-retsenziya-na-voennoe-stihotvorenie-intro",
           "title": "Задание 1. Рецензия на военное стихотворение",
@@ -6325,15 +6151,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 30",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-zadanie-2-emotsionalnyy-portret-geroya",
-      "title": "Задание 2. Эмоциональный портрет героя",
-      "sections": [
+        },
         {
           "id": "ev-sec-zadanie-2-emotsionalnyy-portret-geroya-intro",
           "title": "Задание 2. Эмоциональный портрет героя",
@@ -6446,15 +6264,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 31",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-zadanie-3-otzyv-ot-litsa-veterana",
-      "title": "Задание 3. Отзыв от лица ветерана",
-      "sections": [
+        },
         {
           "id": "ev-sec-zadanie-3-otzyv-ot-litsa-veterana-intro",
           "title": "Задание 3. Отзыв от лица ветерана",
@@ -6555,15 +6365,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 32",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-zadanie-4-sravnitelnyy-otzyv",
-      "title": "Задание 4. Сравнительный отзыв",
-      "sections": [
+        },
         {
           "id": "ev-sec-zadanie-4-sravnitelnyy-otzyv-intro",
           "title": "Задание 4. Сравнительный отзыв",
@@ -6676,15 +6478,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 33",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-kak-budet-otsenivatsya-rabota",
-      "title": "Как будет оцениваться работа",
-      "sections": [
+        },
         {
           "id": "ev-sec-kak-budet-otsenivatsya-rabota-intro",
           "title": "Как будет оцениваться работа",
@@ -6714,15 +6508,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 34",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-sravnitelnaya-tablitsa-i-zadanie",
-      "title": "Сравнительная таблица и задание",
-      "sections": [
+        },
         {
           "id": "ev-sec-sravnitelnaya-tablitsa-i-zadanie-intro",
           "title": "Сравнительная таблица и задание",
@@ -6898,13 +6684,13 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "placeholder": "images/placeholder.svg"
           }
         }
-      ],
-      "number": "Раздел 35",
-      "authorId": "evtyushenko"
+      ]
     },
     {
       "id": "ev-videomaterialy-razdela",
-      "title": "Видеоматериалы раздела",
+      "authorId": "evtyushenko",
+      "number": "Раздел 9",
+      "title": "Видеоматериалы, источники и литература",
       "sections": [
         {
           "id": "ev-sec-videomaterialy-razdela-intro",
@@ -7012,15 +6798,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 36",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-istochniki-i-literatura",
-      "title": "Источники и литература",
-      "sections": [
+        },
         {
           "id": "ev-sec-istochniki-i-literatura-intro",
           "title": "Источники и литература",
@@ -7421,13 +7199,13 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "placeholder": "images/placeholder.svg"
           }
         }
-      ],
-      "number": "Раздел 37",
-      "authorId": "evtyushenko"
+      ]
     },
     {
       "id": "ev-stranitsy-biografii-kotoryh-net-v-uchebnikah-chast-pervaya",
-      "title": "Страницы биографии, которых нет в учебниках. Часть первая",
+      "authorId": "evtyushenko",
+      "number": "Раздел 10",
+      "title": "Страницы биографии, которых нет в учебниках",
       "sections": [
         {
           "id": "ev-sec-stranitsy-biografii-kotoryh-net-v-uchebnikah-chast-pervaya-intro",
@@ -7790,15 +7568,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "caption": "Иллюстрация к разделу",
             "placeholder": "images/placeholder.svg"
           }
-        }
-      ],
-      "number": "Раздел 38",
-      "authorId": "evtyushenko"
-    },
-    {
-      "id": "ev-stranitsy-biografii-kotoryh-net-v-uchebnikah-chast-vtoraya",
-      "title": "Страницы биографии, которых нет в учебниках. Часть вторая",
-      "sections": [
+        },
         {
           "id": "ev-sec-stranitsy-biografii-kotoryh-net-v-uchebnikah-chast-vtoraya-intro",
           "title": "Страницы биографии, которых нет в учебниках. Часть вторая",
@@ -8251,9 +8021,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             "placeholder": "images/placeholder.svg"
           }
         }
-      ],
-      "number": "Раздел 39",
-      "authorId": "evtyushenko"
+      ]
     },
     {
       "id": "evtyushenko-interactive",
@@ -8324,7 +8092,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
               "text": "Проверка внимательного чтения строк Е. А. Евтушенко.",
               "questions": [
                 {
-                  "prompt": "Какое историческое событие и трагедия находятся в центре произведения Е. Евтушенко «Бабий Яр»?",
+                  "prompt": "Какое историческое событие лежит в основе стихотворения Е. А. Евтушенко «Бабий Яр»?",
                   "options": [
                     "Депортация народов Кавказа",
                     "Блокада Ленинграда",
@@ -8336,7 +8104,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Произведение посвящено памяти жертв нацистского геноцида в Бабьем Яру."
                 },
                 {
-                  "prompt": "С каких слов начинается поэма Е. Евтушенко «Бабий Яр»?",
+                  "prompt": "С какой строки начинается стихотворение «Бабий Яр»?",
                   "options": [
                     "«Здесь лежат тысячи убитых...»",
                     "«Не забывайте тех времён...»",
@@ -8355,19 +8123,19 @@ window.TEXTBOOK_EVTYUSHENKO = {
               "text": "Проверка умения связывать детали с авторской мыслью.",
               "questions": [
                 {
-                  "prompt": "Как анализировать художественный смысл произведения «Бабий Яр»?",
+                  "prompt": "Какой путь анализа помогает раскрыть художественный смысл стихотворения «Бабий Яр»?",
                   "options": [
-                    "Стихотворение посвящено блокаде Ленинграда и подвигу ленинградцев",
-                    "Через детали, конфликт, интонацию и вывод автора",
-                    "Через случайные сведения о биографии",
-                    "Поэт описывает парад Победы 1945 года на Красной площади",
-                    "Поэт восхваляет военную мощь советской армии"
+                    "Пересказать сюжет, не обращая внимания на детали и интонацию",
+                    "Связать детали текста, конфликт, интонацию и вывод автора",
+                    "Опереться только на случайные сведения о биографии автора",
+                    "Оценить только рифму и размер, не обращаясь к смыслу",
+                    "Сделать вывод по первому впечатлению, не сверяясь с текстом"
                   ],
                   "answer": 1,
                   "explanation": "Анализ требует связи художественных деталей с общей мыслью произведения."
                 },
                 {
-                  "prompt": "Почему отсутствие памятника над Бабьим Яром вызывает возмущение лирического героя?",
+                  "prompt": "Почему отсутствие памятника над Бабьим Яром возмущает лирического героя?",
                   "options": [
                     "Это нарушение архитектурного плана города",
                     "Это знак замалчивания трагедии, беспамятства и проявления скрытого антисемитизма",
@@ -8379,7 +8147,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Поэт протестует против умалчивания трагедии и исторической беспамятности."
                 },
                 {
-                  "prompt": "С какими историческими и литературными персонажами/событиями отождествляет себя лирический герой?",
+                  "prompt": "С кем из исторических и литературных персонажей отождествляет себя лирический герой?",
                   "options": [
                     "С римскими императорами",
                     "С древнегреческими героями",
@@ -8391,7 +8159,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Поэт перевоплощается в жертв антисемитизма разных эпох, сопереживая их боли."
                 },
                 {
-                  "prompt": "Какую роль играет образ Анны Франк в поэме?",
+                  "prompt": "Какую роль играет образ Анны Франк в стихотворении?",
                   "options": [
                     "Символ невинности, растоптанной юности и индивидуальной человеческой трагедии геноцида",
                     "Историческая справка о событиях в Голландии",
@@ -8403,7 +8171,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Образ девочки делает масштабную трагедию предельно личной и близкой."
                 },
                 {
-                  "prompt": "Как в произведении разоблачается сущность антисемитизма?",
+                  "prompt": "Как в стихотворении разоблачается антисемитизм?",
                   "options": [
                     "Как неизбежное социальное явление",
                     "Как религиозный спор",
@@ -8415,7 +8183,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Поэт сдёргивает маску с черносотенцев и фальшивых патриотов."
                 },
                 {
-                  "prompt": "Каково значение метафоры «Я сегодня - словно древний иудей»?",
+                  "prompt": "Что означает мотив перевоплощения лирического героя в «древнего иудея»?",
                   "options": [
                     "Указание на смену религиозных убеждений автора",
                     "Выражение абсолютной эмпатии и духовного единения с гонимым народом",
@@ -8427,7 +8195,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Лирический герой принимает на себя боль всего еврейского народа."
                 },
                 {
-                  "prompt": "Какую эмоциональную интонацию приобретает финал стихотворения?",
+                  "prompt": "Какой характер имеет финал стихотворения?",
                   "options": [
                     "Равнодушное прощание",
                     "Спокойное смирение с фактами",
@@ -8439,7 +8207,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Финал звучит как гражданский манифест."
                 },
                 {
-                  "prompt": "В чём проявляется гражданская смелость Е. Евтушенко при публикации «Бабьего Яра» в 1961 году?",
+                  "prompt": "В чём проявляется гражданская смелость Е. А. Евтушенко, опубликовавшего «Бабий Яр» в 1961 году?",
                   "options": [
                     "Он открыто поднял тему антисемитизма и замалчивания памяти жертв, вопреки официальной позиции властей",
                     "Выступил против строительства новых зданий",
@@ -8458,7 +8226,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
               "text": "Проверка самостоятельного вывода и готовности к письменной работе.",
               "questions": [
                 {
-                  "prompt": "В чём заключается гуманистический смысл утверждения: «Еврейской крови нет в крови моей. Но ненавистен родовой навек я всем антисемитам...»?",
+                  "prompt": "В чём заключается гуманистический смысл строк: «Еврейской крови нет в крови моей. Но ненавистен злобой заскорузлой я всем антисемитам, как еврей»?",
                   "options": [
                     "Автор отказывается от своей национальной принадлежности",
                     "Это отрицание роли национальной идентичности",
@@ -8467,10 +8235,10 @@ window.TEXTBOOK_EVTYUSHENKO = {
                     "Это формальное заявление для иностранной прессы"
                   ],
                   "answer": 3,
-                  "explanation": "Интернационализм и человечность ставяться выше кровного происхождения."
+                  "explanation": "Интернационализм и человечность ставятся выше кровного происхождения."
                 },
                 {
-                  "prompt": "Какое влияние поэма «Бабий Яр» оказала на советское общество и культуру?",
+                  "prompt": "Какое влияние оказало стихотворение «Бабий Яр» на советское общество и культуру?",
                   "options": [
                     "Привела к запрету всей лирической поэзии",
                     "Используется только в школьных программах за рубежом",
@@ -8482,7 +8250,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Стихотворение стало огромным общественным событием и вдохновило Шостаковича на музыкальный шедевр."
                 },
                 {
-                  "prompt": "Как в поэме соотносятся понятия «патриотизм» и «интернационализм»?",
+                  "prompt": "Как в стихотворении соотносятся понятия «патриотизм» и «интернационализм»?",
                   "options": [
                     "Интернационализм уничтожает любовь к родине",
                     "Патриотизм опережает интернационализм в военных вопросах",
@@ -8494,7 +8262,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Евтушенко доказывает, что русский народ по природе своей чужд антисемитизму."
                 },
                 {
-                  "prompt": "Какую роль играет историческая память в концепции произведения?",
+                  "prompt": "Какую роль играет историческая память в замысле стихотворения?",
                   "options": [
                     "Память ограничивается только семейными архивами",
                     "Память - духовный щит против повторения преступлений геноцида и фашизма в будущем",
@@ -8506,7 +8274,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Забвение трагедии открывает путь к её повторению."
                 },
                 {
-                  "prompt": "Почему овраг Бабий Яр становится в поэме всемирным символом скорби?",
+                  "prompt": "Почему Бабий Яр становится в стихотворении всемирным символом скорби?",
                   "options": [
                     "Из-за постройки там мемориала сразу после войны",
                     "Из-за масштаба совершенного злодеяния и универсальности трагедии невинно убиенных людей",
@@ -8518,7 +8286,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Бабий Яр встаёт в один ряд с Освенцимом и Бухенвальдом."
                 },
                 {
-                  "prompt": "В чём состоит новаторство поэтической публицистики Е. Евтушенко в «Бабьем Яре»?",
+                  "prompt": "В чём состоит новаторство поэтической публицистики Е. А. Евтушенко в «Бабьем Яре»?",
                   "options": [
                     "В подражании древнерусским плачам",
                     "В создании сухой исторической хроники",
@@ -8530,7 +8298,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Евтушенко вернул поэзии функцию громкого общественного голоса."
                 },
                 {
-                  "prompt": "Какая нравственная позиция требуется от читателя согласно смыслу поэмы?",
+                  "prompt": "Какая нравственная позиция требуется от читателя согласно смыслу стихотворения?",
                   "options": [
                     "Небытие неравнодушия: бескомпромиссное непринятие любой формы национальной и расовой ненависти",
                     "Прощение палачей",
@@ -8556,7 +8324,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
               "text": "Проверка внимательного чтения строк Е. А. Евтушенко.",
               "questions": [
                 {
-                  "prompt": "Каков главный риторический вопрос, положенный в основу стихотворения?",
+                  "prompt": "Какой риторический вопрос лежит в основе стихотворения «Хотят ли русские войны»?",
                   "options": [
                     "Помнят ли люди о прошлом?",
                     "Кто виноват в войне?",
@@ -8568,7 +8336,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Вопрос вынесен в заголовок и повторяется как рефрен."
                 },
                 {
-                  "prompt": "Кому предлагается «спросить» о миролюбии русского народа в тексте стихотворения?",
+                  "prompt": "У кого, по тексту стихотворения, предлагается спросить о миролюбии русских людей?",
                   "options": [
                     "У городских жителей",
                     "У генералов штаба",
@@ -8587,19 +8355,19 @@ window.TEXTBOOK_EVTYUSHENKO = {
               "text": "Проверка умения связывать детали с авторской мыслью.",
               "questions": [
                 {
-                  "prompt": "Как анализировать художественный смысл произведения «Хотят ли русские войны»?",
+                  "prompt": "Какой путь анализа помогает раскрыть художественный смысл стихотворения «Хотят ли русские войны»?",
                   "options": [
-                    "Произведение описывает быт советских рабочих на заводах",
-                    "Через случайные сведения о биографии",
-                    "Поэт описывает красоту русской природы без связи с темой войны",
-                    "Поэт рассказывает о покорении космоса и полёте Гагарина",
-                    "Через детали, конфликт, интонацию и вывод автора"
+                    "Пересказать сюжет, не обращая внимания на детали и интонацию",
+                    "Опереться только на случайные сведения о биографии автора",
+                    "Оценить только рифму и размер, не обращаясь к смыслу",
+                    "Сделать вывод по первому впечатлению, не сверяясь с текстом",
+                    "Связать детали текста, конфликт, интонацию и вывод автора"
                   ],
                   "answer": 4,
                   "explanation": "Анализ требует связи художественных деталей с общей мыслью произведения."
                 },
                 {
-                  "prompt": "Какова главная идея стихотворения Е. Евтушенко «Хотят ли русские войны»?",
+                  "prompt": "В чём состоит главная идея стихотворения Е. А. Евтушенко «Хотят ли русские войны»?",
                   "options": [
                     "Развенчание мифа об агрессивности советского/русского народа и утверждение его глубокого стремления к миру",
                     "Описание красоты русской природы",
@@ -8611,7 +8379,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Текст написан как антивоенный манифест миролюбия."
                 },
                 {
-                  "prompt": "Какую роль в тексте играет образ «тишины» («Спросите вы у тишины...»)?",
+                  "prompt": "Какое значение имеет в тексте образ тишины?",
                   "options": [
                     "Описание ночного времени суток",
                     "Элемент романтического пейзажа",
@@ -8623,11 +8391,11 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Тишина противопоставлена грохоту войны."
                 },
                 {
-                  "prompt": "Какое значение имеет упоминание встреч на Эльбе («Спросите тех солдат, что нам обнимались на Эльбе»)?",
+                  "prompt": "Какое значение имеет упоминание о встрече на Эльбе?",
                   "options": [
                     "Упрек союзникам в медлительности",
                     "Описание победного парада",
-                    "Намек на дипломатические переговоры",
+                    "Намёк на дипломатические переговоры",
                     "Напоминание об общем боевом содружестве против фашизма и надежде на мир между народами",
                     "Историческая справка о географии войны"
                   ],
@@ -8635,7 +8403,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Встреча на Эльбе - символ союзничества во имя мира."
                 },
                 {
-                  "prompt": "Как в стихотворении показана цена, уплаченная народом за мир?",
+                  "prompt": "Как в стихотворении показана цена, которую народ заплатил за мир?",
                   "options": [
                     "Через образы спящих в земле солдат и матерей, ждущих погибших сыновей",
                     "Через упоминание военных налогов",
@@ -8647,7 +8415,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Народу, пережившему такие утраты, война не может быть желанна."
                 },
                 {
-                  "prompt": "Какая стилистическая фигура является определяющей в структуре стихотворения?",
+                  "prompt": "Какие художественные приёмы определяют построение стихотворения?",
                   "options": [
                     "Инверсированный верлибр",
                     "Сатирическая аллегория",
@@ -8659,7 +8427,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Повторяющийся вопрос усиливает убедительность ответа."
                 },
                 {
-                  "prompt": "Какое значение придается образу «рабочего и крестьянина» в тексте?",
+                  "prompt": "Какое значение придаётся в тексте образу рабочего и крестьянина?",
                   "options": [
                     "Они требуют расширения территорий",
                     "Они не интересуются внешнеполитическими вопросами",
@@ -8671,7 +8439,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Труженики заинтересованы в сохранении плодов своего труда."
                 },
                 {
-                  "prompt": "Какова роль музыки Э. Колмановского в судьбе этого стихотворения?",
+                  "prompt": "Какую роль сыграла музыка Э. С. Колмановского в судьбе стихотворения?",
                   "options": [
                     "Изменила первоначальный смысл текста",
                     "Превратила стихотворение во всемирно известную песню, ставшую гимном движения за мир",
@@ -8690,7 +8458,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
               "text": "Проверка самостоятельного вывода и готовности к письменной работе.",
               "questions": [
                 {
-                  "prompt": "В чём заключается внешнеполитическое и гуманитарное значение стихотворения в эпоху «холодной войны»?",
+                  "prompt": "В чём состоит внешнеполитическое и гуманитарное значение стихотворения в эпоху «холодной войны»?",
                   "options": [
                     "Оно пробивало занавес пропаганды и доносило до зарубежного читателя истинное стремление советских людей к миру",
                     "Оправдывало наращивание ядерного оружия",
@@ -8702,7 +8470,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Песня переводилась на многие языки и звучала на международных форумах."
                 },
                 {
-                  "prompt": "Каким образом Е. Евтушенко связывает в стихотворении понятия «сила» и «миролюбие»?",
+                  "prompt": "Как Е. А. Евтушенко связывает в стихотворении понятия «силы» и «миролюбия»?",
                   "options": [
                     "Настоящая сила народа - в его умении защитить мир и в отказе от захватнических войн",
                     "Миролюбие - это признак слабости",
@@ -8714,7 +8482,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Народ умеет воевать, но воюет лишь ради того, «чтобы солдаты не гибли на войне»."
                 },
                 {
-                  "prompt": "Почему обращение к зарубежным слушателям («Да, мы умеем воевать, но не хотим, чтобы опять...») звучит с высоким достоинством?",
+                  "prompt": "Почему обращение к зарубежным слушателям («Да, мы умеем воевать, но не хотим, чтобы опять…») звучит с достоинством?",
                   "options": [
                     "Оно демонстрирует равнодушие к мнению мира",
                     "Оно написано с точки зрения превосходства",
@@ -8723,10 +8491,10 @@ window.TEXTBOOK_EVTYUSHENKO = {
                     "Оно опирается на священную память о победе над фашизмом и огромную цену этой победы"
                   ],
                   "answer": 4,
-                  "explanation": "Достоинство народа базируется на перенесенных испытаниях и спасении мира."
+                  "explanation": "Достоинство народа базируется на перенесённых испытаниях и спасении мира."
                 },
                 {
-                  "prompt": "Как в стихотворении проявляется традиция русской классической поэзии (в частности, В. Маяковского)?",
+                  "prompt": "В чём проявляется связь стихотворения с традицией русской гражданской поэзии (в частности, В. В. Маяковского)?",
                   "options": [
                     "В усложненной зашифрованной метафорике",
                     "В камерности и интимности переживаний",
@@ -8738,7 +8506,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Евтушенко использует традицию громкой трибунной поэзии."
                 },
                 {
-                  "prompt": "Какое звучание приобретает стихотворение в контексте современных дискуссий о мире?",
+                  "prompt": "Какое звучание приобретает стихотворение в современных спорах о мире?",
                   "options": [
                     "Трактуется как сугубо бытовое стихотворение",
                     "Используется только в качестве исторического экспоната",
@@ -8752,7 +8520,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                 {
                   "prompt": "В чём состоит философская основа миролюбия, выраженная в тексте?",
                   "options": [
-                    "Вопросы войны и мира зависит только от случайности",
+                    "Вопросы войны и мира зависят только от случайности",
                     "Жизнь, материнство, мирный труд и природа - естественное состояние человека, а война - неестественный кошмар",
                     "Мир возможен только при полном уничтожении соперников",
                     "Война - неизбежный двигатель прогресса",
@@ -8762,7 +8530,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Поэт утверждает органичность мира для человеческой природы."
                 },
                 {
-                  "prompt": "Почему ответ на главный вопрос стихотворения становится очевидным без прямого утверждения «нет» в каждой строчке?",
+                  "prompt": "Почему ответ на главный вопрос стихотворения очевиден, хотя слово «нет» не повторяется в каждой строке?",
                   "options": [
                     "Поэт оставляет вопрос открытым",
                     "Читателю предлагается самому придумать ответ",
@@ -8788,7 +8556,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
               "text": "Проверка внимательного чтения строк Е. А. Евтушенко.",
               "questions": [
                 {
-                  "prompt": "Кому посвящено стихотворение Е. Евтушенко «Штрафники»?",
+                  "prompt": "Кому посвящено стихотворение Е. А. Евтушенко «Штрафники»?",
                   "options": [
                     "Тыловым рабочим и снабженцам",
                     "Партизанским отрядам в глубоком тылу",
@@ -8800,7 +8568,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Текст посвящен трагической и героической судьбе бойцов штрафных подразделений."
                 },
                 {
-                  "prompt": "Каким способом, согласно правилам того времени и тексту стихотворения, штрафник мог «искупить» свою вину?",
+                  "prompt": "Как, согласно правилам того времени и тексту стихотворения, штрафник мог искупить свою вину?",
                   "options": [
                     "Получением государственной награды в тылу",
                     "Кровью - через ранение или гибель в бою",
@@ -8819,19 +8587,19 @@ window.TEXTBOOK_EVTYUSHENKO = {
               "text": "Проверка умения связывать детали с авторской мыслью.",
               "questions": [
                 {
-                  "prompt": "Как анализировать художественный смысл произведения «Штрафники»?",
+                  "prompt": "Какой путь анализа помогает раскрыть художественный смысл стихотворения «Штрафники»?",
                   "options": [
-                    "Поэт описывает парадную сторону Победы и торжество руководства",
-                    "Через случайные сведения о биографии",
-                    "Поэт восхваляет военную дисциплину и беспрекословное подчинение",
-                    "Через детали, конфликт, интонацию и вывод автора",
-                    "Произведение рассказывает о дипломатических переговорах с союзниками"
+                    "Пересказать сюжет, не обращая внимания на детали и интонацию",
+                    "Опереться только на случайные сведения о биографии автора",
+                    "Оценить только рифму и размер, не обращаясь к смыслу",
+                    "Связать детали текста, конфликт, интонацию и вывод автора",
+                    "Сделать вывод по первому впечатлению, не сверяясь с текстом"
                   ],
                   "answer": 3,
                   "explanation": "Анализ требует связи художественных деталей с общей мыслью произведения."
                 },
                 {
-                  "prompt": "В чём заключается ключевое нравственное противоречие в положении бойцов-штрафников?",
+                  "prompt": "В чём состоит нравственное противоречие в положении бойцов-штрафников?",
                   "options": [
                     "В их нежелании принимать участие в боевых действиях",
                     "В конфликтах между самими штрафниками на бытовой почве",
@@ -8855,7 +8623,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Штрафные роты бросали на прорыв самых неприступных рубежей обороны."
                 },
                 {
-                  "prompt": "Как в стихотворении раскрывается состав штрафных рот?",
+                  "prompt": "Какой состав штрафных рот показан в стихотворении?",
                   "options": [
                     "Исключительно матерые уголовные преступники",
                     "Разнородный состав людей, среди которых были как оступившиеся, так и невинно осужденные, объединенные любовью к Родине",
@@ -8867,7 +8635,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Автор показывает, что среди штрафников было множество честных людей, пострадавших от системы."
                 },
                 {
-                  "prompt": "Какое значение имеет метафора смывания вины кровью в поэтике Евтушенко?",
+                  "prompt": "Что означает в поэтике Е. А. Евтушенко метафора искупления вины кровью?",
                   "options": [
                     "Прославление сталинских приказов",
                     "Религиозный обряд очищения",
@@ -8879,7 +8647,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Поэт осмысляет трагическую цену, которую требовала система за право защищать Отечество."
                 },
                 {
-                  "prompt": "Каково отношение лирического героя к штрафникам?",
+                  "prompt": "Как лирический герой относится к штрафникам?",
                   "options": [
                     "Равнодушная фиксация исторических фактов",
                     "Осуждение за совершенные ими ранее проступки",
@@ -8891,11 +8659,11 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Лирический герой Евтушенко выступает в роли адвоката памяти этих забытых солдат."
                 },
                 {
-                  "prompt": "Какую роль в тексте выполняет контраст между официальным отношением к штрафникам и их реальным подвигом?",
+                  "prompt": "Какую роль играет контраст между официальным отношением к штрафникам и их реальным подвигом?",
                   "options": [
                     "Подчеркивает необходимость ужесточения дисциплины",
                     "Высмеивает армейские порядки",
-                    "Показывет бесполезность их участия в боях",
+                    "Показывает бесполезность их участия в боях",
                     "Обнажает несправедливость замалчивания их вклада в общую Победу",
                     "Демонстрирует преимущество кадровых частей"
                   ],
@@ -8922,7 +8690,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
               "text": "Проверка самостоятельного вывода и готовности к письменной работе.",
               "questions": [
                 {
-                  "prompt": "В чём состоит гражданско-патриотическая позиция Е. Евтушенко в стихотворении «Штрафники»?",
+                  "prompt": "В чём состоит гражданско-патриотическая позиция Е. А. Евтушенко в стихотворении «Штрафники»?",
                   "options": [
                     "В попытке оправдать преступления тоталитарного режима",
                     "В идеализации военного быта",
@@ -8934,7 +8702,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Настоящий патриотизм требует честной и неискаженной памяти о каждом солдате."
                 },
                 {
-                  "prompt": "Какое философское осмысление получает тема искупления в произведении?",
+                  "prompt": "Как в стихотворении осмысляется тема искупления?",
                   "options": [
                     "Искупление заслуживают только офицеры",
                     "Искупление определяется количеством полученных орденов",
@@ -8946,7 +8714,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Духовная выдержка и жертвенность выше любых официальных бумаг."
                 },
                 {
-                  "prompt": "Как стихотворение «Штрафники» разрушает идеологические табу советского периода?",
+                  "prompt": "Каким образом стихотворение «Штрафники» преодолевает идеологические табу советского времени?",
                   "options": [
                     "Открыто привлекает внимание к замалчиваемой странице войны и показывает трагизм судеб «неудобных» героев",
                     "Высмеивает подвиг рядовых солдат",
@@ -8970,7 +8738,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "На фронте перед смертью все равны, и подвиг штрафника равен подвигу обычного солдата."
                 },
                 {
-                  "prompt": "Каким образом поэма/стихотворение повлияло на восприятие истории войны в литературе «оттепели»?",
+                  "prompt": "Как стихотворение повлияло на восприятие истории войны в литературе «оттепели»?",
                   "options": [
                     "Способствовало расширению рамок допустимой правды о войне и развитию темы «неизвестных солдат»",
                     "Привело к запрету на публикацию произведений о войне",
@@ -8982,7 +8750,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Публицистика Евтушенко задала тренд на бескомпромиссную честность в освещении истории."
                 },
                 {
-                  "prompt": "Как в контексте произведения соотносятся понятия «Родина» и «государство»?",
+                  "prompt": "Как в стихотворении соотносятся понятия «Родина» и «государство»?",
                   "options": [
                     "Эти понятия абсолютно тождественны",
                     "Отношение к Родине определяется отношением властей",
@@ -9020,7 +8788,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
               "text": "Проверка внимательного чтения строк Е. А. Евтушенко.",
               "questions": [
                 {
-                  "prompt": "Кто является центральным персонажем стихотворения Е. Евтушенко «Фронтовик»?",
+                  "prompt": "Кто является героем стихотворения Е. А. Евтушенко «Фронтовик»?",
                   "options": [
                     "Ветеран войны, вернувшийся к мирному труду и переживающий трудности послевоенного быта",
                     "Подросток, работающий на заводе",
@@ -9032,7 +8800,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Произведение описывает судьбу фронтовика в мирное послевоенное время."
                 },
                 {
-                  "prompt": "Какое чувство испытывает герой-фронтовик, сталкиваясь с равнодушием или бытовой несправедливостью в мирной жизни?",
+                  "prompt": "Что чувствует герой-фронтовик, сталкиваясь в мирной жизни с равнодушием и бытовой несправедливостью?",
                   "options": [
                     "Желание немедленно вернуться на фронт",
                     "Глубокую душевную горечь и обиду за обесценивание пролитой крови",
@@ -9051,19 +8819,19 @@ window.TEXTBOOK_EVTYUSHENKO = {
               "text": "Проверка умения связывать детали с авторской мыслью.",
               "questions": [
                 {
-                  "prompt": "Как анализировать художественный смысл произведения «Фронтовик»?",
+                  "prompt": "Какой путь анализа помогает раскрыть художественный смысл стихотворения «Фронтовик»?",
                   "options": [
-                    "Поэт описывает радость ветерана от беззаботной мирной жизни",
-                    "Поэт восхваляет партийных руководителей послевоенного времени",
-                    "Через случайные сведения о биографии",
-                    "Произведение рассказывает о детях войны и их трудовых подвигах",
-                    "Через детали, конфликт, интонацию и вывод автора"
+                    "Пересказать сюжет, не обращая внимания на детали и интонацию",
+                    "Опереться только на случайные сведения о биографии автора",
+                    "Оценить только рифму и размер, не обращаясь к смыслу",
+                    "Сделать вывод по первому впечатлению, не сверяясь с текстом",
+                    "Связать детали текста, конфликт, интонацию и вывод автора"
                   ],
                   "answer": 4,
                   "explanation": "Анализ требует связи художественных деталей с общей мыслью произведения."
                 },
                 {
-                  "prompt": "В чём состоит психологический драматизм образа фронтовика в стихотворении?",
+                  "prompt": "В чём состоит психологический драматизм образа фронтовика?",
                   "options": [
                     "В желании скрыть своё участие в войне",
                     "В стремлении к быстрой славе",
@@ -9075,7 +8843,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Солдат, спасший мир, оказывается неготов к столкновению с бытовой черствостью."
                 },
                 {
-                  "prompt": "Какую роль в произведении играют детали военного прошлого (ордена, ранения, шинель)?",
+                  "prompt": "Какую роль играют в стихотворении детали военного прошлого (ордена, ранения, шинель)?",
                   "options": [
                     "Подчеркивают богатство героя",
                     "Высмеиваются автором как устаревшие",
@@ -9087,7 +8855,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Награды и шрамы - это вещественные свидетельства подвига, требующие уважения."
                 },
                 {
-                  "prompt": "Как в стихотворении противопоставлены «фронтовое братство» и «мещанский быт»?",
+                  "prompt": "Как в стихотворении противопоставлены фронтовое братство и мещанский быт?",
                   "options": [
                     "Никакого противопоставления в тексте нет",
                     "Фронтовое братство основано на искренности и взаимовыручке, а мещанский быт - на эгоизме и корысти",
@@ -9099,11 +8867,11 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Автор контрастно сталкивает высокую этику войны и низость мирной суеты."
                 },
                 {
-                  "prompt": "Каково отношение окружающих (не воевавших) людей к геройскому прошлому фронтовика в определенных эпизодах?",
+                  "prompt": "Как относятся к героическому прошлому фронтовика люди, не воевавшие?",
                   "options": [
                     "Попытка привлечь его к политике",
                     "Полное незнание о прошедшей войне",
-                    "Равнодушие, обывательское ненимание или черствое отношение, ранящее душу ветерана",
+                    "Равнодушие, обывательское непонимание или черствое отношение, ранящее душу ветерана",
                     "Страх и избегание общения",
                     "Беспрестанное преклонение и помощь"
                   ],
@@ -9111,7 +8879,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Поэт осуждает тех, кто быстро забыл, кому обязан мирным небом."
                 },
                 {
-                  "prompt": "Какую функцию выполняет сквозной мотив «скромности» фронтовика?",
+                  "prompt": "Какую функцию выполняет мотив скромности фронтовика?",
                   "options": [
                     "Служит оправданием его бедности",
                     "Показывает его неуверенность в себе",
@@ -9154,7 +8922,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
               "text": "Проверка самостоятельного вывода и готовности к письменной работе.",
               "questions": [
                 {
-                  "prompt": "Какую социальную и моральную проблему общества поднимает Е. Евтушенко в стихотворении «Фронтовик»?",
+                  "prompt": "Какую общественную и нравственную проблему поднимает Е. А. Евтушенко в стихотворении «Фронтовик»?",
                   "options": [
                     "Проблему урбанизации деревни",
                     "Проблему долга общества перед ветеранами и опасности морального очерствения в мирные годы",
@@ -9166,7 +8934,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Поэт напоминает, что общество находится в неоплатном долгу перед теми, кто его защитил."
                 },
                 {
-                  "prompt": "В чём заключается актуальность темы «посттравматического синдрома» и социальной адаптации, затронутой в стихотворении?",
+                  "prompt": "В чём заключается актуальность темы возвращения с войны и социальной адаптации ветерана, затронутой в стихотворении?",
                   "options": [
                     "В утверждении, что войны не влияют на психику",
                     "В доказывании вреда любой военной службы",
@@ -9178,7 +8946,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Евтушенко одним из первых в поэзии показал психологические трудности фронтовиков."
                 },
                 {
-                  "prompt": "Как стихотворение «Фронтовик» перекликается с произведениями «окопной прозы» (В. Некрасов, Г. Бакланов)?",
+                  "prompt": "Как стихотворение «Фронтовик» перекликается с «окопной прозой» (В. Некрасов, Г. Бакланов)?",
                   "options": [
                     "Отказом от изображения мирной жизни",
                     "Полным отрицанием роли командиров",
@@ -9193,7 +8961,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "prompt": "В чём выражается гуманистический призыв автора к молодым читателям?",
                   "options": [
                     "В требовании изучать военную технику",
-                    "В требовании бережного, бережливого и уважительного отношения к каждому ветерану, пока они живы",
+                    "В требовании бережного и уважительного отношения к каждому ветерану, пока они живы",
                     "В рекомендации заниматься исключительно личной карьерой",
                     "В призыве к выбору военной профессии",
                     "В совете избегать разговоров о прошлом"
@@ -9202,7 +8970,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Призыв автора - успеть дать тепло людям, заслонившим страну."
                 },
                 {
-                  "prompt": "Какое значение имеет образ фронтовика как «нравственного мерила» для общества?",
+                  "prompt": "Какое значение имеет образ фронтовика как нравственного ориентира для общества?",
                   "options": [
                     "Он является образцом финансового успеха",
                     "Он навязывает всем устаревшие нормы",
@@ -9214,7 +8982,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Жизнь фронтовика показывает настоящую цену верности и чести."
                 },
                 {
-                  "prompt": "Каким образом Е. Евтушенко утверждает бессмертие народного подвига?",
+                  "prompt": "Каким образом Е. А. Евтушенко утверждает бессмертие народного подвига?",
                   "options": [
                     "Через доказательство того, что скромный солдатский труд на войне - это фундамент жизни последующих поколений",
                     "Через отрицание роли мирного труда",
@@ -9252,7 +9020,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
               "text": "Проверка внимательного чтения строк Е. А. Евтушенко.",
               "questions": [
                 {
-                  "prompt": "Какова ключевая философская мысль первой строки стихотворения Е. Евтушенко?",
+                  "prompt": "Какова ключевая философская мысль первой строки стихотворения «Людей неинтересных в мире нет»?",
                   "options": [
                     "Все люди одинаковы и взаимозаменяемы",
                     "Люди делятся на важных и незначительных",
@@ -9264,7 +9032,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Евтушенко утверждают концепцию абсолютной ценности и уникальности каждой личности."
                 },
                 {
-                  "prompt": "С чем поэт сравнивает судьбу каждого отдельного человека в тексте?",
+                  "prompt": "С чем поэт сравнивает судьбу каждого человека?",
                   "options": [
                     "С песчинкой в пустыне",
                     "С отдельной, уникальной планетой со своими историями и законами",
@@ -9283,19 +9051,19 @@ window.TEXTBOOK_EVTYUSHENKO = {
               "text": "Проверка умения связывать детали с авторской мыслью.",
               "questions": [
                 {
-                  "prompt": "Как анализировать художественный смысл произведения «Людей неинтересных в мире нет»?",
+                  "prompt": "Какой путь анализа помогает раскрыть художественный смысл стихотворения «Людей неинтересных в мире нет»?",
                   "options": [
-                    "Поэт утверждает, что все люди одинаковы и взаимозаменяемы",
-                    "Через детали, конфликт, интонацию и вывод автора",
-                    "Поэт считает человека винтиком в огромном государственном механизме",
-                    "Через случайные сведения о биографии",
-                    "Поэт считает человека винтиком в огромном государственном механизме"
+                    "Пересказать сюжет, не обращая внимания на детали и интонацию",
+                    "Связать детали текста, конфликт, интонацию и вывод автора",
+                    "Опереться только на случайные сведения о биографии автора",
+                    "Оценить только рифму и размер, не обращаясь к смыслу",
+                    "Сделать вывод по первому впечатлению, не сверяясь с текстом"
                   ],
                   "answer": 1,
                   "explanation": "Анализ требует связи художественных деталей с общей мыслью произведения."
                 },
                 {
-                  "prompt": "В чём состоит трагизм ухода любого человека из жизни, по мнению Евтушенко?",
+                  "prompt": "В чём состоит трагизм ухода любого человека из жизни по мысли Е. А. Евтушенко?",
                   "options": [
                     "Прекращается его профессиональная деятельность",
                     "Общество теряет плательщика налогов",
@@ -9307,7 +9075,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Смерть человека - это гибель целой уникальной вселенной."
                 },
                 {
-                  "prompt": "Почему, согласно стихотворению, люди часто не замечают тайной глубины в окружающих («Кто знал о нём всё?»)?",
+                  "prompt": "Почему, согласно стихотворению, люди часто не замечают внутренней глубины окружающих?",
                   "options": [
                     "Из-за запретов на общение",
                     "Из-за поверхностного взгляда, невнимательности и слепоты к личной жизни других",
@@ -9319,7 +9087,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Обывательский взгляд скользит по поверхности, не проникая в глубину человеческой души."
                 },
                 {
-                  "prompt": "Какую роль играет мотив «незаметных» людей (простых, незаметных прохожих)?",
+                  "prompt": "Какую роль играет мотив незаметных, простых людей?",
                   "options": [
                     "Показывает бессмысленность их существования",
                     "Доказывает, что даже в самой незамысловатой судьбе скрыты драматические страсти, тайны и своя высота",
@@ -9331,7 +9099,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Для автора не существует «маленьких людей» - каждый человек велик в своем внутреннем мире."
                 },
                 {
-                  "prompt": "Какое отношение к смерти выражено в строках о «безвозвратности» человеческого ухода?",
+                  "prompt": "Какое отношение к смерти выражено в строках о невозвратности человеческого ухода?",
                   "options": [
                     "Страх перед собственным небытием",
                     "Ироническое отрицание горя",
@@ -9343,7 +9111,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Утрата человека невосполнима, так как другой такой личности никогда не будет."
                 },
                 {
-                  "prompt": "Какое стилистическое средство задаёт высокий, гуманистический пафос стихотворению?",
+                  "prompt": "Какие художественные средства создают высокий гуманистический пафос стихотворения?",
                   "options": [
                     "Философская метафоричность, анафоры и ораторские обращения",
                     "Сплошные сатирические гиперболы",
@@ -9355,7 +9123,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Поэтическая речь возвышает предмет разговора - человеческую душу."
                 },
                 {
-                  "prompt": "Какова роль образа «первого снега, первой любви, первого поцелуя» в контексте уникальности судьбы?",
+                  "prompt": "Какую роль играют в стихотворении образы первых, неповторимых событий человеческой жизни?",
                   "options": [
                     "Это неповторимый личный опыт каждого человека, образующий его индивидуальный кодекс памяти",
                     "Элементы романтического штампа",
@@ -9367,7 +9135,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Личные переживания у каждого уникальны и не могут быть скопированы."
                 },
                 {
-                  "prompt": "В чём заключается противоречие между внешним проявлением человека и его внутренним миром, по Евтушенко?",
+                  "prompt": "В чём состоит противоречие между внешним обликом человека и его внутренним миром по мысли Е. А. Евтушенко?",
                   "options": [
                     "Внешне человек может казаться простым и незаметным, но внутри него кипят драмы и светят звезды",
                     "Внутренний мир проще, чем кажется снаружи",
@@ -9386,7 +9154,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
               "text": "Проверка самостоятельного вывода и готовности к письменной работе.",
               "questions": [
                 {
-                  "prompt": "В чём заключается гуманистическая концепция личности в поэзии Е. Евтушенко?",
+                  "prompt": "В чём состоит гуманистическая концепция личности в поэзии Е. А. Евтушенко?",
                   "options": [
                     "В прославлении эгоизма",
                     "В абсолютном признании самоценности, уникальности и духовного богатства каждого человеческого «Я»",
@@ -9398,7 +9166,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Евтушенко отстаивает индивидуальность вопреки обезличиванию."
                 },
                 {
-                  "prompt": "Как стихотворение «Людей неинтересных в мире нет» отвечает на идеологическую догму о «человеке-винтике»?",
+                  "prompt": "Как стихотворение «Людей неинтересных в мире нет» отвечает на идеологическую догму о человеке-«винтике»?",
                   "options": [
                     "Прямо опровергает её, доказывая, что человек - не винтик, а неисчерпаемый и уникальный космос",
                     "Избегает темы социальной роли человека",
@@ -9410,7 +9178,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Текст стал манифестом защиты индивидуальности в период «оттепели»."
                 },
                 {
-                  "prompt": "Какой этический призыв адресован читателю в этом произведении?",
+                  "prompt": "Какой этический призыв адресован читателю стихотворения?",
                   "options": [
                     "Сосредоточиться только на изучении своей личности",
                     "Забывать ушедших ради новых знакомств",
@@ -9434,7 +9202,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
                   "explanation": "Вместе с человеком уходит целый мир, который невозможно воссоздать."
                 },
                 {
-                  "prompt": "Как в стихотворении развивается традиция русской философии и литературы (в частности, Ф. М. Достоевского)?",
+                  "prompt": "Как в стихотворении продолжается традиция русской философии и литературы (в частности, Ф. М. Достоевского)?",
                   "options": [
                     "В проповеди религиозного фатализма",
                     "В отрицании роли искусства в обществе",
@@ -9452,13 +9220,13 @@ window.TEXTBOOK_EVTYUSHENKO = {
                     "Из-за отсутствия аналогов в мировой литературе",
                     "Из-за его скандального характера",
                     "Оно сформулировало вечную, близкую каждому человеку истину простыми, точными и поэтически сильными словами",
-                    "Благодаря простой рифмовке, легкой для заучивания детими"
+                    "Благодаря простой рифмовке, легкой для заучивания детьми"
                   ],
                   "answer": 3,
                   "explanation": "Вневременной гуманистический смысл сделал стихотворение классикой лирики."
                 },
                 {
-                  "prompt": "В чём заключается оптимистический вывод, несмотря на трагическую тему смерти в тексте?",
+                  "prompt": "В чём заключается оптимистический вывод стихотворения, несмотря на трагическую тему смерти?",
                   "options": [
                     "В надежде на то, что люди перестанут умирать",
                     "В обещании физического бессмертия",
