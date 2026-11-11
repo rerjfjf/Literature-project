@@ -675,7 +675,7 @@ if (block.type === "video") {
   const title = document.createElement("h2");
   title.textContent = block.title || "Видеоматериал";
   const text = document.createElement("p");
-  text.textContent = block.text || "Видео находится в общей видеотеке учебника.";
+  text.textContent = block.text || "Видео находится в общей видеотеке учебного пособия.";
   const videoId = `${section.authorId}:${section.id}:${blockIndex}`;
   const link = document.createElement("a");
   link.className = "text-button";
@@ -1457,7 +1457,7 @@ const SECTION_QUESTIONS = {
   // ═══════════════════════════════════════════════════════════════
   // ПРЕДИСЛОВИЕ И ОБЗОР
   // ═══════════════════════════════════════════════════════════════
-  "preface": "Какие цели и принципы построения электронного учебника по литературе о Великой Отечественной войне изложены в предисловии?",
+  "preface": "Какие цели и принципы построения электронного учебного пособия по литературе эпохи Великой Отечественной войне изложены в предисловии?",
   "preface-annotation": "Как аннотация помогает понять, зачем создан этот учебник?",
   "overview": "Какие общие закономерности литературы о Великой Отечественной войне видны при сопоставлении всех изученных авторов?",
   "overview-final-summary": "Какой главный итог можно подвести после изучения творчества всех авторов, обратившихся к теме войны?",
@@ -2061,7 +2061,7 @@ function closeAccount() {
 
 function openAiDialog() {
   if (window.hubTrack) {
-    window.hubTrack('ai_dialog_open', { label: 'Открыт ИИ-диалог из учебника' });
+    window.hubTrack('ai_dialog_open', { label: 'Открыт ИИ-диалог из учебного пособия' });
   }
   const dialogUrl =
     (window.PORTAL_CONFIG && window.PORTAL_CONFIG.dialogUrl) || "http://localhost:3001";

@@ -2992,7 +2992,7 @@ window.TEXTBOOK_ZABOLOTSKY = {
           "blocks": [
             {
               "type": "h2",
-              "text": "Обобщение учебника"
+              "text": "Обобщение учебного пособия"
             },
             {
               "type": "p",

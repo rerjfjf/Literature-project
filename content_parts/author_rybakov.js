@@ -2665,7 +2665,7 @@ window.TEXTBOOK_RYBAKOV = {
           "blocks": [
             {
               "type": "h2",
-              "text": "Обобщение учебника"
+              "text": "Обобщение учебного пособия"
             },
             {
               "type": "p",

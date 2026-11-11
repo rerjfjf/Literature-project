@@ -73,7 +73,7 @@ const chBio2 = makeChapter("bio-2", "Глава 2", "Биография и пу�
   "perehod-ot-biografii-k-proizvedeniyu",
 ]);
 
-const chBio3 = makeChapter("bio-3", "Глава 3", "Страницы биографии, которых нет в учебниках", "tvardovsky", [
+const chBio3 = makeChapter("bio-3", "Глава 3", "Страницы биографии, которых нет в х", "tvardovsky", [
   "stranitsy-biografii-kotoryh-net-v-uchebnikah",
   "novyy-mir-i-tsenzura",
   "poema-po-pravu-pamyati",

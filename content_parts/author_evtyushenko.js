@@ -4397,7 +4397,7 @@ window.TEXTBOOK_EVTYUSHENKO = {
             },
             {
               "type": "h2",
-              "text": "Обобщение учебника"
+              "text": "Обобщение учебного пособия"
             },
             {
               "type": "p",

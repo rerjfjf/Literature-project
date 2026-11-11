@@ -1074,7 +1074,7 @@ window.TEXTBOOK_KONDRATYEV = {
             },
             {
               "type": "h2",
-              "text": "Обобщение учебника"
+              "text": "Обобщение учебного пособия"
             },
             {
               "type": "p",
