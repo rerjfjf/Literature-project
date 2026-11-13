@@ -25,11 +25,11 @@ window.TEXTBOOK_EVTYUSHENKO = {
       "id": "ev-big-1",
       "authorId": "evtyushenko",
       "number": "Раздел 1",
-      "title": "Знакомство с автором и биография",
+      "title": "Знакомство с автором и его биография.",
       "sections": [
         {
           "id": "ev-big-1-text",
-          "title": "Знакомство с автором и биография",
+          "title": "Знакомство с автором и его биография",
           "lead": "",
           "blocks": [
             {
