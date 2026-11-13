@@ -138,6 +138,7 @@ window.TEXTBOOK_TVARDOVSKY = {
     },
     {
       "id": "bio-1",
+      "authorId": "tvardovsky",
       "number": "Глава 1",
       "title": "Биографический след А. Т. Твардовского",
       "sections": [
@@ -265,6 +266,7 @@ window.TEXTBOOK_TVARDOVSKY = {
     },
     {
       "id": "bio-2",
+      "authorId": "tvardovsky",
       "number": "Глава 2",
       "title": "Биография и путь к произведению",
       "sections": [
@@ -424,6 +426,7 @@ window.TEXTBOOK_TVARDOVSKY = {
     },
     {
       "id": "terkin-1",
+      "authorId": "tvardovsky",
       "number": "Глава 3",
       "title": "«Василий Тёркин» – обзор поэмы",
       "sections": [
@@ -581,6 +584,7 @@ window.TEXTBOOK_TVARDOVSKY = {
     },
     {
       "id": "terkin-2",
+      "authorId": "tvardovsky",
       "number": "Глава 4",
       "title": "Замысел, жанр, образ героя и ключевые эпизоды",
       "sections": [
@@ -901,6 +905,7 @@ window.TEXTBOOK_TVARDOVSKY = {
     },
     {
       "id": "terkin-5",
+      "authorId": "tvardovsky",
       "number": "Глава 5",
       "title": "Проблемы произведения и информация для раздумий",
       "sections": [
@@ -1234,6 +1239,7 @@ window.TEXTBOOK_TVARDOVSKY = {
     },
     {
       "id": "terkin-7",
+      "authorId": "tvardovsky",
       "number": "Глава 6",
       "title": "Литературная мастерская: поэма А. Т. Твардовского «Василий Тёркин»",
       "sections": [
@@ -2858,6 +2864,7 @@ window.TEXTBOOK_TVARDOVSKY = {
     },
     {
       "id": "rzhev-1",
+      "authorId": "tvardovsky",
       "number": "Глава 7",
       "title": "Реквием безымянному солдату: стихотворение А. Т. Твардовского «Я убит подо Ржевом»",
       "sections": [
@@ -3374,6 +3381,7 @@ window.TEXTBOOK_TVARDOVSKY = {
     },
     {
       "id": "tvardovsky-final",
+      "authorId": "tvardovsky",
       "number": "Итог",
       "title": "Обобщение по творчеству А. Т. Твардовского и мнение критиков",
       "sections": [
